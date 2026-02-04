@@ -137,8 +137,9 @@ $footer_top_classes = $show_menu_section ? 'border-t border-gray-200 pt-12 md:pt
                     } else {
                         $site_name = get_bloginfo( 'name' );
                         $tagline   = get_bloginfo( 'description' );
-                        $default_copyright_url = 'https://chrysoberyl.me';
-                        echo '<a href="' . esc_url( $default_copyright_url ) . '" class="hover:text-google-blue transition-colors">' . esc_html( $site_name ) . '</a>';
+                        $default_copyright_url  = 'https://twiik.co';
+                        $default_copyright_name = 'twiik.co';
+                        echo '<a href="' . esc_url( $default_copyright_url ) . '" class="hover:text-google-blue transition-colors" target="_blank" rel="noopener noreferrer">' . esc_html( $default_copyright_name ) . '</a>';
                         if ( $tagline !== '' ) {
                             echo ' <span class="opacity-90">— ' . esc_html( $tagline ) . '</span>';
                         }

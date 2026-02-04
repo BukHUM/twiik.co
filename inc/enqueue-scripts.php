@@ -180,6 +180,8 @@ function chrysoberyl_enqueue_assets()
         'ajaxurl' => admin_url('admin-ajax.php'),
         'nonce' => wp_create_nonce('chrysoberyl-nonce'),
         'searchUrl' => home_url('/?s='),
+        'load_more_label' => __( 'โหลดข่าวเพิ่มเติม', 'chrysoberyl' ),
+        'load_more_loading' => ( get_locale() === 'en_US' || strpos( get_locale(), 'en_' ) === 0 ) ? 'Loading' : __( 'กำลังโหลด...', 'chrysoberyl' ),
         'search' => array(
             'enabled' => $search_enabled === '1',
             'suggestions_enabled' => $search_suggestions_enabled === '1',

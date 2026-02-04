@@ -233,8 +233,6 @@ function chrysoberyl_get_category_color($category_id = null, $default = '#3B82F6
 
     // Fallback to default color
     return $default;
-    $color = get_term_meta($category_id, 'category_color', true);
-    return $color ? $color : $default;
 }
 
 /**

@@ -74,8 +74,8 @@ $show_sidebar_home = ( get_option( 'chrysoberyl_sidebar_home_enabled', '1' ) ===
                             class="inline-block px-10 py-3 border border-gray-300 rounded-pill text-google-blue font-medium hover:bg-blue-50 hover:border-blue-200 transition-all w-full md:w-auto"
                             id="load-more-btn"
                             data-page="1"
-                            aria-label="<?php esc_attr_e( 'Load more stories', 'chrysoberyl' ); ?>">
-                            <?php _e( 'Load more stories', 'chrysoberyl' ); ?>
+                            aria-label="<?php esc_attr_e( 'โหลดข่าวเพิ่มเติม', 'chrysoberyl' ); ?>">
+                            <?php _e( 'โหลดข่าวเพิ่มเติม', 'chrysoberyl' ); ?>
                         </button>
                     </div>
                     <?php

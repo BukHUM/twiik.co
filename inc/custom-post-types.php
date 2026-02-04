@@ -585,17 +585,9 @@ function chrysoberyl_get_directory_size($directory)
 }
 
 /**
- * Import Demo Data page callback (placeholder)
+ * Import Demo Data page callback
+ * (Moved to inc/demo-data-import.php)
  */
-function chrysoberyl_import_demo_page()
-{
-    ?>
-    <div class="wrap">
-        <h1><?php echo esc_html(__('Import Demo Data', 'chrysoberyl')); ?></h1>
-        <p><?php esc_html_e('Content coming soon.', 'chrysoberyl'); ?></p>
-    </div>
-    <?php
-}
 
 /**
  * Gemini API page callback (placeholder)

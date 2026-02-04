@@ -2311,6 +2311,10 @@ msgstr ""
 msgid "โหลดข่าวเพิ่มเติม"
 msgstr ""
 
+#: inc/enqueue-scripts.php
+msgid "กำลังโหลด..."
+msgstr ""
+
 #: inc/custom-post-types.php:1154
 msgid "ใช้สไตล์ธีม (ปรับแต่ง wp-login ให้เข้ากับธีม Chrysoberyl)"
 msgstr ""

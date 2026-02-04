@@ -14,6 +14,7 @@ if ( ! isset( $post ) ) {
 
 $categories = get_the_category();
 $category   = ! empty( $categories ) ? $categories[0] : null;
+$cat_color  = $category ? chrysoberyl_get_category_color( $category->term_id, '#3B82F6' ) : '#3B82F6';
 $permalink  = chrysoberyl_fix_url( get_permalink() );
 $title      = get_the_title() ? get_the_title() : get_the_date();
 $excerpt_raw = has_excerpt() ? get_the_excerpt() : get_post_field( 'post_content', $post );
@@ -49,7 +50,7 @@ $excerpt    = wp_trim_words( $excerpt_raw, 12 );
     </div>
     <div class="flex flex-col flex-grow">
         <?php if ( $category ) : ?>
-            <a href="<?php echo esc_url( get_category_link( $category->term_id ) ); ?>" class="inline-block mb-3 text-google-blue font-bold text-xs uppercase tracking-wider hover:underline" onclick="event.stopPropagation();">
+            <a href="<?php echo esc_url( get_category_link( $category->term_id ) ); ?>" class="inline-block mb-3 font-bold text-xs uppercase tracking-wider hover:underline" style="color: <?php echo esc_attr( $cat_color ); ?>;" onclick="event.stopPropagation();">
                 <?php echo esc_html( $category->name ); ?>
             </a>
         <?php endif; ?>

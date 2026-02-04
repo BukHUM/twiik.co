@@ -31,10 +31,12 @@ get_header();
                 <?php
                 $categories = get_the_category();
                 if ( ! empty( $categories ) ) :
-                    $category = $categories[0];
+                    $category  = $categories[0];
+                    $cat_color = chrysoberyl_get_category_color( $category->term_id, '#3B82F6' );
                     ?>
                     <a href="<?php echo esc_url( get_category_link( $category->term_id ) ); ?>"
-                        class="inline-block mb-4 text-google-blue text-sm font-medium uppercase tracking-wider hover:underline">
+                        class="inline-block mb-4 text-sm font-medium uppercase tracking-wider hover:underline"
+                        style="color: <?php echo esc_attr( $cat_color ); ?>;">
                         <?php echo esc_html( $category->name ); ?>
                     </a>
                 <?php endif; ?>
@@ -209,8 +211,9 @@ get_header();
                                     <?php
                                     $rel_cats = get_the_category( $related_post->ID );
                                     if ( ! empty( $rel_cats ) ) :
+                                        $rel_cat_color = chrysoberyl_get_category_color( $rel_cats[0]->term_id, '#3B82F6' );
                                         ?>
-                                        <span class="text-google-blue text-xs font-medium uppercase tracking-wider"><?php echo esc_html( $rel_cats[0]->name ); ?></span>
+                                        <span class="text-xs font-medium uppercase tracking-wider" style="color: <?php echo esc_attr( $rel_cat_color ); ?>;"><?php echo esc_html( $rel_cats[0]->name ); ?></span>
                                     <?php endif; ?>
                                     <h3 class="text-lg font-medium text-google-gray group-hover:text-google-blue transition-colors line-clamp-2">
                                         <a href="<?php echo esc_url( chrysoberyl_fix_url( get_permalink( $related_post->ID ) ) ); ?>"><?php echo esc_html( $related_post->post_title ); ?></a>

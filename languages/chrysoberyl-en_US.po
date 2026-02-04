@@ -2310,7 +2310,11 @@ msgstr "Folder (folder-open)"
 #: search.php:150
 #: search.php:151
 msgid "โหลดข่าวเพิ่มเติม"
-msgstr "Load more news"
+msgstr "Load more stories"
+
+#: inc/enqueue-scripts.php
+msgid "กำลังโหลด..."
+msgstr "Loading..."
 
 #: inc/custom-post-types.php:1154
 msgid "ใช้สไตล์ธีม (ปรับแต่ง wp-login ให้เข้ากับธีม Chrysoberyl)"
@@ -2561,7 +2565,7 @@ msgstr "columns"
 
 #: inc/custom-post-types.php
 msgid "โหลดข่าวเพิ่มเติม"
-msgstr "Load more news"
+msgstr "Load more stories"
 
 #: inc/custom-post-types.php
 msgid "เลือกขนาดปุ่มแชร์"

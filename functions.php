@@ -57,6 +57,7 @@ require_once get_template_directory() . '/inc/widget-styling.php';
 require_once get_template_directory() . '/inc/search-functions.php';
 require_once get_template_directory() . '/inc/security.php';
 require_once get_template_directory() . '/inc/login-customizer.php';
+require_once get_template_directory() . '/inc/demo-data-import.php';
 require_once get_template_directory() . '/inc/shortcodes.php';
 
 // Load widgets (must be loaded before register-widgets.php)

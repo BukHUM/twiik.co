@@ -253,7 +253,8 @@
             const nextPage = currentPage + 1;
             
             button.prop('disabled', true);
-            button.html('<i class="fas fa-spinner fa-spin mr-2"></i>กำลังโหลด...');
+            const loadingText = (typeof chrysoberylAjax !== 'undefined' && chrysoberylAjax.load_more_loading) ? chrysoberylAjax.load_more_loading : 'Loading...';
+            button.html('<i class="fas fa-spinner fa-spin mr-2"></i>' + loadingText);
             
             if (typeof chrysoberylAjax !== 'undefined') {
                 // Get current query parameters
@@ -315,13 +316,15 @@
                                 button.hide();
                             } else {
                                 button.prop('disabled', false);
-                                button.html('<span class="relative z-10">โหลดข่าวเพิ่มเติม</span><i class="fas fa-arrow-down ml-2 relative z-10"></i>');
+                                const labelText = (typeof chrysoberylAjax !== 'undefined' && chrysoberylAjax.load_more_label) ? chrysoberylAjax.load_more_label : 'Load more';
+                                button.html('<span class="relative z-10">' + labelText + '</span><i class="fas fa-arrow-down ml-2 relative z-10"></i>');
                             }
                         }
                     },
                     error: function() {
                         button.prop('disabled', false);
-                        button.html('<span class="relative z-10">โหลดข่าวเพิ่มเติม</span><i class="fas fa-arrow-down ml-2 relative z-10"></i>');
+                        const labelText = (typeof chrysoberylAjax !== 'undefined' && chrysoberylAjax.load_more_label) ? chrysoberylAjax.load_more_label : 'Load more';
+                        button.html('<span class="relative z-10">' + labelText + '</span><i class="fas fa-arrow-down ml-2 relative z-10"></i>');
                     }
                 });
             }
