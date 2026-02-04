@@ -1,6 +1,6 @@
 /**
- * TinyMCE: ปุ่ม "แทรกโค้ด" + dialog เลือกภาษา (Classic Editor)
- * รองรับ TinyMCE 4 (WordPress Classic Editor)
+ * TinyMCE: "Insert Code" button + language select dialog (Classic Editor)
+ * Supports TinyMCE 4 (WordPress Classic Editor)
  *
  * @package Chrysoberyl
  * @since 1.0.0
@@ -16,35 +16,38 @@
 
     function openCodeDialog(editor) {
         var win = editor.windowManager.open({
-            title: 'แทรกโค้ด',
-            width: 720,
-            height: 520,
+            title: 'Insert Code',
+            width: 500,
+            height: 400,
             body: [
                 {
                     type: 'listbox',
                     name: 'lang',
-                    label: 'ภาษา',
+                    label: 'Language',
                     value: 'html',
                     values: [
                         { text: 'HTML', value: 'html' },
                         { text: 'JavaScript', value: 'javascript' },
                         { text: 'CSS', value: 'css' },
-                        { text: 'PHP', value: 'php' }
+                        { text: 'PHP', value: 'php' },
+                        { text: 'Python', value: 'python' },
+                        { text: 'Bash/Shell', value: 'bash' },
+                        { text: 'SQL', value: 'sql' },
+                        { text: 'JSON', value: 'json' }
                     ]
                 },
                 {
                     type: 'textbox',
                     name: 'code',
-                    label: 'วางโค้ดด้านล่าง',
+                    label: 'Code',
                     multiline: true,
-                    minWidth: 680,
-                    minHeight: 380
+                    minHeight: 280
                 }
             ],
             buttons: [
-                { text: 'ยกเลิก', onclick: function() { win.close(); } },
+                { text: 'Cancel', onclick: function() { win.close(); } },
                 {
-                    text: 'แทรก',
+                    text: 'Insert',
                     subtype: 'primary',
                     onclick: function() {
                         var langCtrl = win.find('#lang')[0] || win.find('[name="lang"]')[0];
@@ -68,7 +71,7 @@
         tinymce.PluginManager.add('chrysoberyl_code', function(editor, url) {
             if (editor.addButton) {
                 editor.addButton('chrysoberyl_code', {
-                    title: 'แทรกโค้ด',
+                    title: 'Insert Code',
                     icon: 'code',
                     cmd: 'chrysoberyl_code_insert'
                 });
@@ -77,8 +80,8 @@
                 });
             } else if (editor.ui && editor.ui.registry) {
                 editor.ui.registry.addButton('chrysoberyl_code', {
-                    text: 'แทรกโค้ด',
-                    tooltip: 'แทรกโค้ด (เลือกภาษาได้)',
+                    text: 'Insert Code',
+                    tooltip: 'Insert code block with syntax highlighting',
                     onAction: function() {
                         openCodeDialog(editor);
                     }

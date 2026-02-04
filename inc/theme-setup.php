@@ -291,7 +291,7 @@ function chrysoberyl_custom_image_sizes( $sizes ) {
 add_filter( 'image_size_names_choose', 'chrysoberyl_custom_image_sizes' );
 
 /**
- * TinyMCE: เพิ่มปุ่ม "แทรกโค้ด" ใน Classic Editor (เลือกภาษา + วางโค้ดได้)
+ * TinyMCE: Add "Insert Code" button to Classic Editor (select language + paste code)
  */
 function chrysoberyl_mce_external_plugins( $plugins ) {
 	$plugins['chrysoberyl_code'] = get_template_directory_uri() . '/assets/js/tinymce-code-button.js';

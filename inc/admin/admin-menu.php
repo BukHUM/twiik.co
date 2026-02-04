@@ -135,7 +135,7 @@ function chrysoberyl_admin_page()
                         <ul class="chrysoberyl-credit-list">
                             <li>
                                 <span class="chrysoberyl-credit-label"><?php _e('ฟอร์กมาจาก:', 'chrysoberyl'); ?></span>
-                                <?php _e('ธีม Trend Today', 'chrysoberyl'); ?>
+                                <a href="https://gawao.com" target="_blank" rel="noopener noreferrer"><?php _e('ธีม Trend Today', 'chrysoberyl'); ?></a>
                             </li>
                             <li>
                                 <span class="chrysoberyl-credit-label"><?php _e('ทีมผู้พัฒนา:', 'chrysoberyl'); ?></span>
@@ -144,8 +144,8 @@ function chrysoberyl_admin_page()
                             </li>
                             <li>
                                 <span class="chrysoberyl-credit-label"><?php _e('เว็บที่ใช้งานจริง:', 'chrysoberyl'); ?></span>
-                                <a href="https://chrysoberyl.me" target="_blank"
-                                    rel="noopener noreferrer">chrysoberyl.me</a>
+                                <a href="https://chrysoberyl.me" target="_blank" rel="noopener noreferrer">chrysoberyl.me</a>,
+                                <a href="https://twiik.co" target="_blank" rel="noopener noreferrer">twiik.co</a>
                             </li>
                         </ul>
                         <p class="chrysoberyl-credit-license">

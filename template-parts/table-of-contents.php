@@ -43,7 +43,7 @@ $toc_data = array(
     'headings' => implode( ',', $toc_headings ),
     'style' => $toc_style,
     'smoothScroll' => $toc_smooth_scroll === '1',
-    'scrollSpy' => false, // TOC ด้านขวาไม่แสดงสถานะ active
+    'scrollSpy' => $toc_scroll_spy === '1',
     'collapsible' => $toc_collapsible === '1',
     'sticky' => $toc_sticky === '1',
     'minHeadings' => absint( $toc_min_headings ),

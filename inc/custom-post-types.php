@@ -135,7 +135,7 @@ function chrysoberyl_admin_page()
                         <ul class="chrysoberyl-credit-list">
                             <li>
                                 <span class="chrysoberyl-credit-label"><?php _e('ฟอร์กมาจาก:', 'chrysoberyl'); ?></span>
-                                <?php _e('ธีม Trend Today', 'chrysoberyl'); ?>
+                                <a href="https://gawao.com" target="_blank" rel="noopener noreferrer"><?php _e('ธีม Trend Today', 'chrysoberyl'); ?></a>
                             </li>
                             <li>
                                 <span class="chrysoberyl-credit-label"><?php _e('ทีมผู้พัฒนา:', 'chrysoberyl'); ?></span>
@@ -145,8 +145,8 @@ function chrysoberyl_admin_page()
                             <li>
                                 <span
                                     class="chrysoberyl-credit-label"><?php _e('เว็บที่ใช้งานจริง:', 'chrysoberyl'); ?></span>
-                                <a href="https://chrysoberyl.me" target="_blank"
-                                    rel="noopener noreferrer">chrysoberyl.me</a>
+                                <a href="https://chrysoberyl.me" target="_blank" rel="noopener noreferrer">chrysoberyl.me</a>,
+                                <a href="https://twiik.co" target="_blank" rel="noopener noreferrer">twiik.co</a>
                             </li>
                         </ul>
                         <p class="chrysoberyl-credit-license">
@@ -695,18 +695,6 @@ function chrysoberyl_settings_page()
                 }
             }
 
-            // Twitter handle
-            if (isset($_POST['chrysoberyl_twitter_handle'])) {
-                $twitter_handle = sanitize_text_field($_POST['chrysoberyl_twitter_handle']);
-                $twitter_handle = ltrim($twitter_handle, '@'); // Remove @ if present
-                update_option('chrysoberyl_twitter_handle', $twitter_handle);
-            }
-
-            // Custom share text
-            if (isset($_POST['chrysoberyl_custom_share_text'])) {
-                update_option('chrysoberyl_custom_share_text', sanitize_textarea_field($_POST['chrysoberyl_custom_share_text']));
-            }
-
             // Save search settings
             // Enable/Disable
             $search_enabled = isset($_POST['chrysoberyl_search_enabled']) ? '1' : '0';
@@ -1079,8 +1067,6 @@ function chrysoberyl_settings_page()
     $button_style = get_option('chrysoberyl_social_button_style', 'icon_only');
     $button_size = get_option('chrysoberyl_social_button_size', 'medium');
     $social_icon_style = get_option('chrysoberyl_social_icon_style', 'branded');
-    $twitter_handle = get_option('chrysoberyl_twitter_handle', '');
-    $custom_share_text = get_option('chrysoberyl_custom_share_text', '');
 
     $available_platforms = array(
         'facebook' => __('Facebook', 'chrysoberyl'),
@@ -1617,34 +1603,6 @@ function chrysoberyl_settings_page()
                                 </select>
                                 <p class="description">
                                     <?php _e('แบบ Mockup: ไอคอนสีเทา วงกลม เมื่อ hover เป็นพื้นหลังเทาอ่อน ตรงกับ mockup single', 'chrysoberyl'); ?>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <label
-                                    for="chrysoberyl_twitter_handle"><?php _e('Twitter Handle', 'chrysoberyl'); ?></label>
-                            </th>
-                            <td>
-                                <input type="text" name="chrysoberyl_twitter_handle" id="chrysoberyl_twitter_handle"
-                                    value="<?php echo esc_attr($twitter_handle); ?>" placeholder="@username"
-                                    class="regular-text" />
-                                <p class="description">
-                                    <?php _e('ใส่ Twitter/X username (ไม่ต้องใส่ @) เพื่อเพิ่มใน tweet', 'chrysoberyl'); ?>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <label
-                                    for="chrysoberyl_custom_share_text"><?php _e('Custom Share Text', 'chrysoberyl'); ?></label>
-                            </th>
-                            <td>
-                                <textarea name="chrysoberyl_custom_share_text" id="chrysoberyl_custom_share_text" rows="3"
-                                    class="large-text"
-                                    placeholder="<?php esc_attr_e('ข้อความที่ต้องการให้แสดงเมื่อแชร์ (ใช้ {title} สำหรับชื่อบทความ, {url} สำหรับลิงก์)', 'chrysoberyl'); ?>"><?php echo esc_textarea($custom_share_text); ?></textarea>
-                                <p class="description">
-                                    <?php _e('ข้อความที่ต้องการให้แสดงเมื่อแชร์ (ใช้ {title} สำหรับชื่อบทความ, {url} สำหรับลิงก์)', 'chrysoberyl'); ?>
                                 </p>
                             </td>
                         </tr>
