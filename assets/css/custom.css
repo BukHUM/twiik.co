@@ -1,0 +1,2560 @@
+/**
+ * Custom CSS for Chrysoberyl Theme
+ * 
+ * @package chrysoberyl
+ * @since 1.0.0
+ */
+
+/* Theme accent = Google blue (สอดคล้องกับ tailwind.config และทั้งเว็บ) */
+:root {
+    --accent: #1a73e8;
+    --accent-color: #1a73e8;
+}
+
+/* ============================================
+   Responsive Breakpoints
+   ============================================ */
+/* Mobile: < 640px (default) */
+/* Tablet: 640px - 1024px (md:) */
+/* Desktop: > 1024px (lg:) */
+/* Large Desktop: > 1280px (xl:) */
+
+/* Custom Scrollbar for Categories */
+.hide-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Mockup: category pills horizontal scroll (no visible scrollbar) */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Breadcrumb */
+.chrysoberyl-breadcrumb ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chrysoberyl-breadcrumb-sep {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0.375rem;
+    color: #9ca3af;
+    font-size: 0.625rem;
+    pointer-events: none;
+}
+
+.chrysoberyl-breadcrumb-sep i {
+    font-size: 0.5rem;
+}
+
+.chrysoberyl-breadcrumb a {
+    color: #6b7280;
+    text-decoration: none;
+}
+
+.chrysoberyl-breadcrumb a:hover {
+    color: var(--accent, #1a73e8);
+}
+
+.chrysoberyl-breadcrumb-current {
+    color: #1f2937;
+    font-weight: 500;
+}
+
+/* ============================================
+   Header Nav: Sub-menus (Dropdown)
+   ============================================ */
+/* Desktop: parent item with children */
+.chrysoberyl-nav-desktop .menu-item-has-children {
+    position: relative;
+}
+
+.chrysoberyl-nav-desktop .menu-item-has-children > a::after {
+    content: '';
+    display: inline-block;
+    margin-left: 0.25rem;
+    vertical-align: 0.2em;
+    border: solid currentColor;
+    border-width: 0 1.5px 1.5px 0;
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg);
+    opacity: 0.7;
+}
+
+/* Desktop: dropdown panel */
+.chrysoberyl-nav-desktop .chrysoberyl-nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    margin-top: 0.25rem;
+    padding: 0.5rem 0;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 100;
+}
+
+.chrysoberyl-nav-desktop .menu-item-has-children:hover .chrysoberyl-nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.chrysoberyl-nav-desktop .chrysoberyl-nav-dropdown li {
+    margin: 0;
+}
+
+.chrysoberyl-nav-desktop .chrysoberyl-nav-dropdown a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: #5f6368;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.chrysoberyl-nav-desktop .chrysoberyl-nav-dropdown a:hover {
+    background: #f3f4f6;
+    color: var(--accent, #1a73e8);
+}
+
+/* Mobile: nested sub-menu */
+.chrysoberyl-nav-mobile .chrysoberyl-nav-mobile-sub {
+    list-style: none;
+    margin: 0.5rem 0 0 1rem;
+    padding: 0;
+    border-left: 2px solid #e5e7eb;
+    padding-left: 0.75rem;
+}
+
+.chrysoberyl-nav-mobile .chrysoberyl-nav-mobile-sub li {
+    margin: 0;
+}
+
+.chrysoberyl-nav-mobile .chrysoberyl-nav-mobile-sub a {
+    display: block;
+    padding: 0.375rem 0;
+    font-size: 0.9375rem;
+    color: #5f6368;
+}
+
+.chrysoberyl-nav-mobile .chrysoberyl-nav-mobile-sub a:hover {
+    color: var(--accent, #1a73e8);
+}
+
+/* Long title on single/page: max 2 lines + ellipsis (single: show title; page: see .page .chrysoberyl-breadcrumb-title below) */
+/* Page single: match mockup spacing (header + h-4 md:h-6 only, no extra h-16) */
+body.page .chrysoberyl-header-spacer {
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden;
+}
+
+/* Page single: on mobile add more space between header and title so it doesn’t feel cramped */
+@media (max-width: 767px) {
+    body.page #main-content {
+        padding-top: 1.5rem;
+    }
+}
+
+.page .chrysoberyl-breadcrumb-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+/* Categories Widget - compact list + hierarchy */
+.chrysoberyl-categories-list {
+    --cat-gap: 0.125rem;
+}
+
+.chrysoberyl-categories-list .chrysoberyl-categories-root,
+.chrysoberyl-categories-list .chrysoberyl-categories-children {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chrysoberyl-categories-list .chrysoberyl-cat-item-wrap {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.chrysoberyl-categories-list .chrysoberyl-cat-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem 0.625rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: #374151;
+    text-decoration: none;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.chrysoberyl-categories-list .chrysoberyl-cat-link:hover {
+    background-color: #f9fafb;
+    color: var(--accent, #1a73e8);
+}
+
+.chrysoberyl-categories-list .chrysoberyl-cat-link .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.chrysoberyl-categories-list .chrysoberyl-cat-count {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    background-color: #f3f4f6;
+    color: #6b7280;
+    border-radius: 9999px;
+    padding: 0.125rem 0.5rem;
+}
+
+.chrysoberyl-categories-list .chrysoberyl-categories-children {
+    padding-left: 1rem;
+    margin-top: 0.125rem;
+    margin-bottom: 0.25rem;
+    border-left: 2px solid #f3f4f6;
+    margin-left: 0.5rem;
+}
+
+.chrysoberyl-categories-list .chrysoberyl-categories-children .chrysoberyl-cat-link {
+    font-size: 0.8125rem;
+    padding: 0.375rem 0.5rem;
+}
+
+/* Collapsible: only main categories, children hidden until opened */
+.chrysoberyl-categories-collapsible .chrysoberyl-cat-row {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    min-width: 0;
+}
+
+.chrysoberyl-categories-collapsible .chrysoberyl-cat-has-children .chrysoberyl-categories-children {
+    display: none;
+}
+
+.chrysoberyl-categories-collapsible .chrysoberyl-cat-item-wrap.open .chrysoberyl-categories-children {
+    display: block;
+}
+
+.chrysoberyl-categories-collapsible .chrysoberyl-cat-item-wrap.open .chrysoberyl-cat-chevron {
+    transform: rotate(90deg);
+}
+
+.chrysoberyl-categories-collapsible .chrysoberyl-cat-toggle {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #6b7280;
+    border-radius: 0.25rem;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.chrysoberyl-categories-collapsible .chrysoberyl-cat-toggle:hover {
+    background-color: #f3f4f6;
+    color: var(--accent, #1a73e8);
+}
+
+.chrysoberyl-categories-collapsible .chrysoberyl-cat-no-children {
+    width: 1.5rem;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+/* Enhanced Article Card Hover */
+.article-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.article-card:hover .article-img {
+    transform: scale(1.08);
+}
+
+/* Smooth Image Loading */
+.article-img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Line Clamp Utilities */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Sticky Sidebar */
+@media (min-width: 1024px) {
+    .sticky-sidebar {
+        position: sticky;
+        top: 100px;
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+        /* Hide scrollbar but keep scrolling functionality */
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE and Edge */
+    }
+
+    .sticky-sidebar::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Opera */
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus States for Accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #FF4500;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Category Badge Animation */
+.category-badge {
+    transition: all 0.2s ease;
+}
+
+.category-badge:hover {
+    transform: scale(1.05);
+}
+
+/* Trending Tag Animation */
+.trending-tag {
+    transition: all 0.2s ease;
+}
+
+.trending-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section Overlay Gradient */
+.hero-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+}
+
+/* Hero Slider Styles */
+.hero-slider-section {
+    position: relative;
+}
+
+.hero-slider-container {
+    position: relative;
+}
+
+.hero-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    z-index: 1;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.hero-slider-prev,
+.hero-slider-next {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.hero-slider-container:hover .hero-slider-prev,
+.hero-slider-container:hover .hero-slider-next {
+    opacity: 0.8;
+    pointer-events: auto;
+}
+
+.hero-slider-prev:hover,
+.hero-slider-next:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.hero-slider-indicator {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-slider-indicator.active {
+    background-color: white !important;
+    width: 2rem;
+}
+
+@media (max-width: 640px) {
+
+    .hero-slider-prev,
+    .hero-slider-next {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    .hero-slider-prev {
+        left: 0.5rem;
+    }
+
+    .hero-slider-next {
+        right: 0.5rem;
+    }
+}
+
+/* Button Hover Effect */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Popular Number Animation */
+.popular-number {
+    transition: all 0.3s ease;
+    display: block;
+    line-height: 1;
+}
+
+.popular-item:hover .popular-number {
+    transform: scale(1.1);
+}
+
+/* Popular Item */
+.popular-item {
+    min-width: 0;
+    /* Prevent flex item from overflowing */
+}
+
+/* Ensure popular item content doesn't overflow */
+.popular-item>div:last-child {
+    min-width: 0;
+    overflow: hidden;
+}
+
+/* Newsletter Input Focus */
+.newsletter-input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 69, 0, 0.2);
+}
+
+/* Footer Toggle Animation */
+.footer-links {
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-chevron-down {
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-chevron-down.rotate-180 {
+    transform: rotate(180deg);
+}
+
+/* ============================================
+   Enhanced Footer Styles
+   ============================================ */
+
+/* Footer Link Styles */
+.footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+    transform: translateX(4px);
+}
+
+.footer-link:hover i.fa-chevron-right {
+    color: var(--accent-color, #1a73e8);
+    transform: translateX(2px);
+}
+
+.footer-link-item {
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-link-item:hover {
+    transform: translateX(2px);
+}
+
+/* Footer Copyright Menu - separator between items */
+.footer-copyright-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-copyright-menu li {
+    display: inline-flex;
+}
+
+.footer-copyright-menu li:not(:last-child)::after {
+    content: '|';
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    color: #d1d5db;
+}
+
+/* Footer Social Icons */
+.footer-social-icon {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-social-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.footer-social-icon:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+/* Trending Tags in Footer */
+.trending-tag {
+    position: relative;
+    overflow: hidden;
+}
+
+.trending-tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.trending-tag:hover::before {
+    left: 100%;
+}
+
+/* Footer Newsletter Input */
+#footer-newsletter-email:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 69, 0, 0.15);
+}
+
+/* Footer Newsletter Section */
+footer .newsletter-input {
+    transition: all 0.3s ease;
+}
+
+footer .newsletter-input:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 69, 0, 0.2);
+}
+
+footer form button[type="submit"] {
+    position: relative;
+    overflow: hidden;
+}
+
+footer form button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+footer form button[type="submit"]:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Newsletter Section Responsive */
+@media (max-width: 768px) {
+    footer .newsletter-section {
+        padding: 1.5rem;
+    }
+
+    footer .newsletter-section .flex {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    footer .newsletter-section form {
+        width: 100%;
+    }
+
+    footer .newsletter-section form button {
+        width: 100%;
+    }
+}
+
+/* Footer Responsive Improvements */
+@media (max-width: 768px) {
+    .footer-links {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .footer-link {
+        padding: 0.5rem 0;
+    }
+
+    .trending-tag {
+        font-size: 0.75rem;
+        padding: 0.375rem 0.75rem;
+    }
+}
+
+/* Footer Accessibility - Focus States */
+.footer-link:focus,
+.footer-social-icon:focus,
+.trending-tag:focus {
+    outline: 2px solid var(--accent-color, #1a73e8);
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+}
+
+/* Smooth Scroll for Footer Accordion */
+.footer-links[aria-hidden="true"] {
+    display: none;
+}
+
+.footer-links[aria-hidden="false"] {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   Page Content Styling (mockup: privacy/terms)
+   ============================================ */
+.chrysoberyl-page-content.prose h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #202124;
+}
+
+.chrysoberyl-page-content.prose h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #202124;
+}
+
+.chrysoberyl-page-content.prose p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #3c4043;
+}
+
+.chrysoberyl-page-content.prose ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.chrysoberyl-page-content.prose ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    list-style-type: decimal;
+}
+
+.chrysoberyl-page-content.prose li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+    color: #3c4043;
+}
+
+.chrysoberyl-page-content.prose a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.chrysoberyl-page-content.prose a:hover {
+    text-decoration: underline;
+}
+
+.chrysoberyl-page-content.prose .text-lg {
+    color: #202124;
+}
+
+/* ============================================
+   Single Post Content Styling
+   ============================================ */
+
+/* Prose Content Styling (for article body) */
+.prose {
+    color: #374151;
+    line-height: 1.75;
+    font-size: 1.125rem;
+}
+
+.prose p {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    line-height: 1.75;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #111827;
+}
+
+.prose h1 {
+    font-size: 2.25rem;
+}
+
+.prose h2 {
+    font-size: 1.875rem;
+}
+
+.prose h3 {
+    font-size: 1.5rem;
+}
+
+.prose h4 {
+    font-size: 1.25rem;
+}
+
+.prose a {
+    color: #FF4500;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.prose a:hover {
+    color: #dc3a00;
+}
+
+.prose strong {
+    font-weight: 600;
+    color: #111827;
+}
+
+.prose ul {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    padding-left: 1.625em;
+    list-style-type: disc;
+    list-style-position: outside;
+}
+
+.prose ol {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    padding-left: 1.625em;
+    list-style-type: decimal;
+    list-style-position: outside;
+}
+
+.prose li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    display: list-item;
+    padding-left: 0.375em;
+}
+
+/* Nested lists */
+.prose ul ul {
+    list-style-type: circle;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.prose ul ul ul {
+    list-style-type: square;
+}
+
+.prose ol ol {
+    list-style-type: lower-alpha;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.prose ol ol ol {
+    list-style-type: lower-roman;
+}
+
+.prose blockquote {
+    border-left: 4px solid #FF4500;
+    padding-left: 1em;
+    font-style: italic;
+    color: #6B7280;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.prose img {
+    border-radius: 0.5rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.prose figure {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.prose figure img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+/* Caption: ตรงกลาง ตัวเอียง ชิดกับภาพ (single post / Gutenberg) */
+.prose figure figcaption,
+.prose .wp-block-image figcaption,
+.chrysoberyl-single-prose figure figcaption,
+.chrysoberyl-single-prose .wp-block-image figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.875rem;
+    color: #5f6368;
+    margin-top: 0.375rem;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.prose iframe,
+.prose video,
+.prose embed,
+.prose object {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* Ensure all content elements don't overflow */
+.prose * {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.prose table {
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+.prose pre {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Content wrapper overflow protection */
+.prose {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    overflow-x: hidden;
+}
+
+/* Inline code (ในบรรทัด) – ไม่ใส่เส้นขอบ */
+.prose code {
+    background-color: #f1f3f4;
+    color: #1a73e8;
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Code block – โทนสว่าง อ่านง่าย (fallback เมื่อไม่มี Prism) */
+.prose pre {
+    background-color: #f8f9fa;
+    border: 1px solid #e5e7eb;
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+    overflow: auto;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    tab-size: 4;
+}
+
+.prose pre code {
+    background: none;
+    padding: 0;
+    color: #202124;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Single article: code block แบบมีป้ายภาษา พื้นหลังอ่อน ขอบบาง (เหมือน mockup) */
+.single .prose pre[class*="language-"],
+.single .chrysoberyl-article-content pre[class*="language-"] {
+    position: relative;
+    background-color: #f8f9fa;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 2.25rem 1.25rem 1rem;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    tab-size: 4;
+}
+
+.single .prose pre[class*="language-"]::before,
+.single .chrysoberyl-article-content pre[class*="language-"]::before {
+    content: attr(data-lang);
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #9ca3af;
+    text-transform: lowercase;
+    font-family: "Google Sans", "Noto Sans Thai", sans-serif;
+}
+
+/* เมื่อใช้ Prism.js (ทั่วไป) – โทนอ่อน */
+.prose pre[class*="language-"] {
+    padding: 1rem 1.25rem;
+    border: 1px solid #e5e7eb;
+    background-color: #f8f9fa;
+}
+
+.prose table {
+    width: 100%;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    border-collapse: collapse;
+}
+
+.prose table th,
+.prose table td {
+    border: 1px solid #E5E7EB;
+    padding: 0.75rem;
+}
+
+.prose table th {
+    background-color: #F9FAFB;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* Single Post Header Improvements */
+.single-post-header {
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Author Info Styling */
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Social Share Buttons */
+.chrysoberyl-social-share {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.chrysoberyl-share-label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.chrysoberyl-share-buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+/* Mobile: Horizontal scroll for better UX */
+@media (max-width: 768px) {
+    .chrysoberyl-share-buttons {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+        gap: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-right: -1rem;
+        padding-right: 1rem;
+    }
+
+    .chrysoberyl-share-buttons::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .chrysoberyl-share-buttons::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .chrysoberyl-share-buttons::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 2px;
+    }
+
+    /* Make buttons smaller on mobile */
+    .chrysoberyl-share-btn {
+        flex-shrink: 0;
+    }
+
+    .chrysoberyl-share-icon-only .chrysoberyl-share-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .chrysoberyl-share-icon-only .chrysoberyl-share-btn i {
+        font-size: 1.125rem;
+    }
+
+    .chrysoberyl-share-icon-text .chrysoberyl-share-btn,
+    .chrysoberyl-share-button .chrysoberyl-share-btn {
+        padding: 0.5rem 0.875rem;
+        font-size: 0.8125rem;
+        min-width: auto;
+    }
+
+    .chrysoberyl-share-btn-label {
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    /* Hide label on mobile if icon_text or button style */
+    .chrysoberyl-share-icon-text .chrysoberyl-share-btn-label,
+    .chrysoberyl-share-button .chrysoberyl-share-btn-label {
+        display: none;
+    }
+
+    /* Adjust container - keep in same line */
+    .chrysoberyl-social-share {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: nowrap;
+    }
+
+    .chrysoberyl-share-label {
+        font-size: 0.75rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+}
+
+.chrysoberyl-share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.chrysoberyl-share-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0.9;
+}
+
+.chrysoberyl-share-btn:active {
+    transform: translateY(0);
+}
+
+.chrysoberyl-share-btn i {
+    font-size: 1.125rem;
+}
+
+.chrysoberyl-share-btn-label {
+    font-size: 0.875rem;
+}
+
+/* Icon Only Style */
+.chrysoberyl-share-icon-only .chrysoberyl-share-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.chrysoberyl-share-icon-only .chrysoberyl-share-btn i {
+    font-size: 1.25rem;
+}
+
+/* Icon + Text Style */
+.chrysoberyl-share-icon-text .chrysoberyl-share-btn {
+    padding: 0.625rem 1rem;
+    border-radius: 0.5rem;
+}
+
+/* Button Style */
+.chrysoberyl-share-button .chrysoberyl-share-btn {
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    min-width: 120px;
+    justify-content: center;
+}
+
+/* Size Variations */
+.chrysoberyl-social-share.text-sm .chrysoberyl-share-btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.chrysoberyl-social-share.text-sm .chrysoberyl-share-icon-only .chrysoberyl-share-btn {
+    width: 36px;
+    height: 36px;
+}
+
+.chrysoberyl-social-share.text-lg .chrysoberyl-share-btn {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.chrysoberyl-social-share.text-lg .chrysoberyl-share-icon-only .chrysoberyl-share-btn {
+    width: 52px;
+    height: 52px;
+}
+
+.chrysoberyl-social-share.text-lg .chrysoberyl-share-btn i {
+    font-size: 1.5rem;
+}
+
+/* รูปลักษณะไอคอนแชร์แบบ Mockup — เทา วงกลม hover ตรง mockup single */
+.chrysoberyl-share-style-mockup .chrysoberyl-share-btn {
+    background-color: transparent !important;
+    color: #5f6368;
+    border-radius: 9999px;
+    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    box-shadow: none;
+}
+
+.chrysoberyl-share-style-mockup .chrysoberyl-share-btn:hover {
+    background-color: #f1f3f4 !important;
+    color: #5f6368;
+    transform: none;
+    box-shadow: none;
+    opacity: 1;
+}
+
+.chrysoberyl-share-style-mockup .chrysoberyl-share-btn i {
+    font-size: 1.25rem;
+    color: inherit;
+}
+
+/* Floating Share Buttons */
+.chrysoberyl-floating-share {
+    position: fixed;
+    left: 20px;
+    bottom: 100px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.chrysoberyl-floating-share-toggle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #FF4500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.chrysoberyl-floating-share-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background: #FF5500;
+}
+
+.chrysoberyl-floating-share.active .chrysoberyl-floating-share-toggle {
+    background: #6B7280;
+}
+
+.chrysoberyl-floating-share-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.chrysoberyl-floating-share.active .chrysoberyl-floating-share-buttons {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.chrysoberyl-floating-share-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    font-size: 1.25rem;
+}
+
+.chrysoberyl-floating-share-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating Share — แบบ Mockup (เทา วงกลม hover) */
+.chrysoberyl-floating-share-style-mockup .chrysoberyl-floating-share-btn {
+    background-color: transparent !important;
+    color: #5f6368;
+    box-shadow: none;
+}
+
+.chrysoberyl-floating-share-style-mockup .chrysoberyl-floating-share-btn:hover {
+    background-color: #f1f3f4 !important;
+    color: #5f6368;
+    transform: scale(1.05);
+    box-shadow: none;
+}
+
+/* Copy Link Toast Notification */
+.chrysoberyl-copy-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #10B981;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    opacity: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+}
+
+.chrysoberyl-copy-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.chrysoberyl-copy-toast i {
+    font-size: 1.25rem;
+}
+
+/* Search Suggestions */
+.chrysoberyl-search-container {
+    position: relative;
+}
+
+.chrysoberyl-search-suggestions {
+    min-width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 0.5rem;
+}
+
+.chrysoberyl-search-suggestions a {
+    text-decoration: none;
+}
+
+.chrysoberyl-search-suggestions img {
+    object-fit: cover;
+}
+
+/* Search Modal */
+.chrysoberyl-search-modal {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.chrysoberyl-search-modal.hidden {
+    display: none;
+}
+
+.chrysoberyl-search-modal-content {
+    width: 100%;
+    max-width: 800px;
+    animation: slideDown 0.3s ease-out;
+}
+
+.chrysoberyl-search-fullpage .chrysoberyl-search-modal-content {
+    max-width: 100%;
+    border-radius: 0;
+    margin: 0;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chrysoberyl-search-input:focus {
+    outline: none;
+}
+
+/* Table of Contents */
+.chrysoberyl-toc {
+    margin-bottom: 2rem;
+}
+
+.chrysoberyl-toc-container {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid #F3F4F6;
+    transition: box-shadow 0.3s ease;
+}
+
+.chrysoberyl-toc-container:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.chrysoberyl-toc-header {
+    margin-bottom: 1.25rem;
+}
+
+.chrysoberyl-toc-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.chrysoberyl-toc-title i {
+    color: var(--accent, #1a73e8);
+    font-size: 1.25rem;
+}
+
+.chrysoberyl-toc-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+    margin-bottom: 1.25rem;
+}
+
+.chrysoberyl-toc-toggle .chrysoberyl-toc-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.chrysoberyl-toc-toggle .chrysoberyl-toc-title i {
+    color: var(--accent, #1a73e8);
+    font-size: 1.25rem;
+}
+
+.chrysoberyl-toc-icon {
+    transition: transform 0.3s ease;
+    color: #6B7280;
+    font-size: 0.875rem;
+}
+
+.chrysoberyl-toc-content {
+    margin-top: 0;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+.chrysoberyl-toc-content-collapsed {
+    max-height: 0;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.chrysoberyl-toc-nav {
+    font-size: 0.875rem;
+}
+
+.chrysoberyl-toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.chrysoberyl-toc-item {
+    margin: 0;
+}
+
+.chrysoberyl-toc-link {
+    display: block;
+    color: #374151;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+    line-height: 1.4;
+    font-size: 0.875rem;
+}
+
+.chrysoberyl-toc-link:hover {
+    color: var(--accent, #1a73e8);
+    background-color: #F9FAFB;
+}
+
+.chrysoberyl-toc-link-active {
+    color: var(--accent, #1a73e8);
+    background-color: #F9FAFB;
+    font-weight: 600;
+}
+
+/* หัวข้อหลัก (main) — เด่น ตัวหนา สีเข้ม */
+.chrysoberyl-toc-item-main > .chrysoberyl-toc-link {
+    font-weight: 600 !important;
+    font-size: 0.9375rem !important;
+    color: #111827 !important;
+}
+
+/* หัวข้อย่อย (sub) — ไม่ตัวหนา สีเทาเข้มเหมือน article single */
+.chrysoberyl-toc-item-sub > .chrysoberyl-toc-link {
+    font-weight: 400 !important;
+    font-size: 0.875rem !important;
+    color: #5f6368 !important;
+}
+
+/* หัวข้อย่อยที่ active — ไม่ตัวหนา แค่เปลี่ยนสี */
+.chrysoberyl-toc-item-sub > .chrysoberyl-toc-link-active {
+    font-weight: 400 !important;
+    color: var(--accent, #1a73e8) !important;
+}
+
+/* Nested list items — ใช้ padding-left สำหรับ indent */
+.chrysoberyl-toc-nested .chrysoberyl-toc-item {
+    padding-left: 0.75rem;
+}
+
+/* หัวข้อย่อยใน nested (fallback) */
+.chrysoberyl-toc-nested .chrysoberyl-toc-link {
+    font-weight: 400 !important;
+    font-size: 0.875rem !important;
+    color: #5f6368 !important;
+}
+
+.chrysoberyl-toc-nested .chrysoberyl-toc-link-active {
+    font-weight: 400 !important;
+    color: var(--accent, #1a73e8) !important;
+}
+
+/* Level-based padding (optional additional indent) */
+.chrysoberyl-toc-item-level-3 {
+    padding-left: 0.5rem;
+}
+
+.chrysoberyl-toc-item-level-4 {
+    padding-left: 1rem;
+}
+
+.chrysoberyl-toc-item-level-5 {
+    padding-left: 1.5rem;
+}
+
+.chrysoberyl-toc-item-level-6 {
+    padding-left: 2rem;
+}
+
+.chrysoberyl-toc-nested {
+    list-style: none;
+    padding-left: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* TOC Position Styles */
+.chrysoberyl-toc-sidebar {
+    position: relative;
+}
+
+.chrysoberyl-toc-sidebar .chrysoberyl-toc-container {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid #F3F4F6;
+    transition: box-shadow 0.3s ease;
+}
+
+.chrysoberyl-toc-sidebar .chrysoberyl-toc-container:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.chrysoberyl-toc-sticky .chrysoberyl-toc-container {
+    position: sticky;
+    top: 100px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+.chrysoberyl-toc-floating {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    max-width: 300px;
+    max-height: 80vh;
+    overflow-y: auto;
+    pointer-events: auto;
+}
+
+/* Ensure TOC is clickable on page single when rendered in footer */
+body.page .chrysoberyl-toc-floating,
+body.page .chrysoberyl-toc-floating .chrysoberyl-toc-toggle {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.chrysoberyl-toc-floating .chrysoberyl-toc-container {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Mobile TOC */
+.chrysoberyl-toc-mobile-toggle {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    bottom: 5rem;
+    /* 80px - ให้ห่างจาก bottom */
+    left: 1rem;
+    /* 16px - อยู่ด้านซ้าย */
+}
+
+/* Adjust Back to Top button position on mobile when TOC is present */
+body:has(.chrysoberyl-toc-mobile-toggle) #back-to-top {
+    bottom: 1.5rem;
+    /* 24px - ปรับให้ใกล้ bottom มากขึ้น */
+    right: 1rem;
+    /* 16px - อยู่ด้านขวา */
+}
+
+.chrysoberyl-toc-mobile-drawer {
+    transition: opacity 0.3s ease;
+}
+
+.chrysoberyl-toc-mobile-drawer.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.chrysoberyl-toc-mobile-content {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.chrysoberyl-toc-mobile-content-open {
+    transform: translateX(0);
+}
+
+.chrysoberyl-toc-mobile-nav {
+    font-size: 0.875rem;
+}
+
+.chrysoberyl-toc-mobile-nav .chrysoberyl-toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.chrysoberyl-toc-mobile-nav .chrysoberyl-toc-item {
+    margin: 0;
+}
+
+.chrysoberyl-toc-mobile-nav .chrysoberyl-toc-link {
+    display: block;
+    color: #4B5563;
+    text-decoration: none;
+    padding: 0.35rem 0.5rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+    line-height: 1.4;
+}
+
+.chrysoberyl-toc-mobile-nav .chrysoberyl-toc-item-main > .chrysoberyl-toc-link {
+    font-weight: 600 !important;
+    font-size: 0.9375rem !important;
+    color: #111827 !important;
+}
+
+.chrysoberyl-toc-mobile-nav .chrysoberyl-toc-item-sub > .chrysoberyl-toc-link {
+    font-weight: 400 !important;
+    font-size: 0.875rem !important;
+    color: #5f6368 !important;
+}
+
+.chrysoberyl-toc-mobile-nav .chrysoberyl-toc-nested .chrysoberyl-toc-link {
+    font-weight: 400 !important;
+    font-size: 0.875rem !important;
+    color: #5f6368 !important;
+}
+
+.chrysoberyl-toc-mobile-nav .chrysoberyl-toc-link:hover,
+.chrysoberyl-toc-mobile-nav .chrysoberyl-toc-link-active {
+    color: var(--accent, #1a73e8);
+    background-color: #FEF3F2;
+    font-weight: 600;
+}
+
+/* TOC Style Variations */
+.chrysoberyl-toc-style-numbered .chrysoberyl-toc-list {
+    counter-reset: toc-counter;
+}
+
+.chrysoberyl-toc-style-numbered .chrysoberyl-toc-item {
+    counter-increment: toc-counter;
+}
+
+.chrysoberyl-toc-style-numbered .chrysoberyl-toc-link::before {
+    content: counter(toc-counter) ". ";
+    font-weight: 600;
+    color: #6B7280;
+}
+
+.chrysoberyl-toc-style-simple .chrysoberyl-toc-nested {
+    padding-left: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .chrysoberyl-floating-share {
+        left: 10px;
+        bottom: 80px;
+    }
+
+    .chrysoberyl-floating-share-toggle {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+    }
+
+    .chrysoberyl-floating-share-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 1.125rem;
+    }
+
+    .chrysoberyl-social-share {
+        justify-content: center;
+    }
+
+    .chrysoberyl-search-container {
+        display: none;
+    }
+
+    .chrysoberyl-search-modal {
+        padding: 1rem;
+    }
+
+    .chrysoberyl-search-modal-content {
+        margin-top: 1rem;
+    }
+
+    /* TOC Mobile Styles */
+    .chrysoberyl-toc-floating {
+        display: none;
+    }
+
+    .chrysoberyl-toc-sidebar {
+        margin-bottom: 1.5rem;
+    }
+
+    .chrysoberyl-toc-sticky .chrysoberyl-toc-container {
+        position: relative;
+        top: 0;
+        max-height: none;
+    }
+
+    .chrysoberyl-toc-mobile-top {
+        margin-bottom: 1.5rem;
+    }
+
+    .chrysoberyl-toc-mobile-bottom {
+        margin-top: 1.5rem;
+    }
+
+    .chrysoberyl-toc-auto-collapse-mobile .chrysoberyl-toc-content {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .chrysoberyl-toc-auto-collapse-mobile .chrysoberyl-toc-content:not(.chrysoberyl-toc-content-collapsed) {
+        max-height: none;
+    }
+
+    /* Adjust button positions on mobile */
+    .chrysoberyl-toc-mobile-toggle {
+        bottom: 5rem !important;
+        /* 80px - ให้ห่างจาก bottom */
+        left: 1rem !important;
+        /* 16px - อยู่ด้านซ้าย */
+        right: auto !important;
+    }
+
+    /* Back to Top button on mobile */
+    #back-to-top {
+        bottom: 1.5rem !important;
+        /* 24px - ใกล้ bottom */
+        right: 1rem !important;
+        /* 16px - อยู่ด้านขวา */
+    }
+
+    /* Floating Share Buttons - adjust position if TOC is present */
+    .chrysoberyl-floating-share {
+        bottom: 5.5rem;
+        /* ปรับให้อยู่เหนือ TOC button */
+    }
+}
+
+/* Category Badge */
+.category-badge-single {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/* Reading Time */
+.reading-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+}
+
+/* Single post: ตรง mockup single — font sizes, blockquote, links */
+.single .prose,
+.single .chrysoberyl-single-prose {
+    font-size: 1rem;
+    color: #3c4043;
+}
+
+.single .prose h1,
+.single .chrysoberyl-single-prose h1 {
+    font-size: 2rem;
+}
+
+.single .prose h2,
+.single .chrysoberyl-single-prose h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #202124;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.single .prose h3,
+.single .chrysoberyl-single-prose h3 {
+    font-size: 1.375rem;
+    font-weight: 500;
+    color: #202124;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.single .prose h4,
+.single .chrysoberyl-single-prose h4 {
+    font-size: 1.125rem;
+}
+
+.single .prose p,
+.single .chrysoberyl-single-prose p {
+    line-height: 1.8;
+    color: #3c4043;
+    margin-bottom: 1.25rem;
+}
+
+.single .prose blockquote,
+.single .chrysoberyl-single-prose blockquote {
+    border-left: 4px solid #1a73e8;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #5f6368;
+}
+
+.single .prose a,
+.single .chrysoberyl-single-prose a {
+    color: #1a73e8;
+}
+
+.single .prose a:hover,
+.single .chrysoberyl-single-prose a:hover {
+    text-decoration: underline;
+}
+
+.single .prose img,
+.single .chrysoberyl-single-prose img {
+    border-radius: 16px;
+    margin: 1rem 0;
+}
+
+.single .prose figure,
+.single .chrysoberyl-single-prose figure,
+.single .prose .wp-block-image,
+.single .chrysoberyl-single-prose .wp-block-image {
+    margin: 1rem 0;
+}
+
+/* Single post: ลดช่องว่างระหว่างรายการในลิสต์ (ul/ol) */
+.single .prose ul,
+.single .chrysoberyl-single-prose ul,
+.single .prose ol,
+.single .chrysoberyl-single-prose ol {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+.single .prose li,
+.single .chrysoberyl-single-prose li {
+    margin-top: 0.125em;
+    margin-bottom: 0.125em;
+}
+
+.single .prose ul ul,
+.single .prose ol ol,
+.single .chrysoberyl-single-prose ul ul,
+.single .chrysoberyl-single-prose ol ol {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .prose {
+        font-size: 1rem;
+    }
+
+    .prose h1 {
+        font-size: 1.875rem;
+    }
+
+    .prose h2 {
+        font-size: 1.5rem;
+    }
+
+    .prose h3 {
+        font-size: 1.25rem;
+    }
+}
+
+/* ============================================
+   Floating Left Ad (Skyscraper 120x600 / 160x600)
+   ============================================ */
+@media (min-width: 1024px) {
+    .chrysoberyl-floating-left-ad {
+        position: fixed;
+        top: 13rem;
+        z-index: 35;
+        width: 160px;
+        height: 600px;
+        max-height: calc(100vh - 120px);
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    /* Right edge of ad: 20px away from content (content left = (100vw - 80rem)/2 + 2rem) */
+    .chrysoberyl-floating-left-ad-120 {
+        width: 120px;
+        left: max(1rem, calc((100vw - 80rem) / 2 + 2rem - 40px - 120px));
+    }
+
+    .chrysoberyl-floating-left-ad-160 {
+        width: 160px;
+        left: max(1rem, calc((100vw - 80rem) / 2 + 2rem - 40px - 160px));
+    }
+
+    .chrysoberyl-floating-left-ad-inner {
+        width: 100%;
+        height: 600px;
+        max-height: calc(100vh - 120px);
+        background: #fff;
+        border-radius: 0 0.5rem 0.5rem 0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+    }
+
+    .chrysoberyl-floating-left-ad-inner iframe,
+    .chrysoberyl-floating-left-ad-inner img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+@media (max-width: 1023px) {
+    .chrysoberyl-floating-left-ad {
+        display: none;
+    }
+}
+
+/* ============================================
+   Rank Math Sitemap Page (Template: RankMath)
+   ============================================ */
+/* Header & footer: no hover color on sitemap page */
+.chrysoberyl-sitemap-page header nav a:hover,
+.chrysoberyl-sitemap-page header a:hover {
+    color: inherit !important;
+}
+.chrysoberyl-sitemap-page header button:hover {
+    color: inherit !important;
+    background-color: transparent !important;
+}
+.chrysoberyl-sitemap-page footer a:hover {
+    color: inherit !important;
+}
+
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists {
+    --sitemap-gap: 1.5rem;
+}
+
+/* Section blocks: h2/h3 + following list */
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists>h2,
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists>h3,
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists .rank-math-html-sitemap h2,
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists .rank-math-html-sitemap h3 {
+    margin: 1.75rem 0 0.75rem 0;
+    padding: 0.75rem 1rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--accent, #1a73e8);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists>h2:first-child,
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists>h3:first-child,
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists .rank-math-html-sitemap h2:first-child,
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists .rank-math-html-sitemap h3:first-child {
+    margin-top: 0;
+}
+
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists .sitemap-section-toggle {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* Lists: multi-column, more spacing for readability */
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists ul {
+    list-style: none;
+    margin: 0 0 1rem 0;
+    padding: 0.75rem 0 1rem 1.25rem;
+    column-count: 1;
+    column-gap: 2.5rem;
+    line-height: 1.65;
+}
+
+@media (min-width: 640px) {
+    .chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists ul {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists ul {
+        column-count: 3;
+    }
+}
+
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists ul li {
+    margin: 0.5rem 0;
+    padding: 0.4rem 0.5rem 0.4rem 0;
+    break-inside: avoid;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists ul li:last-child {
+    border-bottom: none;
+}
+
+/* Link (title) stands out */
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists ul li a {
+    color: #1f2937;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 500;
+}
+
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists ul li a:hover {
+    color: var(--accent, #1a73e8);
+    text-decoration: underline;
+}
+
+/* Mute secondary text after link (site name, date) - Rank Math may wrap in span */
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists ul li span,
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists ul li .sitemap-date {
+    font-size: 0.8125rem;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists ul li a+span,
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists ul li a+.sitemap-date {
+    margin-left: 0.25rem;
+}
+
+/* Collapsed section: hide list (next sibling of collapsed header) */
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists h2.is-collapsed+ul,
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists h3.is-collapsed+ul,
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists h2.is-collapsed+div,
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists h3.is-collapsed+div {
+    display: none;
+}
+
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists h2 .sitemap-section-toggle,
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists h3 .sitemap-section-toggle {
+    transition: transform 0.2s ease;
+}
+
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists h2.is-collapsed .sitemap-section-toggle,
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-lists h3.is-collapsed .sitemap-section-toggle {
+    transform: rotate(-90deg);
+}
+
+/* Rank Math wrapper if present */
+.chrysoberyl-sitemap-page .rank-math-html-sitemap {
+    margin: 0;
+    padding: 0;
+}
+
+.chrysoberyl-sitemap-page .chrysoberyl-sitemap-back a {
+    font-size: 0.9375rem;
+}
+
+/* Login modal (single post) — error alert + password toggle */
+.chrysoberyl-login-error {
+    border-color: #f87171;
+    background-color: #fef2f2;
+    color: #991b1b;
+}
+
+.chrysoberyl-login-error:not(.hidden) {
+    display: block;
+}
+
+.chrysoberyl-login-pwd-toggle {
+    min-width: 2.25rem;
+    min-height: 2.25rem;
+}
+
+.chrysoberyl-login-pwd-wrap .chrysoberyl-pwd-icon-hide.hidden,
+.chrysoberyl-login-pwd-wrap .chrysoberyl-pwd-icon-show.hidden {
+    display: none !important;
+}
+
+/* Login modal: อยู่เหนือ TOC (z-index 999) และเมื่อเปิด modal ให้ TOC เป็นสีเทา + คลิกไม่ได้ */
+.chrysoberyl-login-modal {
+    z-index: 1001;
+}
+
+body.chrysoberyl-login-modal-open .chrysoberyl-toc .chrysoberyl-toc-link,
+body.chrysoberyl-login-modal-open .chrysoberyl-toc .chrysoberyl-toc-link-active {
+    color: #9ca3af !important;
+    pointer-events: none;
+    cursor: default;
+}
+
+body.chrysoberyl-login-modal-open .chrysoberyl-toc {
+    pointer-events: none;
+}
+
+body.chrysoberyl-login-modal-open .chrysoberyl-toc .chrysoberyl-toc-toggle {
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Search modal: เมื่อเปิด search ให้ TOC และ Back to Top เป็นสีเทา inactive อยู่ด้านหลัง */
+body.chrysoberyl-search-modal-open .chrysoberyl-toc-floating {
+    opacity: 0.4;
+    pointer-events: none;
+    filter: grayscale(100%);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+body.chrysoberyl-search-modal-open .chrysoberyl-toc .chrysoberyl-toc-link,
+body.chrysoberyl-search-modal-open .chrysoberyl-toc .chrysoberyl-toc-link-active {
+    color: #9ca3af !important;
+}
+
+body.chrysoberyl-search-modal-open .chrysoberyl-toc .chrysoberyl-toc-toggle {
+    pointer-events: none;
+    cursor: default;
+}
+
+body.chrysoberyl-search-modal-open #back-to-top {
+    opacity: 0.4;
+    pointer-events: none;
+    filter: grayscale(100%);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* Mobile TOC toggle when search modal is open */
+body.chrysoberyl-search-modal-open .chrysoberyl-toc-mobile-toggle {
+    opacity: 0.4;
+    pointer-events: none;
+    filter: grayscale(100%);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* Image lightbox: เมื่อเปิด lightbox ให้ TOC และ Back to Top inactive */
+body.chrysoberyl-image-lightbox-open .chrysoberyl-toc-floating,
+body.chrysoberyl-image-lightbox-open .chrysoberyl-toc-sidebar .chrysoberyl-toc-container {
+    opacity: 0.4;
+    pointer-events: none;
+    filter: grayscale(100%);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+body.chrysoberyl-image-lightbox-open .chrysoberyl-toc .chrysoberyl-toc-link,
+body.chrysoberyl-image-lightbox-open .chrysoberyl-toc .chrysoberyl-toc-link-active {
+    color: #9ca3af !important;
+}
+
+body.chrysoberyl-image-lightbox-open .chrysoberyl-toc .chrysoberyl-toc-toggle {
+    pointer-events: none;
+    cursor: default;
+}
+
+body.chrysoberyl-image-lightbox-open #back-to-top {
+    opacity: 0.4;
+    pointer-events: none;
+    filter: grayscale(100%);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+body.chrysoberyl-image-lightbox-open .chrysoberyl-toc-mobile-toggle {
+    opacity: 0.4;
+    pointer-events: none;
+    filter: grayscale(100%);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* ============================================
+   Sitemap Page - Google Style Design
+   ============================================ */
+
+/* Sitemap Hero Section */
+.chrysoberyl-sitemap-page h1 {
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+/* Sitemap Grid Cards */
+.chrysoberyl-sitemap-page .bg-google-gray-50 {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chrysoberyl-sitemap-page .bg-google-gray-50:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Sitemap Icon Containers */
+.chrysoberyl-sitemap-page .rounded-full {
+    transition: transform 0.3s ease;
+}
+
+.chrysoberyl-sitemap-page .bg-google-gray-50:hover .rounded-full {
+    transform: scale(1.1);
+}
+
+/* Sitemap Links */
+.chrysoberyl-sitemap-page a svg {
+    transition: transform 0.2s ease;
+}
+
+.chrysoberyl-sitemap-page a:hover svg {
+    transform: translateX(2px);
+}
+
+/* Visual Tree Structure */
+.chrysoberyl-sitemap-page .bg-gray-300 {
+    background-color: #d1d5db;
+}
+
+/* Tree Node Hover Effects */
+.chrysoberyl-sitemap-page .rounded-lg {
+    transition: all 0.2s ease;
+}
+
+.chrysoberyl-sitemap-page a.rounded-lg:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tag Pills in Sitemap */
+.chrysoberyl-sitemap-page .border-gray-200 {
+    transition: all 0.2s ease;
+}
+
+.chrysoberyl-sitemap-page .border-gray-200:hover {
+    border-color: #1a73e8;
+    background-color: #f0f7ff;
+}
+
+/* Responsive Sitemap Grid */
+@media (max-width: 768px) {
+    .chrysoberyl-sitemap-page .grid {
+        gap: 1rem;
+    }
+
+    .chrysoberyl-sitemap-page .rounded-card {
+        padding: 1rem;
+    }
+
+    .chrysoberyl-sitemap-page h1 {
+        font-size: 2rem;
+    }
+
+    .chrysoberyl-sitemap-page h2 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Sitemap Stats Section */
+.chrysoberyl-sitemap-page .text-google-blue {
+    font-weight: 500;
+}
+
+/* Smooth Animations */
+.chrysoberyl-sitemap-page * {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Sitemap: reduce space between header and title (match mockup) */
+.chrysoberyl-sitemap-page #main-content {
+    padding-top: 0 !important;
+}
+.chrysoberyl-sitemap-page #main-content .container {
+    padding-top: 0;
+}
+.chrysoberyl-sitemap-page #main-content .sitemap-hero {
+    padding-top: 1.5rem !important;
+    padding-bottom: 3rem !important;
+}
+@media (min-width: 768px) {
+    .chrysoberyl-sitemap-page #main-content .sitemap-hero {
+        padding-top: 2rem !important;
+        padding-bottom: 4rem !important;
+    }
+}
+
+/* Current Page Indicator: blue color, underline only under text */
+.chrysoberyl-sitemap-page a.text-google-blue,
+.chrysoberyl-sitemap-page a.chrysoberyl-sitemap-current {
+    color: #1a73e8 !important;
+    font-weight: 500;
+}
+.chrysoberyl-sitemap-page a.chrysoberyl-sitemap-current::after {
+    display: none;
+}
+.chrysoberyl-sitemap-page a.chrysoberyl-sitemap-current .chrysoberyl-sitemap-link-text {
+    text-decoration: underline;
+}
+/* Other blue links on page (e.g. stats) keep full underline if needed */
+.chrysoberyl-sitemap-page a.text-google-blue:not(.chrysoberyl-sitemap-current) {
+    position: relative;
+}
+.chrysoberyl-sitemap-page a.text-google-blue:not(.chrysoberyl-sitemap-current)::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #1a73e8;
+    border-radius: 1px;
+}
+
+/* Tree Structure Responsive */
+@media (max-width: 640px) {
+    .chrysoberyl-sitemap-page .min-w-\[600px\] {
+        min-width: 500px;
+    }
+
+    .chrysoberyl-sitemap-page .flex.gap-8 {
+        gap: 1rem;
+    }
+
+    .chrysoberyl-sitemap-page .px-4.py-2 {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Accessibility Focus States */
+.chrysoberyl-sitemap-page a:focus-visible {
+    outline: 2px solid #1a73e8;
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+}
+
+/* Loading State for Dynamic Content */
+.chrysoberyl-sitemap-page .space-y-3 li {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   Image Lightbox (ภาพประกอบบทความ – คลิกขยายแบบ modal)
+   ============================================ */
+.chrysoberyl-image-lightbox {
+    cursor: pointer;
+}
+
+.chrysoberyl-image-lightbox-backdrop {
+    cursor: pointer;
+}
+
+.chrysoberyl-image-lightbox-inner {
+    cursor: default;
+}
+
+.chrysoberyl-image-lightbox-img {
+    pointer-events: none;
+}
+
+.chrysoberyl-image-lightbox-close {
+    cursor: pointer;
+}
+
+/* ภาพในบทความ – แสดง cursor เป็น pointer เผื่อคลิกขยาย */
+.chrysoberyl-article-content img {
+    cursor: pointer;
+}
+
+/* Print Styles for Sitemap */
+@media print {
+    .chrysoberyl-sitemap-page .bg-google-gray-50 {
+        border: 1px solid #e5e7eb;
+        break-inside: avoid;
+    }
+
+    .chrysoberyl-sitemap-page .rounded-full {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+}

@@ -1,0 +1,418 @@
+/**
+ * Chrysoberyl Theme Settings CSS
+ */
+
+:root {
+    --chrysoberyl-primary: #2271b1;
+    --chrysoberyl-primary-hover: #135e96;
+    --chrysoberyl-bg: #f0f0f1;
+    --chrysoberyl-card-bg: #fff;
+    --chrysoberyl-text: #1d2327;
+    --chrysoberyl-text-light: #646970;
+    --chrysoberyl-border: #c3c4c7;
+    --chrysoberyl-border-focus: #2271b1;
+    --chrysoberyl-success: #00a32a;
+    --chrysoberyl-error: #d63638;
+}
+
+/* Wrap */
+.chrysoberyl-settings-wrap {
+    max-width: 1200px; /* Limit width for readability */
+    margin-right: 20px;
+}
+
+.chrysoberyl-settings-wrap h1 {
+    padding: 10px 0 20px;
+    font-weight: 600;
+}
+
+/* Tabs */
+.chrysoberyl-nav-tabs {
+    border-bottom: 1px solid var(--chrysoberyl-border);
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.chrysoberyl-nav-tabs .nav-tab {
+    background: #e5e5e5;
+    border-color: var(--chrysoberyl-border);
+    border-bottom: none;
+    color: var(--chrysoberyl-text-light);
+    font-weight: 500;
+    margin-right: 0;
+    border-radius: 4px 4px 0 0;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+}
+
+.chrysoberyl-nav-tabs .nav-tab:hover {
+    background: #fff;
+    color: var(--chrysoberyl-primary);
+}
+
+.chrysoberyl-nav-tabs .nav-tab-active {
+    background: var(--chrysoberyl-card-bg);
+    color: var(--chrysoberyl-text);
+    border-bottom: 1px solid var(--chrysoberyl-card-bg);
+    margin-bottom: -1px;
+    box-shadow: 0 -2px 0 var(--chrysoberyl-primary) inset;
+}
+
+.chrysoberyl-nav-tabs .dashicons {
+    margin: 0;
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+/* Tab Content */
+.chrysoberyl-tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.chrysoberyl-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Sections */
+.chrysoberyl-settings-section {
+    background: var(--chrysoberyl-card-bg);
+    border: 1px solid var(--chrysoberyl-border);
+    border-radius: 4px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.chrysoberyl-section-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--chrysoberyl-text);
+}
+
+.chrysoberyl-section-title .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    color: var(--chrysoberyl-primary);
+}
+
+.chrysoberyl-section-description {
+    margin-bottom: 25px;
+    color: var(--chrysoberyl-text-light);
+    font-style: italic;
+}
+
+/* Form Table overrides */
+.chrysoberyl-settings-section .form-table th {
+    width: 250px;
+    padding: 20px 10px 20px 0;
+    vertical-align: top;
+    font-weight: 600;
+}
+
+.chrysoberyl-settings-section .form-table td {
+    padding: 15px 10px;
+    vertical-align: top;
+}
+
+/* Inputs */
+.chrysoberyl-settings-section input[type="text"],
+.chrysoberyl-settings-section input[type="email"],
+.chrysoberyl-settings-section input[type="number"],
+.chrysoberyl-settings-section input[type="url"],
+.chrysoberyl-settings-section select,
+.chrysoberyl-settings-section textarea {
+    border: 1px solid var(--chrysoberyl-border);
+    box-shadow: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: border-color 0.2s;
+    max-width: 100%;
+}
+
+.chrysoberyl-settings-section input:focus,
+.chrysoberyl-settings-section select:focus,
+.chrysoberyl-settings-section textarea:focus {
+    border-color: var(--chrysoberyl-primary);
+    box-shadow: 0 0 0 1px var(--chrysoberyl-primary);
+}
+
+.chrysoberyl-settings-section textarea {
+    min-height: 100px;
+}
+
+.regular-text {
+    width: 350px;
+}
+
+.large-text {
+    width: 100%;
+}
+
+/* Toggle Switch */
+.chrysoberyl-toggle {
+    position: relative;
+    display: inline-block;
+    min-height: 24px;
+    padding-left: 50px; /* Space for the slider */
+    cursor: pointer;
+    user-select: none;
+}
+
+.chrysoberyl-toggle input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.chrysoberyl-toggle .toggle-slider {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 24px;
+    width: 42px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.chrysoberyl-toggle .toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.chrysoberyl-toggle input:checked + .toggle-slider {
+    background-color: var(--chrysoberyl-primary);
+}
+
+.chrysoberyl-toggle input:focus + .toggle-slider {
+    box-shadow: 0 0 1px var(--chrysoberyl-primary);
+}
+
+.chrysoberyl-toggle input:checked + .toggle-slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+
+.chrysoberyl-toggle .toggle-label {
+    vertical-align: middle;
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+/* Radio Groups */
+.chrysoberyl-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chrysoberyl-radio-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid var(--chrysoberyl-border);
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.chrysoberyl-radio-option:hover {
+    border-color: var(--chrysoberyl-primary);
+    background: #f8fbfe;
+}
+
+.chrysoberyl-radio-option input[type="radio"] {
+    margin-top: 3px;
+}
+
+.chrysoberyl-radio-option .radio-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.chrysoberyl-radio-option .radio-label strong {
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.chrysoberyl-radio-option .radio-label small {
+    color: var(--chrysoberyl-text-light);
+}
+
+/* Grids (Social, Positions) */
+.chrysoberyl-platforms-grid,
+.chrysoberyl-positions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.chrysoberyl-platform-item,
+.chrysoberyl-position-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid var(--chrysoberyl-border);
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.chrysoberyl-platform-item:hover,
+.chrysoberyl-position-item:hover {
+    border-color: var(--chrysoberyl-primary);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.chrysoberyl-platform-item input[type="checkbox"],
+.chrysoberyl-position-item input[type="checkbox"] {
+    margin: 0;
+}
+
+.platform-icon i,
+.position-icon .dashicons {
+    font-size: 18px;
+    color: var(--chrysoberyl-text-light);
+}
+
+.platform-name,
+.position-label {
+    font-weight: 500;
+}
+
+/* Logo Upload */
+.chrysoberyl-logo-upload {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px dashed var(--chrysoberyl-border);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.chrysoberyl-logo-preview {
+    margin-bottom: 15px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chrysoberyl-logo-preview img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiZmZmYiLz48cGF0aCBkPSJNMCAwTDggOFpNOCAwTDAgOFoiIHN0cm9rZT0iI2VlZSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+');
+}
+
+.chrysoberyl-logo-placeholder {
+    color: var(--chrysoberyl-text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.chrysoberyl-logo-placeholder .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    opacity: 0.5;
+}
+
+.chrysoberyl-logo-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Save Bar (Sticky) */
+.chrysoberyl-save-bar {
+    position: sticky;
+    bottom: 20px;
+    z-index: 99;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--chrysoberyl-primary);
+    margin-top: 30px;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.chrysoberyl-save-info {
+    font-weight: 500;
+    color: var(--chrysoberyl-primary);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+    .chrysoberyl-settings-section .form-table th {
+        width: 100%;
+        padding-bottom: 5px;
+    }
+    
+    .chrysoberyl-platforms-grid,
+    .chrysoberyl-positions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chrysoberyl-save-bar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+    
+    .chrysoberyl-save-bar .button {
+        width: 100%;
+        text-align: center;
+    }
+}

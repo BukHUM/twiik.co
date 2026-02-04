@@ -1,0 +1,13 @@
+{
+  "name": "chrysoberyl-theme",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:css",
+    "build:css": "npx tailwindcss -i ./assets/css/tailwind-src.css -o ./assets/css/tailwind.css --minify",
+    "watch": "npm run watch:css",
+    "watch:css": "npx tailwindcss -i ./assets/css/tailwind-src.css -o ./assets/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

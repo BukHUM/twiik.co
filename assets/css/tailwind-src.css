@@ -1,0 +1,7 @@
+/**
+ * Tailwind CSS source – build with: npm run build:css
+ * Output: assets/css/tailwind.css (used by theme)
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

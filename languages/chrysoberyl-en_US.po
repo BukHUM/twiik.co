@@ -1,0 +1,2452 @@
+# Copyright (C) 2025 Chrysoberyl
+# This file is distributed under the same license as the Chrysoberyl theme.
+msgid ""
+msgstr ""
+"Project-Id-Version: Chrysoberyl 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-30 06:39+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Domain: chrysoberyl\n"
+"Language: en_US\n"
+
+#: template-parts/post-meta.php:73
+msgid "% ความคิดเห็น"
+msgstr "% comments"
+
+#: comments.php:151
+msgid "%1$s at %2$s"
+msgstr "%1$s at %2$s"
+
+#: comments.php:158
+msgid "(Edit)"
+msgstr "(Edit)"
+
+#: template-parts/post-meta.php:73
+msgid "0 ความคิดเห็น"
+msgstr "0 comments"
+
+#: template-parts/post-meta.php:73
+msgid "1 ความคิดเห็น"
+msgstr "1 comment"
+
+#: inc/custom-post-types.php:286
+msgid "Active Plugins:"
+msgstr "Active Plugins:"
+
+#: inc/custom-fields.php:262
+msgid "Add Images"
+msgstr "Add Images"
+
+#: inc/custom-post-types.php:2705
+#: inc/custom-post-types.php:2742
+#: inc/custom-post-types.php:2779
+msgid "Add New"
+msgstr "Add New"
+
+#: inc/custom-post-types.php:2780
+msgid "Add New Featured Story"
+msgstr "Add New Featured Story"
+
+#: inc/custom-post-types.php:2743
+msgid "Add New Gallery"
+msgstr "Add New Gallery"
+
+#: inc/custom-post-types.php:2864
+msgid "Add New Gallery Category"
+msgstr "Add New Gallery Category"
+
+#: inc/custom-post-types.php:2837
+msgid "Add New Video Category"
+msgstr "Add New Video Category"
+
+#: inc/custom-post-types.php:2706
+msgid "Add New Video News"
+msgstr "Add New Video News"
+
+#: inc/custom-fields.php:493
+msgid "Add Posts"
+msgstr "Add Posts"
+
+#: inc/custom-fields.php:432
+msgid "Add Related Post"
+msgstr "Add Related Post"
+
+#: inc/custom-fields.php:290
+msgid "Add to Gallery"
+msgstr "Add to Gallery"
+
+#: inc/theme-setup.php:221
+msgid "Add widgets here to appear after post content."
+msgstr "Add widgets here to appear after post content."
+
+#: inc/theme-setup.php:210
+msgid "Add widgets here to appear in your sidebar."
+msgstr "Add widgets here to appear in your sidebar."
+
+#: inc/custom-fields.php:32
+msgid "Additional Information"
+msgstr "Additional Information"
+
+#: inc/theme-setup.php:219
+msgid "After Content"
+msgstr "After Content"
+
+#: inc/custom-post-types.php:2787
+msgid "All Featured Stories"
+msgstr "All Featured Stories"
+
+#: inc/custom-post-types.php:2750
+msgid "All Galleries"
+msgstr "All Galleries"
+
+#: inc/custom-post-types.php:2859
+msgid "All Gallery Categories"
+msgstr "All Gallery Categories"
+
+#: inc/custom-post-types.php:2832
+msgid "All Video Categories"
+msgstr "All Video Categories"
+
+#: inc/custom-post-types.php:2713
+msgid "All Video News"
+msgstr "All Video News"
+
+#: footer.php:220
+msgid "All rights reserved."
+msgstr "All rights reserved."
+
+#: inc/custom-fields.php:408
+msgid "Alt text for featured image (for accessibility)"
+msgstr "Alt text for featured image (for accessibility)"
+
+#: inc/custom-fields.php:243
+msgid "Alternative: Paste embed code directly"
+msgstr "Alternative: Paste embed code directly"
+
+#: widgets/class-custom-html-widget.php:37
+msgid "Arbitrary HTML or ad code. Use for ads or custom content."
+msgstr "Arbitrary HTML or ad code. Use for ads or custom content."
+
+#: archive.php:55
+msgid "Archive"
+msgstr "Archive"
+
+#: inc/custom-post-types.php:1010
+msgid "Archive Widget"
+msgstr "Archive Widget"
+
+#: inc/custom-fields.php:398
+msgid "Author Bio"
+msgstr "Author Bio"
+
+#: inc/custom-fields.php:391
+msgid "Author Name"
+msgstr "Author Name"
+
+#: inc/custom-post-types.php:1819
+msgid "Auto-collapse on Mobile (ย่ออัตโนมัติบนมือถือ)"
+msgstr "Auto-collapse on Mobile"
+
+#: inc/custom-post-types.php:1930
+msgid "Available Widgets"
+msgstr "Available Widgets"
+
+#: inc/custom-post-types.php:1718
+msgid "Bottom (ด้านล่าง)"
+msgstr "Bottom"
+
+#: inc/custom-fields.php:97
+msgid "Breaking News"
+msgstr "Breaking News"
+
+#: inc/custom-post-types.php:1315
+msgid "Button Size"
+msgstr "Button Size"
+
+#: inc/custom-post-types.php:1294
+msgid "Button Style"
+msgstr "Button Style"
+
+#: inc/custom-post-types.php:1305
+msgid "Button Style (สไตล์ปุ่ม)"
+msgstr "Button Style"
+
+#: widgets/class-newsletter-widget.php:120
+msgid "Button Text:"
+msgstr "Button Text:"
+
+#: comments.php:93
+msgid "Cancel reply"
+msgstr "Cancel reply"
+
+#: inc/theme-setup.php:286
+msgid "Card Image"
+msgstr "Card Image"
+
+#: inc/custom-post-types.php:1497
+msgid "Categories (หมวดหมู่)"
+msgstr "Categories"
+
+#: inc/custom-post-types.php:1006
+msgid "Categories Widget"
+msgstr "Categories Widget"
+
+#: inc/custom-post-types.php:1555
+msgid "Category"
+msgstr "Category"
+
+#: inc/category-fields.php:19
+#: inc/category-fields.php:35
+msgid "Category Color"
+msgstr "Category Color"
+
+#: inc/custom-post-types.php:1090
+#: inc/custom-post-types.php:2583
+msgid "Change Logo"
+msgstr "Change Logo"
+
+#: inc/custom-post-types.php:2568
+msgid "Choose Logo"
+msgstr "Choose Logo"
+
+#: inc/custom-post-types.php:1809
+msgid "Collapsible (ย่อ/ขยายได้)"
+msgstr "Collapsible"
+
+#: inc/custom-post-types.php:1724
+msgid "Collapsible Menu (เมนูย่อ/ขยาย)"
+msgstr "Collapsible Menu"
+
+#: inc/category-fields.php:85
+msgid "Color"
+msgstr "Color"
+
+#: inc/category-fields.php:21
+#: inc/category-fields.php:39
+msgid "Color used for category badges and styling"
+msgstr "Color used for category badges and styling"
+
+#: inc/custom-fields.php:567
+msgid "Comma-separated keywords"
+msgstr "Comma-separated keywords"
+
+#: comments.php:98
+msgid "Comment"
+msgstr "Comment"
+
+#: widgets/class-popular-posts-widget.php:130
+msgid "Comments"
+msgstr "Comments"
+
+#: footer.php:240
+msgid "Contact"
+msgstr "Contact"
+
+#: widgets/class-custom-html-widget.php:70
+msgid "Content (HTML):"
+msgstr "Content (HTML):"
+
+#: inc/custom-post-types.php:1487
+msgid "Content (เนื้อหา)"
+msgstr "Content"
+
+#: inc/custom-post-types.php:139
+msgid "Content Statistics"
+msgstr "Content Statistics"
+
+#: inc/custom-post-types.php:955
+#: inc/theme-helpers.php:341
+msgid "Copy Link"
+msgstr "Copy Link"
+
+#: template-parts/social-share-floating.php:41
+#: template-parts/social-share.php:63
+msgid "Copy link"
+msgstr "Copy link"
+
+#: inc/custom-post-types.php:2145
+msgid "Copyright Text"
+msgstr "Copyright Text"
+
+#: inc/security.php:154
+msgid "Could not read file."
+msgstr "Could not read file."
+
+#: inc/custom-post-types.php:189
+msgid "Custom Content"
+msgstr "Custom Content"
+
+#: inc/custom-fields.php:384
+msgid "Custom Excerpt"
+msgstr "Custom Excerpt"
+
+#: inc/custom-post-types.php:1011
+msgid "Custom HTML / Ad Widget"
+msgstr "Custom HTML / Ad Widget"
+
+#: inc/custom-post-types.php:1349
+msgid "Custom Share Text"
+msgstr "Custom Share Text"
+
+#: inc/custom-post-types.php:31
+#: inc/custom-post-types.php:32
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: inc/custom-post-types.php:1550
+#: widgets/class-popular-posts-widget.php:131
+msgid "Date"
+msgstr "Date"
+
+#: inc/custom-post-types.php:1597
+msgid "Date (เก่าสุด)"
+msgstr "Date (oldest first)"
+
+#: inc/custom-post-types.php:1594
+msgid "Date (ใหม่สุด)"
+msgstr "Date (newest first)"
+
+#: inc/custom-post-types.php:1427
+msgid "Debounce Delay (ms)"
+msgstr "Debounce Delay (ms)"
+
+#: inc/custom-post-types.php:1586
+msgid "Default Sort"
+msgstr "Default Sort"
+
+#: widgets/class-newsletter-widget.php:111
+msgid "Description:"
+msgstr "Description:"
+
+#: inc/custom-post-types.php:1255
+msgid "Display Positions"
+msgstr "Display Positions"
+
+#: widgets/class-archive-widget.php:65
+msgid "Display as dropdown"
+msgstr "Display as dropdown"
+
+#: widgets/class-categories-widget.php:22
+msgid "Display list of categories with post count"
+msgstr "Display list of categories with post count"
+
+#: widgets/class-archive-widget.php:22
+msgid "Display monthly archive links"
+msgstr "Display monthly archive links"
+
+#: widgets/class-popular-posts-widget.php:26
+msgid "Display popular posts based on views or comments"
+msgstr "Display popular posts based on views or comments"
+
+#: widgets/class-recent-posts-widget.php:137
+msgid "Display post date"
+msgstr "Display post date"
+
+#: widgets/class-most-commented-widget.php:22
+msgid "Display posts with most comments"
+msgstr "Display posts with most comments"
+
+#: widgets/class-recent-posts-widget.php:26
+msgid "Display recent posts with thumbnails"
+msgstr "Display recent posts with thumbnails"
+
+#: widgets/class-related-posts-widget.php:22
+msgid "Display related posts by category/tag (best on single post)"
+msgstr "Display related posts by category/tag (best on single post)"
+
+#: widgets/class-social-follow-widget.php:31
+msgid "Display social media follow links"
+msgstr "Display social media follow links"
+
+#: widgets/class-trending-tags-widget.php:26
+msgid "Display trending tags/hashtags"
+msgstr "Display trending tags/hashtags"
+
+#: inc/custom-post-types.php:1517
+msgid "Dropdown (ใต้ search box)"
+msgstr "Dropdown (below search box)"
+
+#: inc/custom-fields.php:233
+#: inc/custom-post-types.php:2906
+msgid "Duration"
+msgstr "Duration"
+
+#: inc/custom-post-types.php:2781
+msgid "Edit Featured Story"
+msgstr "Edit Featured Story"
+
+#: inc/custom-post-types.php:2744
+msgid "Edit Gallery"
+msgstr "Edit Gallery"
+
+#: inc/custom-post-types.php:2862
+msgid "Edit Gallery Category"
+msgstr "Edit Gallery Category"
+
+#: inc/custom-post-types.php:2835
+msgid "Edit Video Category"
+msgstr "Edit Video Category"
+
+#: inc/custom-post-types.php:2707
+msgid "Edit Video News"
+msgstr "Edit Video News"
+
+#: comments.php:101
+msgid "Email"
+msgstr "Email"
+
+#: footer.php:42
+#: widgets/class-newsletter-widget.php:71
+msgid "Email address"
+msgstr "Email address"
+
+#: inc/custom-fields.php:240
+msgid "Embed Code"
+msgstr "Embed Code"
+
+#: inc/custom-post-types.php:1378
+msgid "Enable Search"
+msgstr "Enable Search"
+
+#: inc/custom-post-types.php:1179
+msgid "Enable Social Sharing"
+msgstr "Enable Social Sharing"
+
+#: inc/custom-post-types.php:1665
+msgid "Enable TOC"
+msgstr "Enable TOC"
+
+#: inc/menu-icons.php:28
+msgid "Enter Font Awesome icon class (e.g., fas fa-home)"
+msgstr "Enter Font Awesome icon class (e.g., fas fa-home)"
+
+#: inc/custom-fields.php:229
+msgid "Enter the video URL (YouTube, Vimeo, etc.)"
+msgstr "Enter the video URL (YouTube, Vimeo, etc.)"
+
+#: inc/custom-fields.php:236
+msgid "Enter video duration (e.g., 5:30)"
+msgstr "Enter video duration (e.g., 5:30)"
+
+#: inc/custom-post-types.php:1545
+msgid "Excerpt"
+msgstr "Excerpt"
+
+#: inc/custom-post-types.php:1492
+msgid "Excerpt (คำอธิบาย)"
+msgstr "Excerpt"
+
+#: inc/custom-post-types.php:1626
+msgid "Exclude Categories"
+msgstr "Exclude Categories"
+
+#: inc/custom-fields.php:360
+msgid "Expiry Date:"
+msgstr "Expiry Date:"
+
+#: footer.php:98
+#: footer.php:190
+#: inc/custom-post-types.php:949
+#: inc/theme-helpers.php:335
+msgid "Facebook"
+msgstr "Facebook"
+
+#: inc/custom-post-types.php:1540
+#: inc/theme-setup.php:288
+msgid "Featured Image"
+msgstr "Featured Image"
+
+#: inc/custom-fields.php:405
+msgid "Featured Image Alt Text"
+msgstr "Featured Image Alt Text"
+
+#: inc/custom-post-types.php:979
+#: inc/custom-post-types.php:2776
+#: inc/custom-post-types.php:2778
+msgid "Featured Stories"
+msgstr "Featured Stories"
+
+#: inc/custom-post-types.php:211
+msgid "Featured Stories:"
+msgstr "Featured Stories:"
+
+#: inc/custom-post-types.php:2777
+msgid "Featured Story"
+msgstr "Featured Story"
+
+#: inc/custom-fields.php:75
+msgid "Featured Story Options"
+msgstr "Featured Story Options"
+
+#: inc/custom-post-types.php:1792
+msgid "Features"
+msgstr "Features"
+
+#: inc/security.php:140
+msgid "File is too large."
+msgstr "File is too large."
+
+#: inc/custom-post-types.php:1688
+msgid "Floating (ลอยด้านข้าง)"
+msgstr "Floating"
+
+#: inc/custom-post-types.php:1721
+msgid "Floating Button (ปุ่มลอย)"
+msgstr "Floating Button"
+
+#: inc/custom-post-types.php:1282
+msgid "Floating Buttons"
+msgstr "Floating Buttons"
+
+#: inc/custom-post-types.php:1981
+msgid "Floating Left Ad (Skyscraper)"
+msgstr "Floating Left Ad (Skyscraper)"
+
+#: inc/custom-post-types.php:1045
+msgid "Footer"
+msgstr "Footer"
+
+#: footer.php:120
+msgid "Footer %d"
+msgstr "Footer %d"
+
+#: inc/custom-post-types.php:2057
+msgid "Footer Columns (Footer1–Footer4)"
+msgstr "Footer Columns (Footer1–Footer4)"
+
+#: inc/custom-post-types.php:2155
+#: inc/theme-setup.php:135
+msgid "Footer Copyright Menu"
+msgstr "Footer Copyright Menu"
+
+#: inc/theme-setup.php:134
+msgid "Footer Menu"
+msgstr "Footer Menu"
+
+#: inc/custom-post-types.php:2028
+msgid "Footer Settings"
+msgstr "Footer Settings"
+
+#: inc/theme-setup.php:232
+msgid "Footer column 1. Add widgets (Custom HTML, menu, social, etc.) or choose display type in Theme Settings > Footer."
+msgstr "Footer column 1. Add widgets (Custom HTML, menu, social, etc.) or choose display type in Theme Settings > Footer."
+
+#: inc/theme-setup.php:243
+msgid "Footer column 2. Add widgets or choose display type in Theme Settings > Footer."
+msgstr "Footer column 2. Add widgets or choose display type in Theme Settings > Footer."
+
+#: inc/theme-setup.php:254
+msgid "Footer column 3. Add widgets or choose display type in Theme Settings > Footer."
+msgstr "Footer column 3. Add widgets or choose display type in Theme Settings > Footer."
+
+#: inc/theme-setup.php:265
+msgid "Footer column 4. Add widgets or choose display type in Theme Settings > Footer."
+msgstr "Footer column 4. Add widgets or choose display type in Theme Settings > Footer."
+
+#: inc/custom-post-types.php:2087
+msgid "Footer%d"
+msgstr "Footer%d"
+
+#: inc/theme-setup.php:230
+msgid "Footer1"
+msgstr "Footer1"
+
+#: inc/theme-setup.php:241
+msgid "Footer2"
+msgstr "Footer2"
+
+#: inc/theme-setup.php:252
+msgid "Footer3"
+msgstr "Footer3"
+
+#: inc/theme-setup.php:263
+msgid "Footer4"
+msgstr "Footer4"
+
+#: inc/custom-post-types.php:1523
+msgid "Full Page"
+msgstr "Full Page"
+
+#: inc/custom-post-types.php:978
+msgid "Gallery"
+msgstr "Gallery"
+
+#: inc/custom-post-types.php:2856
+#: inc/custom-post-types.php:2866
+msgid "Gallery Categories"
+msgstr "Gallery Categories"
+
+#: inc/custom-post-types.php:2857
+msgid "Gallery Category"
+msgstr "Gallery Category"
+
+#: inc/custom-fields.php:65
+msgid "Gallery Options"
+msgstr "Gallery Options"
+
+#: inc/custom-post-types.php:1042
+msgid "General"
+msgstr "General"
+
+#: inc/custom-post-types.php:1066
+msgid "General Settings"
+msgstr "General Settings"
+
+#: inc/custom-post-types.php:1573
+msgid "Grid View"
+msgstr "Grid View"
+
+#: inc/custom-post-types.php:1741
+msgid "H2 (หัวข้อหลัก)"
+msgstr "H2 (main heading)"
+
+#: inc/custom-post-types.php:1746
+msgid "H3 (หัวข้อย่อย)"
+msgstr "H3 (subheading)"
+
+#: inc/custom-post-types.php:1751
+msgid "H4 (หัวข้อรอง)"
+msgstr "H4 (secondary heading)"
+
+#: inc/custom-post-types.php:1756
+msgid "H5"
+msgstr "H5"
+
+#: inc/custom-post-types.php:1761
+msgid "H6"
+msgstr "H6"
+
+#: inc/custom-post-types.php:1734
+msgid "Heading Levels"
+msgstr "Heading Levels"
+
+#: inc/theme-setup.php:285
+msgid "Hero Image"
+msgstr "Hero Image"
+
+#: inc/custom-fields.php:356
+msgid "Higher number = higher priority (1-10)"
+msgstr "Higher number = higher priority (1-10)"
+
+#: inc/custom-post-types.php:1302
+msgid "Icon + Text (ไอคอนและข้อความ)"
+msgstr "Icon + Text"
+
+#: inc/menu-icons.php:21
+msgid "Icon Class (Font Awesome)"
+msgstr "Icon Class (Font Awesome)"
+
+#: inc/custom-post-types.php:1299
+msgid "Icon Only (ไอคอนเท่านั้น)"
+msgstr "Icon Only"
+
+#: inc/custom-post-types.php:2893
+msgid "Image"
+msgstr "Image"
+
+#: inc/custom-fields.php:425
+msgid "Image used for social media sharing (Open Graph, Twitter Card)"
+msgstr "Image used for social media sharing (Open Graph, Twitter Card)"
+
+#: inc/custom-post-types.php:2911
+msgid "Images"
+msgstr "Images"
+
+#: footer.php:100
+#: footer.php:192
+msgid "Instagram"
+msgstr "Instagram"
+
+#: inc/security.php:147
+msgid "Invalid file type."
+msgstr "Invalid file type."
+
+#: inc/ajax-handlers.php:217
+msgid "Invalid post ID"
+msgstr "Invalid post ID"
+
+#: inc/custom-post-types.php:1326
+msgid "Large (ใหญ่)"
+msgstr "Large"
+
+#: comments.php:87
+msgid "Leave a Reply"
+msgstr "Leave a Reply"
+
+#: comments.php:88
+msgid "Leave a Reply to %s"
+msgstr "Leave a Reply to %s"
+
+#: inc/custom-post-types.php:951
+#: inc/theme-helpers.php:337
+msgid "Line"
+msgstr "Line"
+
+#: inc/custom-post-types.php:952
+#: inc/theme-helpers.php:338
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: inc/custom-post-types.php:1570
+msgid "List View"
+msgstr "List View"
+
+#: inc/custom-post-types.php:1402
+msgid "Live Search"
+msgstr "Live Search"
+
+#: inc/custom-post-types.php:1121
+msgid "Load More"
+msgstr "Load More"
+
+#: inc/custom-post-types.php:1079
+msgid "Logo Preview"
+msgstr "Logo Preview"
+
+#: inc/custom-fields.php:111
+msgid "Manual view count override"
+msgstr "Manual view count override"
+
+#: inc/custom-post-types.php:1323
+msgid "Medium (กลาง)"
+msgstr "Medium"
+
+#: inc/custom-post-types.php:282
+msgid "Memory Limit:"
+msgstr "Memory Limit:"
+
+#: inc/custom-post-types.php:2020
+msgid "Menu"
+msgstr "Menu"
+
+#: inc/custom-fields.php:557
+msgid "Meta Description"
+msgstr "Meta Description"
+
+#: inc/custom-fields.php:564
+msgid "Meta Keywords"
+msgstr "Meta Keywords"
+
+#: inc/custom-fields.php:550
+msgid "Meta Title"
+msgstr "Meta Title"
+
+#: inc/custom-post-types.php:1826
+msgid "Minimum Headings"
+msgstr "Minimum Headings"
+
+#: inc/custom-post-types.php:1440
+msgid "Minimum Length"
+msgstr "Minimum Length"
+
+#: inc/custom-post-types.php:1576
+msgid "Mixed View"
+msgstr "Mixed View"
+
+#: inc/custom-post-types.php:1710
+msgid "Mobile Position"
+msgstr "Mobile Position"
+
+#: inc/custom-post-types.php:1520
+msgid "Modal/Popup"
+msgstr "Modal/Popup"
+
+#: inc/custom-post-types.php:1009
+msgid "Most Commented Widget"
+msgstr "Most Commented Widget"
+
+#: comments.php:100
+msgid "Name"
+msgstr "Name"
+
+#: inc/custom-post-types.php:1782
+msgid "Nested/Indented (แบบซ้อน)"
+msgstr "Nested/Indented"
+
+#: inc/custom-post-types.php:2782
+msgid "New Featured Story"
+msgstr "New Featured Story"
+
+#: inc/custom-post-types.php:2745
+msgid "New Gallery"
+msgstr "New Gallery"
+
+#: inc/custom-post-types.php:2865
+msgid "New Gallery Category Name"
+msgstr "New Gallery Category Name"
+
+#: inc/custom-post-types.php:2838
+msgid "New Video Category Name"
+msgstr "New Video Category Name"
+
+#: inc/custom-post-types.php:2708
+msgid "New Video News"
+msgstr "New Video News"
+
+#: inc/custom-post-types.php:2035
+msgid "Newsletter Box"
+msgstr "Newsletter Box"
+
+#: footer.php:38
+#: widgets/class-newsletter-widget.php:63
+msgid "Newsletter subscription"
+msgstr "Newsletter subscription"
+
+#: widgets/class-newsletter-widget.php:26
+msgid "Newsletter subscription form"
+msgstr "Newsletter subscription form"
+
+#: inc/custom-post-types.php:2785
+msgid "No featured stories found"
+msgstr "No featured stories found"
+
+#: inc/custom-post-types.php:2786
+msgid "No featured stories found in Trash"
+msgstr "No featured stories found in Trash"
+
+#: inc/security.php:135
+msgid "No file uploaded."
+msgstr "No file uploaded."
+
+#: inc/custom-post-types.php:2748
+msgid "No galleries found"
+msgstr "No galleries found"
+
+#: inc/custom-post-types.php:2749
+msgid "No galleries found in Trash"
+msgstr "No galleries found in Trash"
+
+#: inc/custom-post-types.php:2930
+msgid "No image"
+msgstr "No image"
+
+#: inc/custom-post-types.php:1083
+msgid "No logo uploaded"
+msgstr "No logo uploaded"
+
+#: widgets/class-popular-posts-widget.php:84
+msgid "No popular posts found."
+msgstr "No popular posts found."
+
+#: widgets/class-recent-posts-widget.php:92
+msgid "No recent posts found."
+msgstr "No recent posts found."
+
+#: widgets/class-trending-tags-widget.php:62
+msgid "No tags found."
+msgstr "No tags found."
+
+#: inc/custom-post-types.php:2711
+msgid "No video news found"
+msgstr "No video news found"
+
+#: inc/custom-post-types.php:2712
+msgid "No video news found in Trash"
+msgstr "No video news found in Trash"
+
+#: widgets/class-most-commented-widget.php:83
+#: widgets/class-popular-posts-widget.php:112
+#: widgets/class-recent-posts-widget.php:120
+#: widgets/class-related-posts-widget.php:103
+msgid "Number of posts:"
+msgstr "Number of posts:"
+
+#: widgets/class-trending-tags-widget.php:89
+msgid "Number of tags:"
+msgstr "Number of tags:"
+
+#: inc/custom-post-types.php:1779
+msgid "Numbered List (รายการแบบมีเลข)"
+msgstr "Numbered List"
+
+#: comments.php:34
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "One thought on &ldquo;%1$s&rdquo;"
+
+#: widgets/class-popular-posts-widget.php:124
+msgid "Order by:"
+msgstr "Order by:"
+
+#: inc/custom-fields.php:394
+msgid "Override default author name"
+msgstr "Override default author name"
+
+#: inc/custom-fields.php:387
+msgid "Override default excerpt. Leave empty to use default."
+msgstr "Override default excerpt. Leave empty to use default."
+
+#: inc/custom-post-types.php:278
+msgid "PHP Version:"
+msgstr "PHP Version:"
+
+#: inc/custom-post-types.php:976
+msgid "Pages"
+msgstr "Pages"
+
+#: page.php:103
+#: single.php:110
+msgid "Pages:"
+msgstr "Pages:"
+
+#: inc/custom-post-types.php:1114
+#: template-parts/pagination.php:36
+msgid "Pagination"
+msgstr "Pagination"
+
+#: inc/custom-post-types.php:1107
+msgid "Pagination Type"
+msgstr "Pagination Type"
+
+#: inc/custom-post-types.php:2860
+msgid "Parent Gallery Category"
+msgstr "Parent Gallery Category"
+
+#: inc/custom-post-types.php:2861
+msgid "Parent Gallery Category:"
+msgstr "Parent Gallery Category:"
+
+#: inc/custom-post-types.php:2833
+msgid "Parent Video Category"
+msgstr "Parent Video Category"
+
+#: inc/custom-post-types.php:2834
+msgid "Parent Video Category:"
+msgstr "Parent Video Category:"
+
+#: archive-gallery.php:19
+#: inc/custom-post-types.php:2739
+#: inc/custom-post-types.php:2741
+msgid "Photo Galleries"
+msgstr "Photo Galleries"
+
+#: inc/custom-post-types.php:204
+msgid "Photo Galleries:"
+msgstr "Photo Galleries:"
+
+#: inc/custom-post-types.php:2740
+msgid "Photo Gallery"
+msgstr "Photo Gallery"
+
+#: inc/custom-post-types.php:1002
+msgid "Popular Posts Widget"
+msgstr "Popular Posts Widget"
+
+#: template-parts/sidebar.php:55
+#: widgets/class-popular-posts-widget.php:69
+msgid "Popular article %d: %s"
+msgstr "Popular article %d: %s"
+
+#: template-parts/sidebar-single.php:43
+#: template-parts/sidebar.php:29
+#: widgets/class-popular-posts-widget.php:54
+msgid "Popular articles"
+msgstr "Popular articles"
+
+#: inc/custom-post-types.php:1677
+msgid "Position"
+msgstr "Position"
+
+#: comments.php:94
+msgid "Post Comment"
+msgstr "Post Comment"
+
+#: inc/custom-fields.php:20
+msgid "Post Options"
+msgstr "Post Options"
+
+#: inc/custom-post-types.php:1453
+msgid "Post Types to Search"
+msgstr "Post Types to Search"
+
+#: inc/custom-fields.php:108
+msgid "Post Views:"
+msgstr "Post Views:"
+
+#: inc/custom-post-types.php:975
+msgid "Posts"
+msgstr "Posts"
+
+#: inc/theme-setup.php:133
+msgid "Primary Menu"
+msgstr "Primary Menu"
+
+#: inc/custom-fields.php:353
+msgid "Priority:"
+msgstr "Priority:"
+
+#: footer.php:236
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+#: inc/custom-fields.php:102
+msgid "Reading Time (minutes):"
+msgstr "Reading Time (minutes):"
+
+#: inc/custom-post-types.php:228
+#: widgets/class-recent-posts-widget.php:38
+#: widgets/class-recent-posts-widget.php:104
+msgid "Recent Posts"
+msgstr "Recent Posts"
+
+#: inc/custom-post-types.php:1003
+msgid "Recent Posts Widget"
+msgstr "Recent Posts Widget"
+
+#: single-gallery.php:111
+msgid "Related Galleries"
+msgstr "Related Galleries"
+
+#: inc/custom-fields.php:429
+msgid "Related Posts"
+msgstr "Related Posts"
+
+#: inc/custom-post-types.php:1005
+msgid "Related Posts Widget"
+msgstr "Related Posts Widget"
+
+#: single-video_news.php:111
+msgid "Related Videos"
+msgstr "Related Videos"
+
+#: inc/custom-post-types.php:1591
+msgid "Relevance (ความเกี่ยวข้อง)"
+msgstr "Relevance"
+
+#: inc/custom-fields.php:271
+#: inc/custom-fields.php:299
+#: inc/custom-fields.php:424
+#: inc/custom-fields.php:441
+#: inc/custom-fields.php:506
+#: inc/custom-post-types.php:1095
+msgid "Remove"
+msgstr "Remove"
+
+#: inc/custom-post-types.php:2585
+msgid "Remove Logo"
+msgstr "Remove Logo"
+
+#: inc/custom-post-types.php:1565
+msgid "Results Layout"
+msgstr "Results Layout"
+
+#: inc/custom-fields.php:44
+msgid "SEO Options"
+msgstr "SEO Options"
+
+#: inc/custom-fields.php:560
+msgid "SEO description (recommended: 150-160 characters)"
+msgstr "SEO description (recommended: 150-160 characters)"
+
+#: inc/custom-fields.php:553
+msgid "SEO title (recommended: 50-60 characters)"
+msgstr "SEO title (recommended: 50-60 characters)"
+
+#: inc/custom-post-types.php:2168
+msgid "Save Settings"
+msgstr "Save Settings"
+
+#: inc/custom-post-types.php:1804
+msgid "Scroll Spy (Highlight section ที่กำลังอ่าน)"
+msgstr "Scroll Spy (Highlight section ที่กำลังอ่าน)"
+
+#: inc/custom-post-types.php:1051
+#: widgets/class-search-widget.php:36
+msgid "Search"
+msgstr "Search"
+
+#: inc/custom-post-types.php:2784
+msgid "Search Featured Stories"
+msgstr "Search Featured Stories"
+
+#: inc/custom-post-types.php:1475
+msgid "Search Fields"
+msgstr "Search Fields"
+
+#: inc/custom-post-types.php:2747
+msgid "Search Galleries"
+msgstr "Search Galleries"
+
+#: inc/custom-post-types.php:2858
+msgid "Search Gallery Categories"
+msgstr "Search Gallery Categories"
+
+#: inc/custom-post-types.php:1613
+msgid "Search Placeholder"
+msgstr "Search Placeholder"
+
+#: inc/custom-post-types.php:1369
+msgid "Search Settings"
+msgstr "Search Settings"
+
+#: inc/custom-post-types.php:1390
+msgid "Search Suggestions"
+msgstr "Search Suggestions"
+
+#: inc/custom-post-types.php:2831
+msgid "Search Video Categories"
+msgstr "Search Video Categories"
+
+#: inc/custom-post-types.php:2710
+msgid "Search Video News"
+msgstr "Search Video News"
+
+#: inc/custom-post-types.php:1007
+msgid "Search Widget"
+msgstr "Search Widget"
+
+#: widgets/class-search-widget.php:22
+msgid "Search form for sidebar"
+msgstr "Search form for sidebar"
+
+#: inc/register-widgets.php:63
+msgid "Security check failed"
+msgstr "Security check failed"
+
+#: inc/custom-fields.php:288
+msgid "Select Gallery Images"
+msgstr "Select Gallery Images"
+
+#: inc/custom-fields.php:423
+msgid "Select Image"
+msgstr "Select Image"
+
+#: inc/custom-fields.php:491
+msgid "Select Related Posts"
+msgstr "Select Related Posts"
+
+#: inc/custom-fields.php:462
+msgid "Select Social Sharing Image"
+msgstr "Select Social Sharing Image"
+
+#: inc/custom-post-types.php:1936
+msgid "Select widgets to enable"
+msgstr "Select widgets to enable"
+
+#: inc/custom-post-types.php:914
+msgid "Settings saved successfully!"
+msgstr "Settings saved successfully!"
+
+#: template-parts/social-share-floating.php:52
+#: template-parts/social-share.php:76
+msgid "Share on %s"
+msgstr "Share on %s"
+
+#: inc/custom-fields.php:401
+msgid "Short author biography"
+msgstr "Short author biography"
+
+#: widgets/class-most-commented-widget.php:88
+msgid "Show comment count"
+msgstr "Show comment count"
+
+#: widgets/class-categories-widget.php:146
+msgid "Show hierarchy (main categories only, click to expand subcategories)"
+msgstr "Show hierarchy (main categories only, click to expand subcategories)"
+
+#: inc/custom-post-types.php:1698
+msgid "Show on Mobile"
+msgstr "Show on Mobile"
+
+#: widgets/class-archive-widget.php:61
+#: widgets/class-categories-widget.php:142
+msgid "Show post count"
+msgstr "Show post count"
+
+#: widgets/class-related-posts-widget.php:106
+msgid "Shows posts from the same category/tag. Use on single post sidebar."
+msgstr "Shows posts from the same category/tag. Use on single post sidebar."
+
+#: inc/theme-setup.php:208
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: inc/custom-post-types.php:2019
+msgid "Sidebar (Widgets)"
+msgstr "Sidebar (Widgets)"
+
+#: inc/custom-post-types.php:1685
+msgid "Sidebar (ด้านข้าง)"
+msgstr "Sidebar"
+
+#: inc/custom-post-types.php:1914
+msgid "Sidebar on Archive"
+msgstr "Sidebar on Archive"
+
+#: inc/custom-post-types.php:1898
+msgid "Sidebar on Homepage"
+msgstr "Sidebar on Homepage"
+
+#: inc/custom-post-types.php:1883
+msgid "Sidebar on Page"
+msgstr "Sidebar on Page"
+
+#: inc/custom-post-types.php:1868
+msgid "Sidebar on Single Post"
+msgstr "Sidebar on Single Post"
+
+#: inc/custom-post-types.php:1776
+msgid "Simple List (รายการธรรมดา)"
+msgstr "Simple List"
+
+#: inc/custom-post-types.php:1265
+#: inc/custom-post-types.php:1274
+msgid "Single Post"
+msgstr "Single Post"
+
+#: header.php:21
+msgid "Skip to content"
+msgstr "Skip to content"
+
+#: inc/custom-post-types.php:1320
+msgid "Small (เล็ก)"
+msgstr "Small"
+
+#: inc/custom-post-types.php:1799
+msgid "Smooth Scroll (เลื่อนแบบนุ่มนวล)"
+msgstr "Smooth Scroll"
+
+#: inc/custom-post-types.php:2021
+msgid "Social"
+msgstr "Social"
+
+#: inc/custom-post-types.php:1008
+msgid "Social Follow Widget"
+msgstr "Social Follow Widget"
+
+#: inc/custom-post-types.php:1221
+msgid "Social Platforms"
+msgstr "Social Platforms"
+
+#: inc/custom-post-types.php:1048
+msgid "Social Sharing"
+msgstr "Social Sharing"
+
+#: inc/custom-fields.php:412
+msgid "Social Sharing Image"
+msgstr "Social Sharing Image"
+
+#: inc/custom-post-types.php:1170
+msgid "Social Sharing Settings"
+msgstr "Social Sharing Settings"
+
+#: inc/custom-post-types.php:1814
+msgid "Sticky (ติดตามเมื่อ scroll)"
+msgstr "Sticky"
+
+#: inc/custom-post-types.php:1771
+msgid "Style"
+msgstr "Style"
+
+#: inc/custom-post-types.php:1414
+msgid "Suggestions Count"
+msgstr "Suggestions Count"
+
+#: inc/custom-post-types.php:1533
+msgid "Suggestions Display"
+msgstr "Suggestions Display"
+
+#: inc/custom-post-types.php:1512
+msgid "Suggestions Style"
+msgstr "Suggestions Style"
+
+#: inc/custom-post-types.php:264
+msgid "System Information"
+msgstr "System Information"
+
+#: inc/custom-post-types.php:1839
+msgid "TOC Title"
+msgstr "TOC Title"
+
+#: inc/custom-post-types.php:1054
+msgid "Table of Contents"
+msgstr "Table of Contents"
+
+#: inc/custom-post-types.php:1656
+msgid "Table of Contents Settings"
+msgstr "Table of Contents Settings"
+
+#: inc/custom-post-types.php:1502
+msgid "Tags (ป้ายกำกับ)"
+msgstr "Tags"
+
+#: inc/custom-post-types.php:2046
+msgid "Tags Section"
+msgstr "Tags Section"
+
+#: single-gallery.php:87
+#: single-video_news.php:87
+msgid "Tags:"
+msgstr "Tags:"
+
+#: inc/custom-post-types.php:954
+#: inc/theme-helpers.php:340
+msgid "Telegram"
+msgstr "Telegram"
+
+#: footer.php:238
+msgid "Terms of Service"
+msgstr "Terms of Service"
+
+#: inc/custom-post-types.php:41
+#: inc/custom-post-types.php:42
+msgid "Theme Settings"
+msgstr "Theme Settings"
+
+#: inc/custom-post-types.php:270
+msgid "Theme Version:"
+msgstr "Theme Version:"
+
+#: inc/theme-setup.php:287
+msgid "Thumbnail"
+msgstr "Thumbnail"
+
+#: inc/custom-post-types.php:1600
+msgid "Title (A-Z)"
+msgstr "Title (A-Z)"
+
+#: inc/custom-post-types.php:1603
+msgid "Title (Z-A)"
+msgstr "Title (Z-A)"
+
+#: inc/custom-post-types.php:1482
+msgid "Title (ชื่อบทความ)"
+msgstr "Title"
+
+#: widgets/class-archive-widget.php:56
+#: widgets/class-categories-widget.php:137
+#: widgets/class-custom-html-widget.php:66
+#: widgets/class-most-commented-widget.php:79
+#: widgets/class-newsletter-widget.php:101
+#: widgets/class-popular-posts-widget.php:102
+#: widgets/class-recent-posts-widget.php:110
+#: widgets/class-related-posts-widget.php:99
+#: widgets/class-search-widget.php:50
+#: widgets/class-social-follow-widget.php:72
+#: widgets/class-trending-tags-widget.php:79
+msgid "Title:"
+msgstr "Title:"
+
+#: inc/ajax-handlers.php:128
+msgid "Too many requests. Please try again later."
+msgstr "Too many requests. Please try again later."
+
+#: inc/custom-post-types.php:1715
+msgid "Top (ด้านบน)"
+msgstr "Top"
+
+#: inc/custom-post-types.php:1682
+msgid "Top (ด้านบนเนื้อหา)"
+msgstr "Top (above content)"
+
+#: inc/custom-post-types.php:19
+#: inc/custom-post-types.php:20
+#: template-parts/navbar.php:41
+msgid "Chrysoberyl"
+msgstr "Chrysoberyl"
+
+#: widgets/class-archive-widget.php:21
+msgid "Chrysoberyl: Archive"
+msgstr "Chrysoberyl: Archive"
+
+#: widgets/class-categories-widget.php:21
+msgid "Chrysoberyl: Categories"
+msgstr "Chrysoberyl: Categories"
+
+#: widgets/class-custom-html-widget.php:35
+msgid "Chrysoberyl: Custom HTML / Ad"
+msgstr "Chrysoberyl: Custom HTML / Ad"
+
+#: widgets/class-most-commented-widget.php:21
+msgid "Chrysoberyl: Most Commented"
+msgstr "Chrysoberyl: Most Commented"
+
+#: widgets/class-newsletter-widget.php:24
+msgid "Chrysoberyl: Newsletter"
+msgstr "Chrysoberyl: Newsletter"
+
+#: widgets/class-popular-posts-widget.php:24
+msgid "Chrysoberyl: Popular Posts"
+msgstr "Chrysoberyl: Popular Posts"
+
+#: widgets/class-recent-posts-widget.php:24
+msgid "Chrysoberyl: Recent Posts"
+msgstr "Chrysoberyl: Recent Posts"
+
+#: widgets/class-related-posts-widget.php:21
+msgid "Chrysoberyl: Related Posts"
+msgstr "Chrysoberyl: Related Posts"
+
+#: widgets/class-search-widget.php:21
+msgid "Chrysoberyl: Search"
+msgstr "Chrysoberyl: Search"
+
+#: widgets/class-social-follow-widget.php:30
+msgid "Chrysoberyl: Social Follow"
+msgstr "Chrysoberyl: Social Follow"
+
+#: widgets/class-trending-tags-widget.php:24
+msgid "Chrysoberyl: Trending Tags"
+msgstr "Chrysoberyl: Trending Tags"
+
+#: widgets/class-trending-tags-widget.php:38
+#: widgets/class-trending-tags-widget.php:74
+msgid "Trending Tags"
+msgstr "Trending Tags"
+
+#: inc/custom-post-types.php:1004
+msgid "Trending Tags Widget"
+msgstr "Trending Tags Widget"
+
+#: template-parts/trending-tags.php:25
+msgid "Trending topic: %s"
+msgstr "Trending topic: %s"
+
+#: template-parts/trending-tags.php:20
+msgid "Trending topics"
+msgstr "Trending topics"
+
+#: footer.php:99
+#: footer.php:191
+#: inc/theme-helpers.php:336
+msgid "Twitter"
+msgstr "Twitter"
+
+#: inc/custom-post-types.php:1336
+msgid "Twitter Handle"
+msgstr "Twitter Handle"
+
+#: inc/custom-post-types.php:950
+msgid "Twitter/X"
+msgstr "Twitter/X"
+
+#: archive.php:58
+msgid "Update"
+msgstr "Update"
+
+#: inc/custom-post-types.php:2863
+msgid "Update Gallery Category"
+msgstr "Update Gallery Category"
+
+#: inc/custom-post-types.php:2836
+msgid "Update Video Category"
+msgstr "Update Video Category"
+
+#: inc/custom-post-types.php:290
+msgid "Upload Directory Size:"
+msgstr "Upload Directory Size:"
+
+#: inc/custom-post-types.php:1090
+#: inc/custom-post-types.php:2598
+msgid "Upload Logo"
+msgstr "Upload Logo"
+
+#: inc/custom-post-types.php:1100
+msgid "Upload a logo for your website. Recommended size: 200x60 pixels or larger."
+msgstr "Upload a logo for your website. Recommended size: 200x60 pixels or larger."
+
+#: inc/custom-fields.php:464
+msgid "Use this image"
+msgstr "Use this image"
+
+#: inc/custom-post-types.php:2570
+msgid "Use this logo"
+msgstr "Use this logo"
+
+#: inc/custom-post-types.php:2829
+#: inc/custom-post-types.php:2839
+msgid "Video Categories"
+msgstr "Video Categories"
+
+#: inc/custom-post-types.php:2830
+msgid "Video Category"
+msgstr "Video Category"
+
+#: archive-video_news.php:19
+#: inc/custom-post-types.php:977
+#: inc/custom-post-types.php:2702
+#: inc/custom-post-types.php:2703
+#: inc/custom-post-types.php:2704
+msgid "Video News"
+msgstr "Video News"
+
+#: inc/custom-post-types.php:197
+msgid "Video News:"
+msgstr "Video News:"
+
+#: inc/custom-fields.php:55
+msgid "Video Options"
+msgstr "Video Options"
+
+#: inc/custom-fields.php:226
+#: inc/custom-post-types.php:2905
+msgid "Video URL"
+msgstr "Video URL"
+
+#: inc/custom-post-types.php:2783
+msgid "View Featured Story"
+msgstr "View Featured Story"
+
+#: inc/custom-post-types.php:2746
+msgid "View Gallery"
+msgstr "View Gallery"
+
+#: inc/custom-post-types.php:2709
+msgid "View Video News"
+msgstr "View Video News"
+
+#: inc/custom-post-types.php:2900
+#: widgets/class-popular-posts-widget.php:129
+msgid "Views"
+msgstr "Views"
+
+#: comments.php:102
+msgid "Website"
+msgstr "Website"
+
+#: inc/custom-post-types.php:1072
+msgid "Website Logo"
+msgstr "Website Logo"
+
+#: inc/custom-post-types.php:953
+#: inc/theme-helpers.php:339
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#: inc/custom-fields.php:363
+msgid "When should this stop being featured?"
+msgstr "When should this stop being featured?"
+
+#: inc/custom-post-types.php:1859
+msgid "Widget Visibility Settings"
+msgstr "Widget Visibility Settings"
+
+#: inc/custom-post-types.php:1057
+msgid "Widgets"
+msgstr "Widgets"
+
+#: inc/custom-post-types.php:274
+msgid "WordPress Version:"
+msgstr "WordPress Version:"
+
+#: footer.php:101
+#: footer.php:193
+msgid "YouTube"
+msgstr "YouTube"
+
+#: inc/custom-post-types.php:239
+msgid "ago"
+msgstr "ago"
+
+#: inc/custom-post-types.php:2078
+msgid "กริด (th-large)"
+msgstr "Grid (th-large)"
+
+#: footer.php:309
+msgid "กลับขึ้นด้านบน"
+msgstr "Back to top"
+
+#: 404.php:45
+msgid "กลับหน้าก่อนหน้า"
+msgstr "Go back"
+
+#: 404.php:41
+#: search.php:168
+msgid "กลับหน้าแรก"
+msgstr "Back to home"
+
+#: inc/theme-helpers.php:528
+msgid "กองบรรณาธิการ"
+msgstr "Editorial Team"
+
+#: inc/custom-post-types.php:121
+msgid "กาเหว่า"
+msgstr "Gawao"
+
+#: template-parts/pagination.php:42
+#: template-parts/pagination.php:76
+msgid "ก่อนหน้า"
+msgstr "Previous"
+
+#: inc/custom-post-types.php:1995
+msgid "ขนาด:"
+msgstr "Size:"
+
+#: template-parts/content-none.php:17
+msgid "ขออภัย ไม่พบเนื้อหาที่คุณกำลังมองหา ลองค้นหาด้วยคำอื่น"
+msgstr "Sorry, no content found. Try another search."
+
+#: single.php:154
+msgid "ข่าวที่เกี่ยวข้อง"
+msgstr "Related News"
+
+#: template-parts/sidebar-single.php:87
+msgid "ข่าวน่าสนใจ"
+msgstr "Interesting News"
+
+#: 404.php:60
+#: archive.php:82
+#: home.php:26
+msgid "ข่าวล่าสุด"
+msgstr "Latest News"
+
+#: inc/custom-post-types.php:2150
+msgid "ข้อความด้านซ้ายของแถบ copyright (เว้นว่าง = ใช้ค่าเริ่มต้น). ใช้ {year} สำหรับปี, {sitename} สำหรับชื่อเว็บ"
+msgstr "Text on the left of the copyright bar (leave empty for default). Use {year} for year, {sitename} for site name"
+
+#: inc/custom-post-types.php:1356
+#: inc/custom-post-types.php:1354
+msgid "ข้อความที่ต้องการให้แสดงเมื่อแชร์ (ใช้ {title} สำหรับชื่อบทความ, {url} สำหรับลิงก์)"
+msgstr "Text to show when sharing (use {title} for post title, {url} for link)"
+
+#: inc/custom-post-types.php:1620
+msgid "ข้อความที่แสดงใน Search Box"
+msgstr "Text displayed in Search Box"
+
+#: inc/custom-post-types.php:2123
+msgid "ข้อความหัวข้อ:"
+msgstr "Heading text:"
+
+#: inc/custom-post-types.php:2069
+msgid "ข้อมูล (info-circle)"
+msgstr "Info (info-circle)"
+
+#: inc/custom-post-types.php:168
+msgid "ความคิดเห็น"
+msgstr "Comments"
+
+#: inc/custom-post-types.php:1447
+msgid "ความยาวขั้นต่ำของคำค้นหา (1-10 ตัวอักษร)"
+msgstr "Minimum search term length (1-10 characters)"
+
+#: widgets/class-most-commented-widget.php:62
+msgid "ความเห็น"
+msgstr "Comments"
+
+#: inc/custom-post-types.php:1138
+msgid "คอลัมน์"
+msgstr "columns"
+
+#: search.php:29
+msgid "คำค้นยอดฮิต:"
+msgstr "Popular searches:"
+
+#: 404.php:33
+#: search.php:25
+#: template-parts/search-modal.php:26
+#: template-parts/search-modal.php:40
+#: widgets/class-search-widget.php:27
+#: widgets/class-search-widget.php:47
+msgid "ค้นหา"
+msgstr "Search"
+
+#: widgets/class-search-widget.php:36
+msgid "ค้นหา..."
+msgstr "Search..."
+
+#: template-parts/navbar.php:70
+#: template-parts/navbar.php:88
+msgid "ค้นหาข่าว"
+msgstr "Search news"
+
+#: search.php:15
+msgid "ค้นหาข่าวและเทรนด์ล่าสุด"
+msgstr "Search news and latest trends"
+
+#: inc/custom-post-types.php:2137
+msgid "จะแสดงปุ่มโซเชียล (Facebook, Twitter, Instagram, YouTube). ลิงก์ปัจจุบันเป็นตัวอย่าง (#). ถ้าต้องการกำหนด URL จริง ให้เลือก \"Sidebar (Widgets)\" แล้วไปที่ Appearance → Widgets → Footer นี้ แล้วใส่ Widget \"Chrysoberyl: Social Follow\" แล้วกรอกลิงก์ใน Widget"
+msgstr "Shows social buttons (Facebook, Twitter, Instagram, YouTube). Current links are placeholders (#). To set real URLs, choose \"Sidebar (Widgets)\" and go to Appearance → Widgets → this Footer, then add \"Chrysoberyl: Social Follow\" widget and enter links there."
+
+#: inc/custom-post-types.php:1833
+msgid "จำนวน Heading ขั้นต่ำที่จะแสดง TOC (0 = แสดงเสมอ)"
+msgstr "Minimum headings to show TOC (0 = always show)"
+
+#: inc/custom-post-types.php:1421
+msgid "จำนวน Suggestions ที่แสดง (1-20)"
+msgstr "Number of suggestions to show (1-20)"
+
+#: inc/custom-post-types.php:1133
+msgid "จำนวนคอลัมน์ข่าวล่าสุด (หน้าแรก)"
+msgstr "Number of latest news columns (homepage)"
+
+#: inc/custom-post-types.php:1846
+msgid "ชื่อหัวข้อของ TOC (เช่น: สารบัญ, Table of Contents)"
+msgstr "TOC heading title (e.g. Table of Contents)"
+
+#: inc/custom-post-types.php:1944
+msgid "ช่องค้นหาใน sidebar"
+msgstr "Search box in sidebar"
+
+#: inc/custom-post-types.php:2081
+msgid "ดาว (star)"
+msgstr "Star (star)"
+
+#: home.php:30
+msgid "ดูทั้งหมด"
+msgstr "View all"
+
+#: inc/custom-post-types.php:250
+msgid "ดูบทความทั้งหมด"
+msgstr "View all posts"
+
+#: template-parts/content-none.php:35
+msgid "ดูเหมือนว่าเราไม่พบสิ่งที่คุณกำลังมองหา ลองค้นหาดู"
+msgstr "It seems we can't find what you're looking for. Try searching."
+
+#: inc/custom-post-types.php:1283
+msgid "ด้านข้างหน้าจอ"
+msgstr "Side of screen"
+
+#: inc/custom-post-types.php:1264
+msgid "ด้านบนบทความ"
+msgstr "Above post"
+
+#: inc/custom-post-types.php:1273
+msgid "ด้านล่างบทความ"
+msgstr "Below post"
+
+#: inc/custom-post-types.php:1659
+msgid "ตั้งค่า Table of Contents (TOC) สำหรับบทความ"
+msgstr "Configure Table of Contents (TOC) for posts"
+
+#: inc/custom-post-types.php:1372
+msgid "ตั้งค่าการค้นหาและ Search Suggestions"
+msgstr "Configure search and Search Suggestions"
+
+#: inc/custom-post-types.php:1173
+msgid "ตั้งค่าการแชร์เนื้อหาไปยัง Social Media platforms ต่างๆ"
+msgstr "Configure sharing content to Social Media platforms"
+
+#: inc/custom-post-types.php:2077
+msgid "ตำแหน่ง (map-marker-alt)"
+msgstr "Location (map-marker-alt)"
+
+#: widgets/class-newsletter-widget.php:40
+#: widgets/class-newsletter-widget.php:97
+msgid "ติดตาม"
+msgstr "Subscribe"
+
+#: footer.php:188
+msgid "ติดตามข่าวสารและอัปเดตล่าสุด"
+msgstr "Subscribe for latest news and updates"
+
+#: footer.php:118
+#: footer.php:95
+#: footer.php:184
+#: widgets/class-social-follow-widget.php:36
+#: widgets/class-social-follow-widget.php:69
+msgid "ติดตามเรา"
+msgstr "Follow us"
+
+#: footer.php:174
+msgid "ติดต่อโฆษณา"
+msgstr "Advertise with us"
+
+#: inc/custom-post-types.php:117
+msgid "ต้นกล้าไอที"
+msgstr "Tonkla IT"
+
+#: template-parts/pagination.php:64
+#: template-parts/pagination.php:77
+msgid "ถัดไป"
+msgstr "Next"
+
+#: inc/custom-post-types.php:2005
+msgid "ถ้าไม่ใส่โค้ด จะแสดงกรอบ placeholder โฆษณา"
+msgstr "If no code is entered, an ad placeholder will be shown"
+
+#: widgets/class-custom-html-widget.php:80
+msgid "ถ้าไม่ใส่โค้ด จะแสดงกรอบ placeholder โฆษณาให้"
+msgstr "If no code is entered, an ad placeholder will be shown"
+
+#: inc/custom-post-types.php:116
+msgid "ทีมผู้พัฒนา:"
+msgstr "Development team:"
+
+#: inc/custom-post-types.php:2083
+msgid "ที่คั่น (bookmark)"
+msgstr "Bookmark (bookmark)"
+
+#: template-parts/post-meta.php:29
+#: template-parts/sidebar-single.php:118
+#: template-parts/sidebar-single.php:189
+msgid "ที่แล้ว"
+msgstr "ago"
+
+#: inc/custom-post-types.php:113
+msgid "ธีม Chrysoberyl พัฒนาและดูแลโดย"
+msgstr "Chrysoberyl theme developed and maintained by"
+
+#: inc/custom-post-types.php:126
+msgid "ธีมนี้ใช้งานได้ฟรี ตามเงื่อนไขสัญญาอนุญาตของ WordPress (GPL)"
+msgstr "This theme is free to use under the WordPress (GPL) license."
+
+#: inc/custom-post-types.php:137
+msgid "ธีม Trend Today"
+msgstr "Trend Today theme"
+
+#: inc/custom-post-types.php:136
+msgid "ฟอร์กมาจาก:"
+msgstr "Forked from:"
+
+#: inc/custom-post-types.php:142
+msgid "เว็บที่ใช้งานจริง:"
+msgstr "Live site:"
+
+#: footer.php:176
+msgid "นโยบายความเป็นส่วนตัว"
+msgstr "Privacy Policy"
+
+#: inc/custom-post-types.php:150
+msgid "บทความ"
+msgstr "Posts"
+
+#: widgets/class-most-commented-widget.php:27
+#: widgets/class-most-commented-widget.php:74
+msgid "บทความที่มีความเห็นมาก"
+msgstr "Posts with most comments"
+
+#: inc/custom-post-types.php:1946
+msgid "บทความที่มีความเห็นมากที่สุด"
+msgstr "Posts with most comments"
+
+#: template-parts/sidebar-single.php:158
+#: widgets/class-related-posts-widget.php:30
+#: widgets/class-related-posts-widget.php:95
+msgid "บทความที่เกี่ยวข้อง"
+msgstr "Related posts"
+
+#: inc/custom-post-types.php:1942
+msgid "บทความที่เกี่ยวข้องตามหมวดหมู่/แท็ก (เหมาะกับหน้า single)"
+msgstr "Related posts by category/tag (best on single post)"
+
+#: inc/custom-post-types.php:2031
+msgid "ปรับแต่งส่วน footer: newsletter, tags, คอลัมน์ widget และข้อความ copyright"
+msgstr "Customize footer: newsletter, tags, widget columns and copyright text"
+
+#: inc/custom-post-types.php:1157
+msgid "ปิด = แสดงหน้าเข้าสู่ระบบแบบดั้งเดิมของ WordPress"
+msgstr "Off = show default WordPress login page"
+
+#: inc/custom-post-types.php:1877
+msgid "ปิดใช้ถ้าต้องการให้บทความเต็มความกว้างโดยไม่มี sidebar ด้านขวา"
+msgstr "Turn off to make single post full width without right sidebar"
+
+#: inc/custom-post-types.php:1924
+msgid "ปิดใช้ถ้าต้องการให้หน้า Archive (หมวดหมู่, แท็ก, ผู้เขียน ฯลฯ) เต็มความกว้างโดยไม่มี widget ด้านขวา"
+msgstr "Turn off to make Archive pages full width without right widget area"
+
+#: inc/custom-post-types.php:1892
+msgid "ปิดใช้ถ้าต้องการให้หน้าคงที่เต็มความกว้างโดยไม่มี sidebar ด้านขวา"
+msgstr "Turn off to make Pages full width without right sidebar"
+
+#: inc/custom-post-types.php:1908
+msgid "ปิดใช้ถ้าต้องการให้หน้าแรกเต็มความกว้างโดยไม่มี widget ด้านขวา (Popular Posts, Recent Posts, Trending Tags)"
+msgstr "Turn off to make homepage full width without right widgets (Popular Posts, Recent Posts, Trending Tags)"
+
+#: inc/custom-post-types.php:1215
+msgid "ปิดใช้ถ้าไม่ต้องการให้มีปุ่มแชร์ในหน้าคงที่"
+msgstr "Turn off to hide share buttons on pages"
+
+#: inc/custom-post-types.php:1200
+msgid "ปิดใช้ถ้าไม่ต้องการให้มีปุ่มแชร์ในหน้าบทความ"
+msgstr "Turn off to hide share buttons on single post"
+
+#: inc/custom-post-types.php:1945
+msgid "ปุ่มติดตาม Facebook, Twitter, Line, YouTube ฯลฯ"
+msgstr "Follow buttons for Facebook, Twitter, Line, YouTube, etc."
+
+#: template-parts/breadcrumb.php:67
+msgid "ผลการค้นหา"
+msgstr "Search results"
+
+#: search.php:65
+msgid "ผลการค้นหาสำหรับ %s"
+msgstr "Search results for %s"
+
+#: inc/custom-post-types.php:177
+msgid "ผู้ใช้"
+msgstr "Users"
+
+#: template-parts/content-none.php:24
+msgid "พร้อมที่จะเผยแพร่โพสต์แรกของคุณแล้ว? <a href=\"%1$s\">เริ่มที่นี่</a>."
+msgstr "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+
+#: inc/custom-post-types.php:971
+#: inc/enqueue-scripts.php:119
+#: search.php:21
+#: template-parts/navbar.php:63
+#: template-parts/search-modal.php:14
+msgid "พิมพ์คำค้นหา..."
+msgstr "Type to search..."
+
+#: inc/custom-post-types.php:1948
+msgid "พื้นที่โฆษณาหรือ HTML กำหนดเอง"
+msgstr "Ad or custom HTML area"
+
+#: template-parts/trending-tags.php:18
+msgid "มาแรง:"
+msgstr "Trending:"
+
+#: template-parts/sidebar-single.php:41
+#: template-parts/sidebar.php:27
+#: widgets/class-popular-posts-widget.php:38
+#: widgets/class-popular-posts-widget.php:96
+msgid "ยอดนิยม"
+msgstr "Popular"
+
+#: inc/custom-post-types.php:246
+msgid "ยังไม่มีบทความ"
+msgstr "No posts yet"
+
+#: inc/custom-post-types.php:1434
+msgid "ระยะเวลาที่รอก่อนค้นหา (0-2000ms, แนะนำ 300ms)"
+msgstr "Delay before searching (0-2000ms, 300ms recommended)"
+
+#: search.php:70
+msgid "รายการ"
+msgstr "Items"
+
+#: inc/custom-post-types.php:2072
+msgid "รายการ (list)"
+msgstr "List (list)"
+
+#: inc/custom-post-types.php:1943
+msgid "รายการหมวดหมู่พร้อมจำนวนบทความ"
+msgstr "Category list with post count"
+
+#: footer.php:175
+msgid "ร่วมงานกับเรา"
+msgstr "Join us"
+
+#: 404.php:29
+msgid "ลองค้นหาดู..."
+msgstr "Try searching..."
+
+#: search.php:164
+msgid "ลองใช้คำค้นหาอื่น หรือตรวจสอบการสะกด"
+msgstr "Try different keywords or check spelling"
+
+#: inc/custom-post-types.php:1933
+msgid "ลากเพื่อเรียงลำดับการแสดงผล • เลือกติ๊กเพื่อเปิดใช้"
+msgstr "Drag to reorder • Tick to enable"
+
+#: inc/custom-post-types.php:2071
+msgid "ลิงก์ (link)"
+msgstr "Link (link)"
+
+#: inc/custom-post-types.php:2080
+msgid "ลูกศร (chevron-right)"
+msgstr "Arrow (chevron-right)"
+
+#: widgets/class-custom-html-widget.php:74
+msgid "วิธีใส่โค้ด:"
+msgstr "How to add code:"
+
+#: footer.php:47
+msgid "สมัครรับข่าวสาร"
+msgstr "Subscribe to newsletter"
+
+#: footer.php:34
+#: widgets/class-newsletter-widget.php:39
+#: widgets/class-newsletter-widget.php:96
+msgid "สมัครรับข่าวสารสรุปประจำวันส่งตรงถึงอีเมลของคุณ"
+msgstr "Subscribe to daily digest delivered to your email"
+
+#: inc/custom-post-types.php:2074
+msgid "สมุดที่อยู่ (address-book)"
+msgstr "Address book (address-book)"
+
+#: inc/custom-post-types.php:998
+#: template-parts/table-of-contents.php:27
+msgid "สารบัญ"
+msgstr "Table of Contents"
+
+#: inc/custom-post-types.php:159
+msgid "หน้า"
+msgstr "Pages"
+
+#: 404.php:20
+msgid "หน้านี้อาจถูกลบหรือย้ายไปที่อื่นแล้ว"
+msgstr "This page may have been removed or moved"
+
+#: inc/custom-post-types.php:1147
+msgid "หน้าเข้าสู่ระบบ (Login)"
+msgstr "Login page"
+
+#: archive.php:20
+#: inc/navigation-functions.php:97
+#: template-parts/breadcrumb.php:19
+msgid "หน้าแรก"
+msgstr "Home"
+
+#: footer.php:116
+#: footer.php:155
+#: widgets/class-categories-widget.php:27
+#: widgets/class-categories-widget.php:132
+msgid "หมวดหมู่"
+msgstr "Categories"
+
+#: inc/custom-post-types.php:1973
+msgid "หมายเหตุ:"
+msgstr "Note:"
+
+#: inc/custom-post-types.php:2115
+msgid "หัวข้อและไอคอน"
+msgstr "Heading and icon"
+
+#: inc/custom-post-types.php:2082
+msgid "หัวใจ (heart)"
+msgstr "Heart (heart)"
+
+#: page.php:42
+msgid "อัปเดตเมื่อ %s"
+msgstr "Updated on %s"
+
+#: widgets/class-archive-widget.php:27
+#: widgets/class-archive-widget.php:51
+msgid "อาร์คิฟ"
+msgstr "Archive"
+
+#: inc/custom-post-types.php:1947
+msgid "อาร์คิฟแยกตามเดือน"
+msgstr "Monthly archive"
+
+#: inc/custom-post-types.php:2075
+msgid "อีเมล (envelope)"
+msgstr "Email (envelope)"
+
+#: template-parts/post-meta.php:65
+msgid "อ่าน %d นาที"
+msgstr "%d min read"
+
+#: inc/custom-post-types.php:109
+msgid "เกี่ยวกับธีม"
+msgstr "About theme"
+
+#: footer.php:117
+#: footer.php:165
+msgid "เกี่ยวกับเรา"
+msgstr "About us"
+
+#: inc/custom-post-types.php:253
+msgid "เขียนบทความใหม่"
+msgstr "Write new post"
+
+#: footer.php:177
+msgid "เงื่อนไขการใช้งาน"
+msgstr "Terms of Service"
+
+#: inc/custom-post-types.php:2124
+msgid "เช่น หมวดหมู่, เกี่ยวกับเรา"
+msgstr "e.g. Categories, About us"
+
+#: inc/custom-post-types.php:2112
+msgid "เนื้อหา: ไปที่ Appearance → Widgets แล้วเลือกพื้นที่ Footer1–Footer4 เพื่อเพิ่ม/จัดเรียง Widget ที่ต้องการ (Custom HTML, Categories, Social Follow ฯลฯ)"
+msgstr "Content: Go to Appearance → Widgets and select Footer1–Footer4 to add/reorder widgets (Custom HTML, Categories, Social Follow, etc.)"
+
+#: inc/custom-post-types.php:1408
+msgid "เปิดใช้งาน Live Search (ค้นหาขณะพิมพ์)"
+msgstr "Enable Live Search (search as you type)"
+
+#: inc/custom-post-types.php:1396
+msgid "เปิดใช้งาน Search Suggestions (Autocomplete)"
+msgstr "Enable Search Suggestions (Autocomplete)"
+
+#: inc/custom-post-types.php:1671
+msgid "เปิดใช้งาน Table of Contents"
+msgstr "Enable Table of Contents"
+
+#: inc/custom-post-types.php:1384
+msgid "เปิดใช้งานการค้นหา"
+msgstr "Enable search"
+
+#: inc/custom-post-types.php:1185
+msgid "เปิดใช้งานการแชร์เนื้อหาไปยัง Social Media"
+msgstr "Enable sharing content to Social Media"
+
+#: inc/custom-post-types.php:1991
+msgid "เปิดใช้โฆษณาแบบลอยติดด้านซ้าย (ขนาด 120x600 หรือ 160x600) แสดงเฉพาะหน้า single post"
+msgstr "Enable floating left ad (120x600 or 160x600), shown on single post only"
+
+#: page.php:44
+msgid "เผยแพร่เมื่อ %s"
+msgstr "Published on %s"
+
+#: footer.php:75
+msgid "เมนู"
+msgstr "Menu"
+
+#: inc/custom-post-types.php:2079
+msgid "เมนู (bars)"
+msgstr "Menu (bars)"
+
+#: inc/custom-post-types.php:2158
+msgid "เมนูทางขวาของแถบ copyright: ไปที่ Appearance → Menus แล้วกำหนดเมนูให้ตำแหน่ง \"Footer Copyright Menu\""
+msgstr "Menu on the right of copyright bar: Go to Appearance → Menus and assign a menu to \"Footer Copyright Menu\""
+
+#: inc/custom-post-types.php:2137
+msgid "เมื่อเลือก Social"
+msgstr "When Social is selected"
+
+#: inc/custom-post-types.php:1506
+msgid "เลือก Fields ที่ต้องการให้ค้นหา"
+msgstr "Select fields to search"
+
+#: inc/custom-post-types.php:1469
+msgid "เลือก Post Types ที่ต้องการให้ค้นหา"
+msgstr "Select post types to search"
+
+#: inc/custom-post-types.php:1249
+msgid "เลือก Social Media platforms ที่ต้องการแสดงปุ่มแชร์"
+msgstr "Select Social Media platforms for share buttons"
+
+#: inc/custom-post-types.php:1862
+msgid "เลือก widgets ที่ต้องการให้แสดงใน WordPress Widgets area (Appearance > Widgets)"
+msgstr "Select widgets to show in WordPress Widgets area (Appearance > Widgets)"
+
+#: inc/custom-post-types.php:1330
+msgid "เลือกขนาดปุ่มแชร์"
+msgstr "Select share button size"
+
+#: inc/custom-post-types.php:1559
+msgid "เลือกข้อมูลที่ต้องการแสดงใน Suggestions"
+msgstr "Select data to show in suggestions"
+
+#: inc/custom-post-types.php:1692
+msgid "เลือกตำแหน่งที่ต้องการแสดง TOC"
+msgstr "Select TOC display position"
+
+#: inc/custom-post-types.php:1728
+msgid "เลือกตำแหน่งที่ต้องการแสดง TOC บน Mobile"
+msgstr "Select TOC position on mobile"
+
+#: inc/custom-post-types.php:1288
+msgid "เลือกตำแหน่งที่ต้องการแสดงปุ่มแชร์"
+msgstr "Select share button positions"
+
+#: inc/custom-post-types.php:1765
+msgid "เลือกระดับ Heading ที่ต้องการแสดงใน TOC"
+msgstr "Select heading levels to show in TOC"
+
+#: inc/custom-post-types.php:1527
+msgid "เลือกรูปแบบการแสดงผล Suggestions"
+msgstr "Select suggestions display style"
+
+#: inc/custom-post-types.php:1786
+msgid "เลือกรูปแบบการแสดงผล TOC"
+msgstr "Select TOC display style"
+
+#: inc/custom-post-types.php:1309
+msgid "เลือกรูปแบบการแสดงผลปุ่มแชร์"
+msgstr "Select share button display style"
+
+#: inc/custom-post-types.php:1580
+msgid "เลือกรูปแบบการแสดงผลในหน้า Search Results"
+msgstr "Select search results layout"
+
+#: inc/custom-post-types.php:1607
+msgid "เลือกวิธีการเรียงลำดับผลการค้นหา"
+msgstr "Select search results sort order"
+
+#: inc/custom-post-types.php:1127
+msgid "เลือกวิธีการแสดงผลบทความในหน้าแรก: แสดง pagination หรือปุ่มโหลดข่าวเพิ่มเติม"
+msgstr "Choose how to display posts on homepage: pagination or load more button"
+
+#: inc/custom-post-types.php:1142
+msgid "เลือกว่าจะให้กริดข่าวล่าสุดในหน้าแรกและหน้าอาร์คิฟแสดงกี่คอลัมน์ (จอขนาดกลางขึ้นไป)"
+msgstr "Choose number of columns for latest news grid on homepage and archive (medium screens and up)"
+
+#: inc/custom-post-types.php:1643
+msgid "เลือกหมวดหมู่ที่ต้องการยกเว้นจากการค้นหา"
+msgstr "Select categories to exclude from search"
+
+#: widgets/class-archive-widget.php:38
+msgid "เลือกเดือน"
+msgstr "Select month"
+
+#: inc/custom-post-types.php:2103
+msgid "เลือกเมนู"
+msgstr "Select menu"
+
+#: inc/custom-post-types.php:2101
+msgid "เลือกเมนู:"
+msgstr "Select menu:"
+
+#: inc/custom-post-types.php:120
+msgid "เว็บตัวอย่าง:"
+msgstr "Sample site:"
+
+#: inc/custom-post-types.php:2134
+msgid "เว้นว่าง = ใช้ชื่อเมนู (Menu) หรือหัวข้อตามคอลัมน์ (Sidebar)"
+msgstr "Leave empty to use menu name (Menu) or column heading (Sidebar)"
+
+#: template-parts/social-share-floating.php:26
+#: template-parts/social-share.php:48
+msgid "แชร์"
+msgstr "Share"
+
+#: inc/custom-post-types.php:2070
+msgid "แชร์ (share-alt)"
+msgstr "Share (share-alt)"
+
+#: inc/custom-post-types.php:2059
+msgid "แต่ละคอลัมน์เลือกได้ว่าจะแสดง: Widget (จาก Appearance > Widgets), Menu หรือ Social"
+msgstr "Each column can show: Widget (from Appearance > Widgets), Menu or Social"
+
+#: inc/custom-post-types.php:2073
+msgid "แผนผัง (sitemap)"
+msgstr "Sitemap (sitemap)"
+
+#: inc/custom-post-types.php:1704
+msgid "แสดง TOC บน Mobile"
+msgstr "Show TOC on mobile"
+
+#: inc/custom-post-types.php:1921
+msgid "แสดง sidebar (widget) ในหน้า Archive"
+msgstr "Show sidebar (widget) on Archive pages"
+
+#: inc/custom-post-types.php:1905
+msgid "แสดง sidebar (widget) ในหน้าแรก"
+msgstr "Show sidebar (widget) on homepage"
+
+#: inc/custom-post-types.php:1889
+msgid "แสดง sidebar ในหน้าคงที่ (Page เช่น Privacy Policy, เกี่ยวกับเรา)"
+msgstr "Show sidebar on pages (e.g. Privacy Policy, About us)"
+
+#: inc/custom-post-types.php:1874
+msgid "แสดง sidebar ในหน้าบทความ (Single Post)"
+msgstr "Show sidebar on single post"
+
+#: inc/custom-post-types.php:1941
+msgid "แสดง tags ที่มาแรง (Trending tags)"
+msgstr "Show trending tags"
+
+#: widgets/class-categories-widget.php:68
+msgid "แสดง/ซ่อนหมวดย่อย"
+msgstr "Show/hide subcategories"
+
+#: inc/custom-post-types.php:2041
+msgid "แสดงกล่องสมัครรับข่าวสาร (Newsletter) ใน footer"
+msgstr "Show newsletter subscription box in footer"
+
+#: inc/custom-post-types.php:1939
+msgid "แสดงบทความยอดนิยมตามจำนวน views"
+msgstr "Show popular posts by views"
+
+#: inc/custom-post-types.php:1940
+msgid "แสดงบทความล่าสุด"
+msgstr "Show recent posts"
+
+#: inc/custom-post-types.php:1206
+msgid "แสดงปุ่มแชร์ในหน้าคงที่"
+msgstr "Show share buttons on pages"
+
+#: inc/custom-post-types.php:1212
+msgid "แสดงปุ่มแชร์ในหน้าคงที่ (Page เช่น Privacy Policy)"
+msgstr "Show share buttons on pages (e.g. Privacy Policy)"
+
+#: inc/custom-post-types.php:1191
+msgid "แสดงปุ่มแชร์ในหน้าบทความ"
+msgstr "Show share buttons on single post"
+
+#: inc/custom-post-types.php:1197
+msgid "แสดงปุ่มแชร์ในหน้าบทความ (Single Post)"
+msgstr "Show share buttons on single post"
+
+#: inc/custom-post-types.php:2052
+msgid "แสดงส่วน tags มาแรงใน footer"
+msgstr "Show trending tags section in footer"
+
+#: widgets/class-categories-widget.php:68
+msgid "แสดงหมวดย่อย"
+msgstr "Show subcategories"
+
+#: inc/custom-post-types.php:1115
+msgid "แสดงหมายเลขหน้า"
+msgstr "Show page numbers"
+
+#: inc/custom-post-types.php:2120
+msgid "แสดงหัวข้อ"
+msgstr "Show heading"
+
+#: inc/custom-post-types.php:2090
+msgid "แสดงเป็น:"
+msgstr "Display as:"
+
+#: inc/custom-post-types.php:2002
+msgid "โค้ดโฆษณา (HTML / สคริปต์ AdSense):"
+msgstr "Ad code (HTML / AdSense script):"
+
+#: template-parts/floating-left-ad.php:22
+#: template-parts/floating-left-ad.php:31
+#: widgets/class-custom-html-widget.php:25
+msgid "โฆษณา"
+msgstr "Ad"
+
+#: inc/custom-post-types.php:2076
+msgid "โทรศัพท์ (phone)"
+msgstr "Phone (phone)"
+
+#: inc/custom-post-types.php:2068
+msgid "โฟลเดอร์ (folder-open)"
+msgstr "Folder (folder-open)"
+
+#: archive.php:120
+#: archive.php:121
+#: home.php:63
+#: home.php:64
+#: inc/custom-post-types.php:1122
+#: index.php:44
+#: index.php:45
+#: search.php:150
+#: search.php:151
+msgid "โหลดข่าวเพิ่มเติม"
+msgstr "Load more news"
+
+#: inc/custom-post-types.php:1154
+msgid "ใช้สไตล์ธีม (ปรับแต่ง wp-login ให้เข้ากับธีม Chrysoberyl)"
+msgstr "Use theme style (customize wp-login to match Chrysoberyl theme)"
+
+#: inc/custom-post-types.php:1343
+msgid "ใส่ Twitter/X username (ไม่ต้องใส่ @) เพื่อเพิ่มใน tweet"
+msgstr "Enter Twitter/X username (without @) to add to tweets"
+
+#: footer.php:40
+#: widgets/class-newsletter-widget.php:69
+msgid "ใส่อีเมลของคุณ"
+msgstr "Enter your email"
+
+#: template-parts/content-none.php:14
+msgid "ไม่พบข่าว"
+msgstr "No posts found"
+
+#: search.php:162
+msgid "ไม่พบผลการค้นหา"
+msgstr "No search results found"
+
+#: template-parts/breadcrumb.php:72
+msgid "ไม่พบหน้า"
+msgstr "Page not found"
+
+#: 404.php:17
+msgid "ไม่พบหน้าที่คุณกำลังมองหา"
+msgstr "The page you are looking for was not found"
+
+#: footer.php:31
+#: widgets/class-newsletter-widget.php:38
+#: widgets/class-newsletter-widget.php:95
+msgid "ไม่พลาดทุกเทรนด์"
+msgstr "Never miss a trend"
+
+#: inc/custom-post-types.php:1639
+msgid "ไม่มีหมวดหมู่"
+msgstr "No categories"
+
+#: inc/custom-post-types.php:2127
+msgid "ไอคอนหัวข้อ:"
+msgstr "Heading icon:"
+
+#: inc/custom-post-types.php:2067
+msgid "— ไม่มีไอคอน"
+msgstr "— No icon"
+
+#: inc/custom-post-types.php:1974
+msgid "• Widgets ที่ถูกเลือกจะแสดงใน Appearance > Widgets และสามารถเพิ่มไปยัง Widget Areas ต่างๆ ได้"
+msgstr "• Selected widgets will appear in Appearance > Widgets and can be added to widget areas."
+
+#: inc/custom-post-types.php:1975
+msgid "• Widgets ที่ไม่ถูกเลือกจะไม่แสดงใน Widgets area แต่โค้ดยังคงทำงานอยู่"
+msgstr "• Unselected widgets will not appear in Widgets area but code remains active."
+
+#: inc/custom-post-types.php:1976
+msgid "• การเปลี่ยนแปลงจะมีผลหลังจากบันทึกการตั้งค่า"
+msgstr "• Changes take effect after saving settings."
+
+#: widgets/class-custom-html-widget.php:78
+msgid "• เนื้อหาอื่น: ใส่แท็ก HTML ที่ต้องการได้ (รองรับแท็กพื้นฐาน)"
+msgstr "• Other content: Add any HTML tags (basic tags supported)."
+
+#: widgets/class-custom-html-widget.php:76
+msgid "• แบนเนอร์รูป: ใช้ HTML เช่น"
+msgstr "• Image banner: Use HTML such as"
+
+#: widgets/class-custom-html-widget.php:75
+msgid "• โฆษณาจาก Google AdSense: วางสคริปต์ที่ได้จาก AdSense ทั้งก้อนลงในช่องด้านบน"
+msgstr "• Google AdSense: Paste the full AdSense script in the box above."
+
+#: page-rankmath.php
+msgid "รวมลิงก์ทั้งหมดของ Chrysoberyl เพื่อความสะดวกในการนำทาง"
+msgstr "All links of Chrysoberyl for easy navigation"
+
+#: page-rankmath.php
+msgid "หน้าหลัก"
+msgstr "Main Pages"
+
+#: page-rankmath.php
+msgid "หน้าแรก (Homepage)"
+msgstr "Home (Homepage)"
+
+#: page-rankmath.php
+msgid "เนื้อหา"
+msgstr "Content"
+
+#: page-rankmath.php
+msgid "หมวดหมู่ (Category)"
+msgstr "Category"
+
+#: page-rankmath.php
+msgid "บทความ (Single Post)"
+msgstr "Single Post"
+
+#: page-rankmath.php
+msgid "แท็ก"
+msgstr "Tag"
+
+#: page-rankmath.php
+msgid "แท็ก (Tag Archive)"
+msgstr "Tag Archive"
+
+#: page-rankmath.php
+msgid "ผู้เขียน (Author)"
+msgstr "Author"
+
+#: page-rankmath.php
+msgid "ผลการค้นหา (Search)"
+msgstr "Search Results (Search)"
+
+#: page-rankmath.php
+msgid "แท็กยอดนิยม:"
+msgstr "Popular tags:"
+
+#: page-rankmath.php
+msgid "กฎหมาย & อื่นๆ"
+msgstr "Legal & Other"
+
+#: page-rankmath.php
+msgid "คุณอยู่ที่นี่"
+msgstr "You are here"
+
+#: page-rankmath.php
+msgid "หน้าไม่พบ (404 Error)"
+msgstr "Page not found (404 Error)"
+
+#: page-rankmath.php
+msgid "โครงสร้างเว็บไซต์"
+msgstr "Site structure"
+
+#: page-rankmath.php
+msgid "เครื่องมือ"
+msgstr "Utility"
+
+#: page-rankmath.php
+msgid "กฎหมาย"
+msgstr "Legal"
+
+#: page-rankmath.php
+msgid "รวมทั้งหมด %s หน้า (รวม Sitemap)"
+msgstr "Total of %s pages (including Sitemap)"

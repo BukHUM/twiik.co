@@ -1,0 +1,254 @@
+/**
+ * Login page styles - Chrysoberyl theme
+ * Matches theme: Google Sans + Noto Sans Thai, accent #1a73e8, google-gray-50 bg, shadow-card
+ *
+ * @package chrysoberyl
+ * @since 1.0.0
+ */
+
+:root {
+	--chrysoberyl-accent: #1a73e8;
+	--chrysoberyl-accent-hover: #1557b0;
+	--chrysoberyl-google-gray: #202124;
+	--chrysoberyl-google-gray-500: #5f6368;
+	--chrysoberyl-google-gray-50: #f8f9fa;
+	--chrysoberyl-google-gray-100: #f1f3f4;
+	--chrysoberyl-shadow-card: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+	--chrysoberyl-border: #e5e7eb;
+}
+
+body.login {
+	font-family: "Google Sans", "Noto Sans Thai", -apple-system, BlinkMacSystemFont, sans-serif;
+	background-color: var(--chrysoberyl-google-gray-50);
+	background-image: none;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body.login * {
+	box-sizing: border-box;
+}
+
+/* Main login box - white card like theme */
+#login {
+	width: 100%;
+	max-width: 420px;
+	padding: 0;
+}
+
+#loginform,
+.login form {
+	background: #fff;
+	border: 1px solid var(--chrysoberyl-border);
+	border-radius: 1rem;
+	box-shadow: var(--chrysoberyl-shadow-card);
+	padding: 2rem;
+	margin-top: 0;
+	margin-left: 0;
+}
+
+/* Logo area */
+.login h1 {
+	margin-bottom: 1.5rem;
+}
+
+.login h1 a {
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+	margin: 0 auto 1rem;
+}
+
+/* Labels */
+.login label {
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: var(--chrysoberyl-google-gray);
+}
+
+/* Inputs - rounded, border, focus accent (theme style) */
+.login input[type="text"],
+.login input[type="password"],
+.login input[type="email"] {
+	width: 100%;
+	padding: 0.625rem 0.875rem;
+	font-size: 1rem;
+	font-family: inherit;
+	line-height: 1.5;
+	color: #111827;
+	background: #fff;
+	border: 1px solid var(--chrysoberyl-border);
+	border-radius: 0.5rem;
+	margin-top: 0.25rem;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus,
+.login input[type="email"]:focus {
+	border-color: var(--chrysoberyl-accent);
+	outline: 0;
+	box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+}
+
+.login input[type="checkbox"] {
+	border-radius: 0.25rem;
+}
+
+/* Primary button - theme accent (Google blue) */
+.wp-core-ui .button-primary,
+.login .button-primary {
+	width: 100%;
+	display: block;
+	background: var(--chrysoberyl-accent);
+	border-color: var(--chrysoberyl-accent);
+	color: #fff;
+	font-family: inherit;
+	font-weight: 600;
+	font-size: 1rem;
+	padding: 0.625rem 1rem;
+	height: auto;
+	line-height: 1.5;
+	border-radius: 0.5rem;
+	text-shadow: none;
+	box-shadow: none;
+	transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary:focus,
+.login .button-primary:hover,
+.login .button-primary:focus {
+	background: var(--chrysoberyl-accent-hover);
+	border-color: var(--chrysoberyl-accent-hover);
+	color: #fff;
+}
+
+.wp-core-ui .button-primary:active {
+	background: #134a9e;
+	border-color: #134a9e;
+}
+
+/* Links - theme accent */
+.login #nav a,
+.login #backtoblog a {
+	color: var(--chrysoberyl-accent);
+	text-decoration: none;
+	font-size: 0.875rem;
+}
+
+.login #nav a:hover,
+.login #backtoblog a:hover {
+	color: var(--chrysoberyl-accent-hover);
+	text-decoration: underline;
+}
+
+/* Message / success - left border accent */
+.login .message,
+.login .success {
+	border-left: 4px solid var(--chrysoberyl-accent);
+	background: #fff;
+	padding: 0.875rem 1rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+	margin-bottom: 1rem;
+}
+
+.login .message {
+	border-left-color: var(--chrysoberyl-accent);
+}
+
+.login #login_error {
+	border-left: 4px solid #dc2626;
+	background: #fef2f2;
+	padding: 0.875rem 1rem;
+	border-radius: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+/* Form row spacing */
+.login form .forgetmenot {
+	margin-top: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+.login .submit {
+	margin-top: 1.25rem;
+}
+
+/* Footer links row */
+.login #nav,
+.login #backtoblog {
+	padding: 0.5rem 0;
+}
+
+.login #backtoblog {
+	margin-bottom: 0.5rem;
+}
+
+/* Language switcher - sibling of #login, keep below form and centered */
+body.login .language-switcher {
+	width: 100%;
+	max-width: 420px;
+	margin-top: 1.5rem;
+	padding: 1rem 0;
+	text-align: center;
+}
+
+body.login .language-switcher form {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
+body.login .language-switcher label,
+body.login .language-switcher select,
+body.login .language-switcher .button {
+	margin: 0;
+	vertical-align: middle;
+}
+
+body.login .language-switcher .dashicons-translation {
+	color: var(--chrysoberyl-google-gray-500);
+	font-size: 1.25rem;
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+/* Privacy link - keep centered below form */
+body.login .privacy-policy-page-link {
+	text-align: center;
+	margin-top: 1rem;
+	font-size: 0.875rem;
+	color: var(--chrysoberyl-google-gray-500);
+}
+
+body.login .privacy-policy-page-link a {
+	color: var(--chrysoberyl-accent);
+	text-decoration: none;
+}
+
+body.login .privacy-policy-page-link a:hover {
+	color: var(--chrysoberyl-accent-hover);
+	text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+	body.login {
+		padding: 16px;
+	}
+
+	#loginform,
+	.login form {
+		padding: 1.5rem;
+	}
+}
