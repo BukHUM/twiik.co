@@ -24,11 +24,22 @@ $show_sidebar_home = ( get_option( 'chrysoberyl_sidebar_home_enabled', '1' ) ===
 
         <!-- Main Feed -->
         <div class="<?php echo $show_sidebar_home ? 'lg:w-2/3' : 'lg:w-full'; ?>">
+            <?php
+            $posts_page_id = (int) get_option( 'page_for_posts' );
+            if ( $posts_page_id ) {
+                $archive_url = get_permalink( $posts_page_id );
+            } else {
+                $archive_url = home_url( '/all-posts/' );
+            }
+            if ( ! $archive_url ) {
+                $archive_url = home_url( '/all-posts/' );
+            }
+            ?>
             <div class="flex justify-between items-end mb-6">
                 <h2 class="text-2xl font-bold text-gray-900 border-l-4 border-accent pl-3">
                     <?php _e( 'ข่าวล่าสุด', 'chrysoberyl' ); ?>
                 </h2>
-                <a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>" 
+                <a href="<?php echo esc_url( $archive_url ); ?>"
                    class="text-sm text-gray-500 hover:text-accent">
                     <?php _e( 'ดูทั้งหมด', 'chrysoberyl' ); ?> <i class="fas fa-arrow-right ml-1"></i>
                 </a>

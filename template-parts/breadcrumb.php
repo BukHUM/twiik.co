@@ -24,6 +24,8 @@ if (is_front_page()) {
     $should_show = get_option('chrysoberyl_breadcrumb_show_on_page', '1') === '1';
 } elseif (is_category()) {
     $should_show = get_option('chrysoberyl_breadcrumb_show_on_category', '1') === '1';
+} elseif (( is_home() && ! is_front_page() ) || (int) get_query_var( 'chrysoberyl_all_posts' ) === 1) {
+    $should_show = get_option('chrysoberyl_breadcrumb_show_on_category', '1') === '1';
 } elseif (is_tag()) {
     $should_show = get_option('chrysoberyl_breadcrumb_show_on_tag', '1') === '1';
 } elseif (is_author()) {
@@ -84,6 +86,12 @@ $breadcrumb_current_class = (is_archive() || is_single()) ? 'text-google-blue fo
                 <span class="chrysoberyl-breadcrumb-sep mx-1" aria-hidden="true">/</span>
                 <span
                     class="chrysoberyl-breadcrumb-current <?php echo esc_attr($breadcrumb_current_class); ?>"><?php echo esc_html(get_the_archive_title()); ?></span>
+            </li>
+        <?php elseif (( is_home() && ! is_front_page() ) || (int) get_query_var( 'chrysoberyl_all_posts' ) === 1): ?>
+            <li class="inline-flex items-center shrink-0" aria-current="page">
+                <span class="chrysoberyl-breadcrumb-sep mx-1" aria-hidden="true">/</span>
+                <span
+                    class="chrysoberyl-breadcrumb-current <?php echo esc_attr($breadcrumb_current_class); ?>"><?php echo esc_html(_x('ข่าวล่าสุด', 'breadcrumb', 'chrysoberyl')); ?></span>
             </li>
         <?php elseif (is_single()): ?>
             <?php

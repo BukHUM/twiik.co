@@ -1593,6 +1593,10 @@ msgstr ""
 msgid "ข่าวล่าสุด"
 msgstr ""
 
+#: archive-all.php:15
+msgid "บทความล่าสุดจากทุกหมวดหมู่"
+msgstr ""
+
 #: inc/custom-post-types.php:2150
 msgid "ข้อความด้านซ้ายของแถบ copyright (เว้นว่าง = ใช้ค่าเริ่มต้น). ใช้ {year} สำหรับปี, {sitename} สำหรับชื่อเว็บ"
 msgstr ""

@@ -11,6 +11,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Force Site Language (instead of user profile language) on Chrysoberyl admin pages.
+ * Reload textdomain with correct locale early in after_setup_theme.
+ */
+add_action( 'after_setup_theme', 'chrysoberyl_reload_textdomain_for_admin', 99 );
+function chrysoberyl_reload_textdomain_for_admin() {
+    if ( ! is_admin() ) {
+        return;
+    }
+    if ( ! isset( $_GET['page'] ) || strpos( $_GET['page'], 'chrysoberyl' ) !== 0 ) {
+        return;
+    }
+    
+    $site_locale = get_option( 'WPLANG' );
+    $locale = $site_locale ? $site_locale : 'en_US';
+    
+    // Unload current textdomain
+    unload_textdomain( 'chrysoberyl' );
+    
+    // Load textdomain with site locale
+    $mofile = get_template_directory() . '/languages/chrysoberyl-' . $locale . '.mo';
+    if ( file_exists( $mofile ) ) {
+        load_textdomain( 'chrysoberyl', $mofile );
+    }
+}
+
+/**
  * Include theme files
  */
 require_once get_template_directory() . '/inc/theme-setup.php';

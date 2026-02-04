@@ -1594,6 +1594,10 @@ msgstr "Interesting News"
 msgid "ข่าวล่าสุด"
 msgstr "Latest News"
 
+#: archive-all.php:15
+msgid "บทความล่าสุดจากทุกหมวดหมู่"
+msgstr "Latest articles from all categories"
+
 #: inc/custom-post-types.php:2150
 msgid "ข้อความด้านซ้ายของแถบ copyright (เว้นว่าง = ใช้ค่าเริ่มต้น). ใช้ {year} สำหรับปี, {sitename} สำหรับชื่อเว็บ"
 msgstr "Text on the left of the copyright bar (leave empty for default). Use {year} for year, {sitename} for site name"
@@ -2450,3 +2454,507 @@ msgstr "Legal"
 #: page-rankmath.php
 msgid "รวมทั้งหมด %s หน้า (รวม Sitemap)"
 msgstr "Total of %s pages (including Sitemap)"
+
+#: inc/custom-post-types.php:133
+msgid "ธีม Chrysoberyl - Theme พัฒนาและดูแลโดย"
+msgstr "Chrysoberyl - Theme developed and maintained by"
+
+#: inc/custom-post-types.php:1271
+msgid "เมื่อไม่มีโลโก้ แสดงชื่อเว็บใน header แบบใด:"
+msgstr "When no logo, display site name in header as:"
+
+#: inc/custom-post-types.php:1276
+msgid "สีเทา (ค่าเริ่มต้น)"
+msgstr "Gray (default)"
+
+#: inc/custom-post-types.php:1281
+msgid "มีสีสัน (แบบโลโก้ Google)"
+msgstr "Colorful (Google logo style)"
+
+#: inc/custom-post-types.php:1340
+msgid "ใช้สไตล์ธีม (ปรับแต่ง wp-login ให้เข้ากับธีม Chrysoberyl - Theme)"
+msgstr "Use theme style (customize wp-login to match Chrysoberyl - Theme)"
+
+#: inc/custom-post-types.php:1359
+msgid "เปิดใช้งาน Breadcrumbs"
+msgstr "Enable Breadcrumbs"
+
+#: inc/custom-post-types.php:1366
+msgid "แสดง Breadcrumbs (เส้นทางนำทาง)"
+msgstr "Show Breadcrumbs (navigation path)"
+
+#: inc/custom-post-types.php:1369
+msgid "เปิด/ปิดการแสดง breadcrumbs ทั้งหมดในเว็บไซต์"
+msgstr "Enable/disable breadcrumbs across the entire website"
+
+#: inc/custom-post-types.php:1374
+msgid "แสดง Breadcrumbs ที่"
+msgstr "Show Breadcrumbs on"
+
+#: inc/custom-post-types.php:1378
+msgid "เลือกหน้าที่ต้องการแสดง Breadcrumbs"
+msgstr "Select pages to show Breadcrumbs"
+
+#: inc/custom-post-types.php:1381
+msgid "เลือกประเภทหน้าที่ต้องการแสดง breadcrumbs:"
+msgstr "Select page types to display breadcrumbs:"
+
+#: inc/custom-post-types.php:1388
+msgid "หน้าแรก (Homepage)"
+msgstr "Homepage"
+
+#: inc/custom-post-types.php:1393
+msgid "บทความ (Single Post)"
+msgstr "Single Post"
+
+#: inc/custom-post-types.php:1398
+msgid "หน้าเพจ (Page)"
+msgstr "Page"
+
+#: inc/custom-post-types.php:1403
+msgid "หมวดหมู่ (Category Archive)"
+msgstr "Category Archive"
+
+#: inc/custom-post-types.php:1407
+msgid "แท็ก (Tag Archive)"
+msgstr "Tag Archive"
+
+#: inc/custom-post-types.php:1412
+msgid "ผู้เขียน (Author Archive)"
+msgstr "Author Archive"
+
+#: inc/custom-post-types.php:1417
+msgid "วันที่ (Date Archive)"
+msgstr "Date Archive"
+
+#: inc/custom-post-types.php:1422
+msgid "ผลการค้นหา (Search Results)"
+msgstr "Search Results"
+
+#: inc/custom-post-types.php:1426
+msgid "หน้าไม่พบ (404 Page)"
+msgstr "404 Page"
+
+#: inc/custom-post-types.php:1627
+msgid "แบบ Mockup: ไอคอนสีเทา วงกลม เมื่อ hover เป็นพื้นหลังเทาอ่อน ตรงกับ mockup single"
+msgstr "Mockup style: gray circle icons, light gray background on hover, matches mockup single"
+
+#: inc/custom-post-types.php:1798
+msgid "Categories (หมวดหมู่)"
+msgstr "Categories"
+
+#: inc/custom-post-types.php:1940
+msgid "ไม่มีหมวดหมู่"
+msgstr "No categories"
+
+#: inc/custom-post-types.php:2204
+msgid "แสดงกล่องข้อมูลผู้เขียน (Author info) ด้านล่างเนื้อหาในหน้าบทความ"
+msgstr "Show author info box below content on single post"
+
+#: inc/custom-post-types.php:2545
+msgid "เช่น หมวดหมู่, เกี่ยวกับเรา"
+msgstr "e.g. Category, About us"
+
+#: inc/custom-post-types.php
+msgid "คอลัมน์"
+msgstr "columns"
+
+#: inc/custom-post-types.php
+msgid "โหลดข่าวเพิ่มเติม"
+msgstr "Load more news"
+
+#: inc/custom-post-types.php
+msgid "เลือกขนาดปุ่มแชร์"
+msgstr "Select share button size"
+
+#: inc/custom-post-types.php
+msgid "เลือกรูปแบบการแสดงผลปุ่มแชร์"
+msgstr "Select share button style"
+
+#: inc/custom-post-types.php
+msgid "เลือกตำแหน่งที่ต้องการแสดงปุ่มแชร์"
+msgstr "Select positions to display share buttons"
+
+#: inc/custom-post-types.php
+msgid "รูปลักษณะไอคอนแชร์"
+msgstr "Share icon style"
+
+#: inc/custom-post-types.php
+msgid "เปิดใช้งานการค้นหา"
+msgstr "Enable search"
+
+#: inc/custom-post-types.php
+msgid "เลือกเมนู"
+msgstr "Select menu"
+
+#: inc/custom-post-types.php
+msgid "หัวข้อและไอคอน"
+msgstr "Title and icon"
+
+#: inc/custom-post-types.php
+msgid "แสดงหัวข้อ"
+msgstr "Show title"
+
+#: inc/custom-post-types.php
+msgid "ตั้งค่าการแชร์เนื้อหาไปยัง Social Media platforms ต่างๆ"
+msgstr "Configure content sharing to various Social Media platforms"
+
+#: inc/custom-post-types.php
+msgid "เปิดใช้งานการแชร์เนื้อหาไปยัง Social Media"
+msgstr "Enable content sharing to Social Media"
+
+#: inc/custom-post-types.php
+msgid "เลือก Social Media platforms ที่ต้องการแสดงปุ่มแชร์"
+msgstr "Select Social Media platforms to show share buttons"
+
+#: inc/custom-post-types.php
+msgid "Icon Only (ไอคอนเท่านั้น)"
+msgstr "Icon Only"
+
+#: inc/custom-post-types.php
+msgid "Icon + Text (ไอคอนและข้อความ)"
+msgstr "Icon + Text"
+
+#: inc/custom-post-types.php
+msgid "Button Style (สไตล์ปุ่ม)"
+msgstr "Button Style"
+
+#: inc/custom-post-types.php
+msgid "Small (เล็ก)"
+msgstr "Small"
+
+#: inc/custom-post-types.php
+msgid "Medium (กลาง)"
+msgstr "Medium"
+
+#: inc/custom-post-types.php
+msgid "Large (ใหญ่)"
+msgstr "Large"
+
+#: inc/custom-post-types.php
+msgid "แบบสีแบรนด์ (Branded)"
+msgstr "Branded colors"
+
+#: inc/custom-post-types.php
+msgid "แบบ Mockup (เทา วงกลม hover)"
+msgstr "Mockup style (gray circle hover)"
+
+#: inc/custom-post-types.php
+msgid "ใส่ Twitter/X username (ไม่ต้องใส่ @) เพื่อเพิ่มใน tweet"
+msgstr "Enter Twitter/X username (without @) to add to tweet"
+
+#: inc/custom-post-types.php
+msgid "พิมพ์คำค้นหา..."
+msgstr "Type to search..."
+
+#: inc/custom-post-types.php
+msgid "สารบัญ"
+msgstr "Table of Contents"
+
+#: inc/custom-post-types.php
+msgid "Top (ด้านบนเนื้อหา)"
+msgstr "Top (above content)"
+
+#: inc/custom-post-types.php
+msgid "Sidebar (ด้านข้าง)"
+msgstr "Sidebar"
+
+#: inc/custom-post-types.php
+msgid "Floating (ลอยด้านข้าง)"
+msgstr "Floating (side)"
+
+#: inc/custom-post-types.php
+msgid "เลือกตำแหน่งที่ต้องการแสดง TOC"
+msgstr "Select position to display TOC"
+
+#: inc/custom-post-types.php
+msgid "Post single (บทความเดียว)"
+msgstr "Single Post"
+
+#: inc/custom-post-types.php
+msgid "Page single (หน้าคงที่)"
+msgstr "Single Page"
+
+#: inc/custom-post-types.php
+msgid "เลือกว่าจะแสดง TOC ในหน้าประเภทใด"
+msgstr "Select which page types to display TOC"
+
+#: inc/custom-post-types.php
+msgid "แสดง TOC บน Mobile"
+msgstr "Show TOC on Mobile"
+
+#: inc/custom-post-types.php
+msgid "Top (ด้านบน)"
+msgstr "Top"
+
+#: inc/custom-post-types.php
+msgid "Bottom (ด้านล่าง)"
+msgstr "Bottom"
+
+#: inc/custom-post-types.php
+msgid "Floating Button (ปุ่มลอย)"
+msgstr "Floating Button"
+
+#: inc/custom-post-types.php
+msgid "Collapsible Menu (เมนูย่อ/ขยาย)"
+msgstr "Collapsible Menu"
+
+#: inc/custom-post-types.php
+msgid "เลือกตำแหน่งที่ต้องการแสดง TOC บน Mobile"
+msgstr "Select position to display TOC on Mobile"
+
+#: inc/custom-post-types.php
+msgid "H2 (หัวข้อหลัก)"
+msgstr "H2 (main heading)"
+
+#: inc/custom-post-types.php
+msgid "H3 (หัวข้อย่อย)"
+msgstr "H3 (subheading)"
+
+#: inc/custom-post-types.php
+msgid "H4 (หัวข้อรอง)"
+msgstr "H4 (sub-subheading)"
+
+#: inc/custom-post-types.php
+msgid "เลือกระดับ Heading ที่ต้องการแสดงใน TOC"
+msgstr "Select heading levels to display in TOC"
+
+#: inc/custom-post-types.php
+msgid "Simple List (รายการธรรมดา)"
+msgstr "Simple List"
+
+#: inc/custom-post-types.php
+msgid "Numbered List (รายการแบบมีเลข)"
+msgstr "Numbered List"
+
+#: inc/custom-post-types.php
+msgid "Nested/Indented (แบบซ้อน)"
+msgstr "Nested/Indented"
+
+#: inc/custom-post-types.php
+msgid "เลือกรูปแบบการแสดงผล TOC"
+msgstr "Select TOC display style"
+
+#: inc/custom-post-types.php
+msgid "Smooth Scroll (เลื่อนแบบนุ่มนวล)"
+msgstr "Smooth Scroll"
+
+#: inc/custom-post-types.php
+msgid "Scroll Spy (Highlight section ที่กำลังอ่าน)"
+msgstr "Scroll Spy (highlight current section)"
+
+#: inc/custom-post-types.php
+msgid "Collapsible (ย่อ/ขยายได้)"
+msgstr "Collapsible"
+
+#: inc/custom-post-types.php
+msgid "Sticky (ติดตามเมื่อ scroll)"
+msgstr "Sticky (follow on scroll)"
+
+#: inc/custom-post-types.php
+msgid "Auto-collapse on Mobile (ย่ออัตโนมัติบนมือถือ)"
+msgstr "Auto-collapse on Mobile"
+
+#: inc/custom-post-types.php
+msgid "จำนวน Heading ขั้นต่ำที่จะแสดง TOC (0 = แสดงเสมอ)"
+msgstr "Minimum headings to display TOC (0 = always show)"
+
+#: inc/custom-post-types.php
+msgid "ชื่อหัวข้อของ TOC (เช่น: สารบัญ, Table of Contents)"
+msgstr "TOC title (e.g.: Table of Contents)"
+
+#: inc/custom-post-types.php
+msgid "เลือก widgets ที่ต้องการให้แสดงใน WordPress Widgets area (Appearance > Widgets)"
+msgstr "Select widgets to display in WordPress Widgets area (Appearance > Widgets)"
+
+#: inc/custom-post-types.php
+msgid "ปิดใช้ถ้าไม่ต้องการแสดง Author box ก่อนส่วนบทความที่เกี่ยวข้อง"
+msgstr "Turn off to hide Author box before related posts section"
+
+#: inc/custom-post-types.php
+msgid "ลากเพื่อเรียงลำดับการแสดงผล • เลือกติ๊กเพื่อเปิดใช้"
+msgstr "Drag to reorder • Check to enable"
+
+#: inc/custom-post-types.php
+msgid "แสดง tags ที่มาแรง (Trending tags)"
+msgstr "Show trending tags"
+
+#: inc/custom-post-types.php
+msgid "ช่องค้นหาใน sidebar"
+msgstr "Search box in sidebar"
+
+#: inc/custom-post-types.php
+msgid "ปุ่มติดตาม Facebook, Twitter, Line, YouTube ฯลฯ"
+msgstr "Follow buttons for Facebook, Twitter, Line, YouTube, etc."
+
+#: inc/custom-post-types.php
+msgid "อาร์คิฟแยกตามเดือน"
+msgstr "Archive by month"
+
+#: inc/custom-post-types.php
+msgid "พื้นที่โฆษณาหรือ HTML กำหนดเอง"
+msgstr "Ad space or custom HTML"
+
+#: inc/custom-post-types.php
+msgid "หมายเหตุ:"
+msgstr "Note:"
+
+#: inc/custom-post-types.php
+msgid "• Widgets ที่ถูกเลือกจะแสดงใน Appearance > Widgets และสามารถเพิ่มไปยัง Widget Areas ต่างๆ ได้"
+msgstr "• Selected widgets will appear in Appearance > Widgets and can be added to various Widget Areas"
+
+#: inc/custom-post-types.php
+msgid "• Widgets ที่ไม่ถูกเลือกจะไม่แสดงใน Widgets area แต่โค้ดยังคงทำงานอยู่"
+msgstr "• Unselected widgets won't appear in Widgets area but code still works"
+
+#: inc/custom-post-types.php
+msgid "• การเปลี่ยนแปลงจะมีผลหลังจากบันทึกการตั้งค่า"
+msgstr "• Changes take effect after saving settings"
+
+#: inc/custom-post-types.php
+msgid "ขนาด:"
+msgstr "Size:"
+
+#: inc/custom-post-types.php
+msgid "โค้ดโฆษณา (HTML / สคริปต์ AdSense):"
+msgstr "Ad code (HTML / AdSense script):"
+
+#: inc/custom-post-types.php
+msgid "ถ้าไม่ใส่โค้ด จะแสดงกรอบ placeholder โฆษณา"
+msgstr "If no code, placeholder ad frame will be shown"
+
+#: inc/custom-post-types.php
+msgid "ปรับแต่งส่วน footer: newsletter, tags, คอลัมน์ widget และข้อความ copyright"
+msgstr "Customize footer: newsletter, tags, widget columns and copyright text"
+
+#: inc/custom-post-types.php
+msgid "แสดงส่วน Footer"
+msgstr "Show Footer Section"
+
+#: inc/custom-post-types.php
+msgid "แสดงส่วนเมนู footer (4 คอลัมน์: About, More from us, Support, Subscribe)"
+msgstr "Show footer menu section (4 columns: About, More from us, Support, Subscribe)"
+
+#: inc/custom-post-types.php
+msgid "แสดงแถบ legal (Logo, Copyright, ลิงก์ Sitemap/FAQ/Privacy/Terms)"
+msgstr "Show legal bar (Logo, Copyright, Sitemap/FAQ/Privacy/Terms links)"
+
+#: inc/custom-post-types.php
+msgid "ลิงก์โซเชียล (Footer)"
+msgstr "Social Links (Footer)"
+
+#: inc/custom-post-types.php
+msgid "ใส่ URL สำหรับแสดงใน footer (เว้นว่าง = ไม่แสดงไอคอนนั้น)"
+msgstr "Enter URL to display in footer (leave empty = hide that icon)"
+
+#: inc/custom-post-types.php
+msgid "แสดงกล่องสมัครรับข่าวสาร (Newsletter) ใน footer"
+msgstr "Show newsletter subscription box in footer"
+
+#: inc/custom-post-types.php
+msgid "แสดงส่วน tags มาแรงใน footer"
+msgstr "Show trending tags section in footer"
+
+#: inc/custom-post-types.php
+msgid "แต่ละคอลัมน์เลือกได้ว่าจะแสดง: Widget (จาก Appearance > Widgets), Menu หรือ Social"
+msgstr "Each column can display: Widget (from Appearance > Widgets), Menu or Social"
+
+#: inc/custom-post-types.php
+msgid "— ไม่มีไอคอน"
+msgstr "— No icon"
+
+#: inc/custom-post-types.php
+msgid "โฟลเดอร์ (folder-open)"
+msgstr "Folder (folder-open)"
+
+#: inc/custom-post-types.php
+msgid "ข้อมูล (info-circle)"
+msgstr "Info (info-circle)"
+
+#: inc/custom-post-types.php
+msgid "แชร์ (share-alt)"
+msgstr "Share (share-alt)"
+
+#: inc/custom-post-types.php
+msgid "ลิงก์ (link)"
+msgstr "Link (link)"
+
+#: inc/custom-post-types.php
+msgid "รายการ (list)"
+msgstr "List (list)"
+
+#: inc/custom-post-types.php
+msgid "แผนผัง (sitemap)"
+msgstr "Sitemap (sitemap)"
+
+#: inc/custom-post-types.php
+msgid "สมุดที่อยู่ (address-book)"
+msgstr "Address book (address-book)"
+
+#: inc/custom-post-types.php
+msgid "อีเมล (envelope)"
+msgstr "Email (envelope)"
+
+#: inc/custom-post-types.php
+msgid "โทรศัพท์ (phone)"
+msgstr "Phone (phone)"
+
+#: inc/custom-post-types.php
+msgid "ตำแหน่ง (map-marker-alt)"
+msgstr "Location (map-marker-alt)"
+
+#: inc/custom-post-types.php
+msgid "กริด (th-large)"
+msgstr "Grid (th-large)"
+
+#: inc/custom-post-types.php
+msgid "เมนู (bars)"
+msgstr "Menu (bars)"
+
+#: inc/custom-post-types.php
+msgid "ลูกศร (chevron-right)"
+msgstr "Arrow (chevron-right)"
+
+#: inc/custom-post-types.php
+msgid "ดาว (star)"
+msgstr "Star (star)"
+
+#: inc/custom-post-types.php
+msgid "หัวใจ (heart)"
+msgstr "Heart (heart)"
+
+#: inc/custom-post-types.php
+msgid "ที่คั่น (bookmark)"
+msgstr "Bookmark (bookmark)"
+
+#: inc/custom-post-types.php
+msgid "แสดงเป็น:"
+msgstr "Display as:"
+
+#: inc/custom-post-types.php
+msgid "เลือกเมนู:"
+msgstr "Select menu:"
+
+#: inc/custom-post-types.php
+msgid "เนื้อหา: ไปที่ Appearance → Widgets แล้วเลือกพื้นที่ Footer1–Footer4 เพื่อเพิ่ม/จัดเรียง Widget ที่ต้องการ (Custom HTML, Categories, Social Follow ฯลฯ)"
+msgstr "Content: Go to Appearance → Widgets and select Footer1–Footer4 area to add/arrange widgets (Custom HTML, Categories, Social Follow, etc.)"
+
+#: inc/custom-post-types.php
+msgid "ข้อความหัวข้อ:"
+msgstr "Title text:"
+
+#: inc/custom-post-types.php
+msgid "ไอคอนหัวข้อ:"
+msgstr "Title icon:"
+
+#: inc/custom-post-types.php
+msgid "เว้นว่าง = ใช้ชื่อเมนู (Menu) หรือหัวข้อตามคอลัมน์ (Sidebar)"
+msgstr "Leave empty = use menu name (Menu) or column title (Sidebar)"
+
+#: inc/custom-post-types.php
+msgid "เมื่อเลือก Social"
+msgstr "When selecting Social"
+
+#: inc/custom-post-types.php
+msgid "จะแสดงปุ่มโซเชียล (Facebook, Twitter, Instagram, YouTube). ลิงก์ปัจจุบันเป็นตัวอย่าง (#). ถ้าต้องการกำหนด URL จริง ให้เลือก \"Sidebar (Widgets)\" แล้วไปที่ Appearance → Widgets → Footer นี้ แล้วใส่ Widget \"Chrysoberyl - Theme: Social Follow\" แล้วกรอกลิงก์ใน Widget"
+msgstr "Shows social buttons (Facebook, Twitter, Instagram, YouTube). Current links are examples (#). To set real URLs, select \"Sidebar (Widgets)\" then go to Appearance → Widgets → this Footer and add \"Chrysoberyl - Theme: Social Follow\" widget with your links"

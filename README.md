@@ -6,11 +6,11 @@ Twiik - Tweak tech knowledge project base on WordPress CMS and Chrysoberyl theme
 
 # Chrysoberyl WordPress Theme
 
-Modern news website theme — ทันทุกกระแสโลก
+Minimal and clean blog style
 
 ## Description
 
-Chrysoberyl is a clean, responsive WordPress theme for news and blog content with modern UI/UX. Built with Tailwind CSS, custom post types (Video News, Gallery, Featured Story), Theme Settings, and translation support (Thai / English).
+Chrysoberyl is a clean, responsive WordPress theme for news and blog content with modern UI/UX. Built with Tailwind CSS, Theme Settings, and translation support (Thai / English).
 
 ## Features
 
@@ -29,8 +29,8 @@ Chrysoberyl is a clean, responsive WordPress theme for news and blog content wit
 ## Requirements
 
 - WordPress 6.0+
-- PHP 7.4+
-- MySQL 5.6+
+- PHP 8.0+
+- MySQL 5.6+, MariaDB
 
 ## Installation
 
@@ -60,6 +60,7 @@ The theme uses the text domain `chrysoberyl`. English strings are in `languages/
 
 - **ทีมผู้พัฒนา:** [ต้นกล้าไอที](https://tonkla.co)
 - **เว็บตัวอย่าง:** [กาเหว่า](https://gawao.com)
+- **เว็บตัวอย่าง:** [Twiik](https://twiik.co)
 
 ## License
 

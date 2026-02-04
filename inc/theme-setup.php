@@ -24,19 +24,6 @@ function chrysoberyl_theme_setup() {
     load_theme_textdomain( 'chrysoberyl', get_template_directory() . '/languages' );
 
     /*
-     * On Theme Settings admin page, use site language so labels/descriptions
-     * follow Site Language (Settings → General) instead of user profile language.
-     */
-    add_filter( 'determine_locale', 'chrysoberyl_locale_on_settings_page', 5 );
-    function chrysoberyl_locale_on_settings_page( $locale ) {
-        if ( is_admin() && isset( $_GET['page'] ) && 'chrysoberyl-settings' === $_GET['page'] ) {
-            $site_locale = get_option( 'WPLANG' );
-            return $site_locale ? $site_locale : 'en_US';
-        }
-        return $locale;
-    }
-
-    /*
      * Let WordPress manage the document title.
      * By adding theme support, we declare that this theme does not use a
      * hard-coded <title> tag in the document head, and expect WordPress to
@@ -316,3 +303,89 @@ function chrysoberyl_mce_buttons( $buttons ) {
 }
 add_filter( 'mce_external_plugins', 'chrysoberyl_mce_external_plugins' );
 add_filter( 'mce_buttons', 'chrysoberyl_mce_buttons' );
+
+/**
+ * Blog archive URL (/all-posts/) — same layout as category archive, content from all categories.
+ * Rewrite rule + query var + template so "View all" goes to this page when Posts page is not set.
+ */
+function chrysoberyl_blog_archive_rewrite_rules() {
+    add_rewrite_rule( '^all-posts/?$', 'index.php?chrysoberyl_all_posts=1', 'top' );
+}
+add_action( 'init', 'chrysoberyl_blog_archive_rewrite_rules' );
+
+/**
+ * Flush rewrite rules once after theme load so /all-posts/ is recognized (no need to visit Permalinks).
+ */
+function chrysoberyl_maybe_flush_rewrite_for_all_posts() {
+    $flushed = get_option( 'chrysoberyl_all_posts_rewrite_flushed', '' );
+    $theme_version = wp_get_theme( get_template() )->get( 'Version' );
+    if ( $flushed !== $theme_version ) {
+        flush_rewrite_rules();
+        update_option( 'chrysoberyl_all_posts_rewrite_flushed', $theme_version );
+    }
+}
+add_action( 'init', 'chrysoberyl_maybe_flush_rewrite_for_all_posts', 99 );
+
+/**
+ * Fallback: when /all-posts/ is requested but rewrite didn't match (e.g. page slug), force our query var.
+ */
+function chrysoberyl_all_posts_request_fallback( $query_vars ) {
+    if ( isset( $query_vars['chrysoberyl_all_posts'] ) && (int) $query_vars['chrysoberyl_all_posts'] === 1 ) {
+        return $query_vars;
+    }
+    $path = isset( $_SERVER['REQUEST_URI'] ) ? trim( parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ), '/' ) : '';
+    if ( $path === 'all-posts' || $path === 'all-posts/' ) {
+        $query_vars['chrysoberyl_all_posts'] = '1';
+        unset( $query_vars['name'] );
+        unset( $query_vars['pagename'] );
+    }
+    return $query_vars;
+}
+add_filter( 'request', 'chrysoberyl_all_posts_request_fallback', 1 );
+
+function chrysoberyl_blog_archive_query_vars( $vars ) {
+    $vars[] = 'chrysoberyl_all_posts';
+    return $vars;
+}
+add_filter( 'query_vars', 'chrysoberyl_blog_archive_query_vars' );
+
+function chrysoberyl_blog_archive_pre_get_posts( $query ) {
+    if ( is_admin() || ! $query->is_main_query() ) {
+        return;
+    }
+    if ( (int) get_query_var( 'chrysoberyl_all_posts' ) !== 1 ) {
+        return;
+    }
+    $query->set( 'post_type', 'post' );
+    $query->set( 'post_status', 'publish' );
+    $query->set( 'orderby', 'date' );
+    $query->set( 'order', 'DESC' );
+}
+add_action( 'pre_get_posts', 'chrysoberyl_blog_archive_pre_get_posts' );
+
+function chrysoberyl_blog_archive_template_include( $template ) {
+    $use_archive_all = ( (int) get_query_var( 'chrysoberyl_all_posts' ) === 1 )
+        || ( is_home() && ! is_front_page() );
+    if ( ! $use_archive_all ) {
+        return $template;
+    }
+    $archive_all = get_template_directory() . '/archive-all.php';
+    if ( file_exists( $archive_all ) ) {
+        return $archive_all;
+    }
+    return $template;
+}
+add_filter( 'template_include', 'chrysoberyl_blog_archive_template_include', 99 );
+
+/**
+ * Prevent 404 when visiting /all-posts/ (custom endpoint).
+ */
+function chrysoberyl_all_posts_prevent_404() {
+    if ( (int) get_query_var( 'chrysoberyl_all_posts' ) !== 1 ) {
+        return;
+    }
+    global $wp_query;
+    $wp_query->is_404 = false;
+    status_header( 200 );
+}
+add_action( 'template_redirect', 'chrysoberyl_all_posts_prevent_404', 1 );
