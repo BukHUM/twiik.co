@@ -1,3 +1,9 @@
+# twiik.co — Chrysoberyl WordPress Theme
+
+Twiik - Tweak tech knowledge project base on WordPress CMS and Chrysoberyl theme.
+
+---
+
 # Chrysoberyl WordPress Theme
 
 Modern news website theme — ทันทุกกระแสโลก
