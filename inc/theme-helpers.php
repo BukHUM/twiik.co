@@ -346,6 +346,8 @@ function chrysoberyl_get_share_url($platform, $post_id = null)
             return 'https://wa.me/?text=' . $text . '%20' . $encoded_url;
         case 'telegram':
             return 'https://t.me/share/url?url=' . $encoded_url . '&text=' . $text;
+        case 'pinterest':
+            return 'https://pinterest.com/pin/create/button/?url=' . $encoded_url . '&description=' . $text;
         case 'copy_link':
             return '#'; // Will be handled by JavaScript
         default:
@@ -368,6 +370,7 @@ function chrysoberyl_get_share_label($platform)
         'linkedin' => __('LinkedIn', 'chrysoberyl'),
         'whatsapp' => __('WhatsApp', 'chrysoberyl'),
         'telegram' => __('Telegram', 'chrysoberyl'),
+        'pinterest' => __('Pinterest', 'chrysoberyl'),
         'copy_link' => __('Copy Link', 'chrysoberyl'),
     );
     return isset($labels[$platform]) ? $labels[$platform] : '';
@@ -388,6 +391,7 @@ function chrysoberyl_get_share_icon($platform)
         'linkedin' => 'fab fa-linkedin-in',
         'whatsapp' => 'fab fa-whatsapp',
         'telegram' => 'fab fa-telegram-plane',
+        'pinterest' => 'fab fa-pinterest-p',
         'copy_link' => 'fas fa-link',
     );
     return isset($icons[$platform]) ? $icons[$platform] : 'fas fa-share-alt';
@@ -408,6 +412,7 @@ function chrysoberyl_get_share_color($platform)
         'linkedin' => '#0077B5',
         'whatsapp' => '#25D366',
         'telegram' => '#0088CC',
+        'pinterest' => '#E60023',
         'copy_link' => '#6B7280',
     );
     return isset($colors[$platform]) ? $colors[$platform] : '#6B7280';

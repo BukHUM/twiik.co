@@ -1,99 +1,54 @@
+# twiik.co — Chrysoberyl WordPress Theme
+
+Twiik - Tweak tech knowledge project base on WordPress CMS and Chrysoberyl theme.
+
+---
+
 # Chrysoberyl WordPress Theme
 
-Modern news and blog theme for WordPress.
+Minimal and clean blog style
 
 ## Description
 
-Chrysoberyl is a clean, responsive WordPress theme designed for news and blog websites. Built with Tailwind CSS, featuring comprehensive Theme Settings, and full translation support (Thai / English).
-
-**Demo sites:** [twiik.co](https://twiik.co) | [chrysoberyl.me](https://chrysoberyl.me)
+Chrysoberyl is a clean, responsive WordPress theme for news and blog content with modern UI/UX. Built with Tailwind CSS, Theme Settings, and translation support (Thai / English).
 
 ## Features
 
-### Core Features
-- **Responsive design** — Mobile-first layout optimized for all devices
-- **Theme Settings** — Comprehensive admin panel for customization
-- **Translation ready** — Thai default with English translation included
-- **SEO friendly** — Clean markup, fast loading, Rank Math compatible
-
-### Theme Settings (Admin Panel)
-- **General** — Logo, pagination type, homepage layout, sidebar options
-- **Footer** — Newsletter toggle, tags section, 4 customizable columns, copyright text
-- **Social Sharing** — Configurable buttons, positions (above/below post, floating), icon styles
-- **Search** — Live search, suggestions, debounce timing, minimum character length
-- **Table of Contents** — Position (top/sidebar/floating), heading levels, scroll spy, sticky, collapsible
-- **Widgets** — Enable/disable and reorder sidebar widgets
-
-### Content Features
+- **Responsive design** — Mobile-first layout
+- **Theme Settings** — Logo, pagination type, homepage columns, login page style, footer, social sharing, search, table of contents, widgets (Chrysoberyl menu in admin)
 - **Custom post types** — Video News, Photo Gallery, Featured Story
-- **Category colors** — Assign custom colors to categories
-- **Classic Editor support** — Insert Code button with syntax highlighting
-- **Demo data import** — Quick setup with sample content, categories, pages, and menus
-
-### Menu Locations
-- Primary Menu (header navigation with mega menu support)
-- Footer Menu
-- Footer Copyright Menu
+- **Footer** — Newsletter/tags toggles, Footer1–Footer4 columns (sidebar/menu/social), copyright text and menu
+- **Social sharing** — Configurable buttons and positions (above/below post, floating)
+- **Search** — Live search, suggestions, post type and field options
+- **Table of Contents** — TOC for single posts (style, position, mobile)
+- **Widgets** — Popular Posts, Recent Posts, Trending Tags, Related Posts, Newsletter, Social Follow, and more
+- **Translation ready** — Thai default; English via `languages/en_US.mo`. See `languages/README.md` for regenerating .pot/.po/.mo
+- **Custom menu locations** — Primary, Footer, Footer Copyright
+- **Featured images, post formats** — Standard WordPress support
 
 ## Requirements
 
 - WordPress 6.0+
-- PHP 7.4+
-- MySQL 5.6+ or MariaDB
+- PHP 8.0+
+- MySQL 5.6+, MariaDB
 
 ## Installation
 
 1. Upload the `chrysoberyl` folder to `/wp-content/themes/`
 2. Activate the theme via **Appearance → Themes**
-3. Configure options under **Chrysoberyl → Theme Settings**
-4. (Optional) Import demo data via **Chrysoberyl → Import Demo Data**
-
-## Demo Data Import
-
-The theme includes a demo data importer to quickly set up your site:
-
-1. Go to **Chrysoberyl → Import Demo Data** in WordPress admin
-2. Select what to import: Categories, Posts, Pages, or Menus
-3. Click **Import** to add sample content
-
-**Note:** Demo posts include a source link to twiik.co. You can edit or remove these after import.
+3. Configure options under **Chrysoberyl → Theme Settings** (General, Footer, Social Sharing, Search, Table of Contents, Widgets)
 
 ## Rank Math HTML Sitemap
 
-The theme includes a custom template for Rank Math HTML sitemap:
+The theme includes a **RankMath** page template for the HTML sitemap (collapsible sections, multi-column links, clearer spacing). To use:
 
-1. Create a page for your sitemap
-2. Set **Page Attributes → Template** to **RankMath**
-3. Configure in **Rank Math SEO → Sitemap Settings → HTML Sitemap**
+1. Create or edit the page used as sitemap in **Rank Math SEO → Sitemap Settings → HTML Sitemap** (Display format: **Page**).
+2. In the page editor, set **Page Attributes → Template** to **RankMath**.
+3. For multiple collapsible sections (Posts, Pages, Categories), in **Rank Math SEO → Sitemap Settings** enable **Include in HTML Sitemap** for each post type and taxonomy you want.
 
 ## Translation
 
-- Text domain: `chrysoberyl`
-- English translations: `languages/chrysoberyl-en_US.po`
-- Set **Settings → General → Site Language** to English (United States) to use English
-
-To add or update translations, edit the `.po` file and compile to `.mo` using Poedit or similar tools.
-
-## File Structure
-
-```
-chrysoberyl/
-├── assets/
-│   ├── css/          # Tailwind CSS and custom styles
-│   └── js/           # JavaScript files
-├── inc/
-│   ├── admin/        # Admin menu and dashboard
-│   ├── custom-post-types.php
-│   ├── demo-data-import.php
-│   ├── theme-setup.php
-│   └── ...
-├── languages/        # Translation files
-├── template-parts/   # Reusable template components
-├── widgets/          # Custom widget classes
-├── functions.php
-├── style.css
-└── README.md
-```
+The theme uses the text domain `chrysoberyl`. English strings are in `languages/chrysoberyl-en_US.po` and compiled to `languages/en_US.mo`. Set **Settings → General → Site Language** to English to use them. To update or add languages, see **languages/README.md**.
 
 ## Version
 
@@ -101,11 +56,12 @@ chrysoberyl/
 
 ## Credits
 
-- **Forked from:** [Trend Today theme](https://gawao.com)
-- **Development team:** [Tonkla IT](https://tonkla.co)
-- **Demo sites:** [chrysoberyl.me](https://chrysoberyl.me), [twiik.co](https://twiik.co)
+(ตรงกับหน้า **Chrysoberyl → Dashboard** ใน Theme Settings)
+
+- **ทีมผู้พัฒนา:** [ต้นกล้าไอที](https://tonkla.co)
+- **เว็บตัวอย่าง:** [กาเหว่า](https://gawao.com)
+- **เว็บตัวอย่าง:** [Twiik](https://twiik.co)
 
 ## License
 
-GNU General Public License v2 or later  
-[http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
+GNU General Public License v2 or later

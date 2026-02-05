@@ -246,6 +246,17 @@ function chrysoberyl_get_breaking_news( $number = 5, $category_id = null ) {
  * @return string|null Image URL or null.
  */
 function chrysoberyl_get_first_hero_image_url() {
+    // On home: use hero style (single = one post, slide = first of breaking/latest)
+    if ( is_home() ) {
+        $hero_style = get_option( 'chrysoberyl_hero_style', 'single' );
+        if ( $hero_style === 'single' ) {
+            $hero_id = chrysoberyl_get_hero_single_post_id();
+            if ( $hero_id ) {
+                $url = get_the_post_thumbnail_url( $hero_id, 'chrysoberyl-hero' );
+                return $url ? $url : null;
+            }
+        }
+    }
     $category_id = null;
     if ( is_category() ) {
         $category_id = get_queried_object_id();

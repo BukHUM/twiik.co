@@ -23,8 +23,9 @@ $show_language = apply_filters( 'chrysoberyl_show_language_switcher', false );
                     $theme_logo_id = get_theme_mod( 'custom_logo' );
                     $theme_logo_url = $theme_logo_id ? wp_get_attachment_image_url( $theme_logo_id, 'full' ) : '';
                 }
+                $show_site_name = get_option( 'chrysoberyl_show_site_name', '1' );
                 $site_name_style = get_option( 'chrysoberyl_site_name_style', 'gray' );
-                $use_google_colors = ( ! $theme_logo_url && $site_name_style === 'google_colors' );
+                $use_google_colors = ( $site_name_style === 'google_colors' );
                 ?>
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center gap-2 group" aria-label="<?php bloginfo( 'name' ); ?>">
                     <?php if ( $theme_logo_url ) : ?>
@@ -32,12 +33,12 @@ $show_language = apply_filters( 'chrysoberyl_show_language_switcher', false );
                     <?php else : ?>
                         <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-google-blue text-white font-bold text-sm"><?php echo esc_html( substr( get_bloginfo( 'name' ), 0, 1 ) ); ?></span>
                     <?php endif; ?>
-                    <?php if ( $theme_logo_url ) : ?>
-                        <span class="text-xl text-google-gray-500 font-normal relative top-[1px]"><?php bloginfo( 'name' ); ?></span>
-                    <?php elseif ( $use_google_colors ) : ?>
-                        <span class="text-xl font-normal relative top-[1px] chrysoberyl-site-name-google-colors"><?php echo chrysoberyl_get_site_name_google_colors(); ?></span>
-                    <?php else : ?>
-                        <span class="text-xl text-google-gray-500 font-normal relative top-[1px]"><?php bloginfo( 'name' ); ?></span>
+                    <?php if ( $show_site_name === '1' ) : ?>
+                        <?php if ( $use_google_colors ) : ?>
+                            <span class="text-xl font-normal relative top-[1px] chrysoberyl-site-name-google-colors"><?php echo chrysoberyl_get_site_name_google_colors(); ?></span>
+                        <?php else : ?>
+                            <span class="text-xl text-google-gray-500 font-normal relative top-[1px]"><?php bloginfo( 'name' ); ?></span>
+                        <?php endif; ?>
                     <?php endif; ?>
                 </a>
             </div>

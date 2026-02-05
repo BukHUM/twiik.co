@@ -12,13 +12,20 @@ if ( is_category() ) {
     $category_id = get_queried_object_id();
 }
 
-// Get breaking news posts (4 slides)
-$breaking_query = chrysoberyl_get_breaking_news( 4, $category_id );
+// Number of slides: from Theme Settings (home) or default 4 (e.g. category archive)
+$hero_slides_count = 4;
+if ( is_home() ) {
+    $hero_slides_count = (int) get_option( 'chrysoberyl_hero_slides_count', '4' );
+    $hero_slides_count = max( 2, min( 8, $hero_slides_count ) );
+}
+
+// Get breaking news posts (N slides)
+$breaking_query = chrysoberyl_get_breaking_news( $hero_slides_count, $category_id );
 
 // Fallback to latest posts if no breaking news
 if ( ! $breaking_query->have_posts() ) {
     $args = array(
-        'posts_per_page' => 4,
+        'posts_per_page' => $hero_slides_count,
         'post_type'      => 'post',
         'orderby'        => 'date',
         'order'          => 'DESC',

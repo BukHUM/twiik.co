@@ -13,8 +13,15 @@ $show_sidebar_home = ( get_option( 'chrysoberyl_sidebar_home_enabled', '1' ) ===
 
 <main id="main-content" class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-8 w-full">
 
-    <!-- Hero Section (mockup: เดี่ยว 1 รายการ — Sticky หรือโพสต์ล่าสุด) -->
-    <?php get_template_part( 'template-parts/hero-single' ); ?>
+    <!-- Hero Section (single = 1 รายการ, slide = สไลด์หลายรายการ ตาม Theme Settings) -->
+    <?php
+    $hero_style = get_option( 'chrysoberyl_hero_style', 'single' );
+    if ( $hero_style === 'slide' ) {
+        get_template_part( 'template-parts/hero-section' );
+    } else {
+        get_template_part( 'template-parts/hero-single' );
+    }
+    ?>
 
     <!-- Category Filters (mockup: pills desktop, dropdown mobile) -->
     <?php get_template_part( 'template-parts/category-filters' ); ?>

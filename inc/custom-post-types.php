@@ -135,7 +135,7 @@ function chrysoberyl_admin_page()
                         <ul class="chrysoberyl-credit-list">
                             <li>
                                 <span class="chrysoberyl-credit-label"><?php _e('ฟอร์กมาจาก:', 'chrysoberyl'); ?></span>
-                                <a href="https://gawao.com" target="_blank" rel="noopener noreferrer"><?php _e('ธีม Trend Today', 'chrysoberyl'); ?></a>
+                                <?php _e('ธีม Trend Today', 'chrysoberyl'); ?>
                             </li>
                             <li>
                                 <span class="chrysoberyl-credit-label"><?php _e('ทีมผู้พัฒนา:', 'chrysoberyl'); ?></span>
@@ -145,8 +145,8 @@ function chrysoberyl_admin_page()
                             <li>
                                 <span
                                     class="chrysoberyl-credit-label"><?php _e('เว็บที่ใช้งานจริง:', 'chrysoberyl'); ?></span>
-                                <a href="https://chrysoberyl.me" target="_blank" rel="noopener noreferrer">chrysoberyl.me</a>,
-                                <a href="https://twiik.co" target="_blank" rel="noopener noreferrer">twiik.co</a>
+                                <a href="https://chrysoberyl.me" target="_blank"
+                                    rel="noopener noreferrer">chrysoberyl.me</a>
                             </li>
                         </ul>
                         <p class="chrysoberyl-credit-license">
@@ -614,6 +614,9 @@ function chrysoberyl_settings_page()
             if (isset($_POST['chrysoberyl_logo'])) {
                 update_option('chrysoberyl_logo', sanitize_text_field($_POST['chrysoberyl_logo']));
             }
+            // Show site name next to logo
+            $show_site_name = (isset($_POST['chrysoberyl_show_site_name']) && $_POST['chrysoberyl_show_site_name'] === '1') ? '1' : '0';
+            update_option('chrysoberyl_show_site_name', $show_site_name);
             // Save site name style when no logo (gray vs colorful)
             if (isset($_POST['chrysoberyl_site_name_style'])) {
                 $style = sanitize_text_field($_POST['chrysoberyl_site_name_style']);
@@ -639,6 +642,19 @@ function chrysoberyl_settings_page()
                     update_option('chrysoberyl_home_news_columns', $cols);
                 }
             }
+            // Save hero section: display (single / slide) and number of slides
+            if (isset($_POST['chrysoberyl_hero_style'])) {
+                $hero_style = sanitize_text_field($_POST['chrysoberyl_hero_style']);
+                if (in_array($hero_style, array('single', 'slide'), true)) {
+                    update_option('chrysoberyl_hero_style', $hero_style);
+                }
+            }
+            if (isset($_POST['chrysoberyl_hero_slides_count'])) {
+                $hero_slides = absint($_POST['chrysoberyl_hero_slides_count']);
+                if ($hero_slides >= 2 && $hero_slides <= 8) {
+                    update_option('chrysoberyl_hero_slides_count', $hero_slides);
+                }
+            }
 
             // Save social sharing settings
             // Enable/Disable
@@ -652,7 +668,7 @@ function chrysoberyl_settings_page()
             update_option('chrysoberyl_social_show_on_page', $social_show_on_page);
 
             // Selected platforms
-            $available_platforms = array('facebook', 'twitter', 'line', 'linkedin', 'whatsapp', 'telegram', 'copy_link');
+            $available_platforms = array('facebook', 'twitter', 'line', 'linkedin', 'whatsapp', 'telegram', 'pinterest', 'copy_link');
             $selected_platforms = isset($_POST['chrysoberyl_social_platforms']) && is_array($_POST['chrysoberyl_social_platforms'])
                 ? array_intersect($_POST['chrysoberyl_social_platforms'], $available_platforms)
                 : array();
@@ -693,6 +709,18 @@ function chrysoberyl_settings_page()
                 if (in_array($icon_style, array('branded', 'mockup'), true)) {
                     update_option('chrysoberyl_social_icon_style', $icon_style);
                 }
+            }
+
+            // Twitter handle
+            if (isset($_POST['chrysoberyl_twitter_handle'])) {
+                $twitter_handle = sanitize_text_field($_POST['chrysoberyl_twitter_handle']);
+                $twitter_handle = ltrim($twitter_handle, '@'); // Remove @ if present
+                update_option('chrysoberyl_twitter_handle', $twitter_handle);
+            }
+
+            // Custom share text
+            if (isset($_POST['chrysoberyl_custom_share_text'])) {
+                update_option('chrysoberyl_custom_share_text', sanitize_textarea_field($_POST['chrysoberyl_custom_share_text']));
             }
 
             // Save search settings
@@ -1053,10 +1081,14 @@ function chrysoberyl_settings_page()
 
     $logo_id = get_option('chrysoberyl_logo', '');
     $logo_url = $logo_id ? wp_get_attachment_image_url($logo_id, 'full') : '';
+    $show_site_name = get_option('chrysoberyl_show_site_name', '1');
     $site_name_style = get_option('chrysoberyl_site_name_style', 'gray');
     $pagination_type = get_option('chrysoberyl_pagination_type', 'load_more'); // Default to load_more
     $home_news_columns = (int) get_option('chrysoberyl_home_news_columns', '2');
     $home_news_columns = max(1, min(4, $home_news_columns));
+    $hero_style = get_option('chrysoberyl_hero_style', 'single');
+    $hero_slides_count = (int) get_option('chrysoberyl_hero_slides_count', '4');
+    $hero_slides_count = max(2, min(8, $hero_slides_count));
 
     // Get social sharing settings
     $social_sharing_enabled = get_option('chrysoberyl_social_sharing_enabled', '1');
@@ -1067,6 +1099,8 @@ function chrysoberyl_settings_page()
     $button_style = get_option('chrysoberyl_social_button_style', 'icon_only');
     $button_size = get_option('chrysoberyl_social_button_size', 'medium');
     $social_icon_style = get_option('chrysoberyl_social_icon_style', 'branded');
+    $twitter_handle = get_option('chrysoberyl_twitter_handle', '');
+    $custom_share_text = get_option('chrysoberyl_custom_share_text', '');
 
     $available_platforms = array(
         'facebook' => __('Facebook', 'chrysoberyl'),
@@ -1075,6 +1109,7 @@ function chrysoberyl_settings_page()
         'linkedin' => __('LinkedIn', 'chrysoberyl'),
         'whatsapp' => __('WhatsApp', 'chrysoberyl'),
         'telegram' => __('Telegram', 'chrysoberyl'),
+        'pinterest' => __('Pinterest', 'chrysoberyl'),
         'copy_link' => __('Copy Link', 'chrysoberyl'),
     );
 
@@ -1263,6 +1298,21 @@ function chrysoberyl_settings_page()
                         </tr>
                         <tr>
                             <th scope="row">
+                                <label><?php _e('แสดงชื่อไซต์ใน header', 'chrysoberyl'); ?></label>
+                            </th>
+                            <td>
+                                <label class="chrysoberyl-toggle-wrap">
+                                    <input type="hidden" name="chrysoberyl_show_site_name" value="0" />
+                                    <input type="checkbox" name="chrysoberyl_show_site_name" value="1" <?php checked($show_site_name, '1'); ?> />
+                                    <span class="toggle-label"><?php _e('แสดงชื่อไซต์ข้างโลโก้', 'chrysoberyl'); ?></span>
+                                </label>
+                                <p class="description" style="margin-top:8px;">
+                                    <?php _e('ปิดใช้เพื่อแสดงเฉพาะโลโก้โดยไม่มีชื่อไซต์', 'chrysoberyl'); ?>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
                                 <label
                                     for="chrysoberyl_pagination_type"><?php _e('Pagination Type', 'chrysoberyl'); ?></label>
                             </th>
@@ -1303,6 +1353,39 @@ function chrysoberyl_settings_page()
                                 </select>
                                 <p class="description">
                                     <?php _e('เลือกว่าจะให้กริดข่าวล่าสุดในหน้าแรกและหน้าอาร์คิฟแสดงกี่คอลัมน์ (จอขนาดกลางขึ้นไป)', 'chrysoberyl'); ?>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <label><?php _e('Hero Section (หน้าแรก)', 'chrysoberyl'); ?></label>
+                            </th>
+                            <td>
+                                <p class="description" style="margin-bottom:10px;">
+                                    <?php _e('รูปแบบการแสดง Hero บนหน้าแรก:', 'chrysoberyl'); ?>
+                                </p>
+                                <fieldset class="chrysoberyl-radio-group" style="margin-bottom:12px;">
+                                    <label class="chrysoberyl-radio-option">
+                                        <input type="radio" name="chrysoberyl_hero_style" value="single" <?php checked($hero_style, 'single'); ?> />
+                                        <span class="radio-label"><?php _e('เดี่ยว (หนึ่งรายการ)', 'chrysoberyl'); ?></span>
+                                    </label>
+                                    <label class="chrysoberyl-radio-option">
+                                        <input type="radio" name="chrysoberyl_hero_style" value="slide" <?php checked($hero_style, 'slide'); ?> />
+                                        <span class="radio-label"><?php _e('สไลด์ (หลายรายการ)', 'chrysoberyl'); ?></span>
+                                    </label>
+                                </fieldset>
+                                <p class="description" style="margin-bottom:6px;">
+                                    <?php _e('จำนวนสไลด์ (เมื่อเลือกแบบสไลด์):', 'chrysoberyl'); ?>
+                                </p>
+                                <select name="chrysoberyl_hero_slides_count" id="chrysoberyl_hero_slides_count">
+                                    <?php for ($n = 2; $n <= 8; $n++): ?>
+                                        <option value="<?php echo (int) $n; ?>" <?php selected($hero_slides_count, $n); ?>>
+                                            <?php echo (int) $n; ?> <?php _e('สไลด์', 'chrysoberyl'); ?>
+                                        </option>
+                                    <?php endfor; ?>
+                                </select>
+                                <p class="description" style="margin-top:8px;">
+                                    <?php _e('แบบเดี่ยว = แสดงโพสต์ Sticky หรือโพสต์ล่าสุด 1 รายการ | แบบสไลด์ = แสดง Breaking News หลายสไลด์', 'chrysoberyl'); ?>
                                 </p>
                             </td>
                         </tr>
@@ -1483,6 +1566,7 @@ function chrysoberyl_settings_page()
                                         'linkedin' => 'fab fa-linkedin-in',
                                         'whatsapp' => 'fab fa-whatsapp',
                                         'telegram' => 'fab fa-telegram-plane',
+                                        'pinterest' => 'fab fa-pinterest-p',
                                         'copy_link' => 'fas fa-link',
                                     );
                                     foreach ($available_platforms as $platform_key => $platform_name):
@@ -1603,6 +1687,34 @@ function chrysoberyl_settings_page()
                                 </select>
                                 <p class="description">
                                     <?php _e('แบบ Mockup: ไอคอนสีเทา วงกลม เมื่อ hover เป็นพื้นหลังเทาอ่อน ตรงกับ mockup single', 'chrysoberyl'); ?>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <label
+                                    for="chrysoberyl_twitter_handle"><?php _e('Twitter Handle', 'chrysoberyl'); ?></label>
+                            </th>
+                            <td>
+                                <input type="text" name="chrysoberyl_twitter_handle" id="chrysoberyl_twitter_handle"
+                                    value="<?php echo esc_attr($twitter_handle); ?>" placeholder="@username"
+                                    class="regular-text" />
+                                <p class="description">
+                                    <?php _e('ใส่ Twitter/X username (ไม่ต้องใส่ @) เพื่อเพิ่มใน tweet', 'chrysoberyl'); ?>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <label
+                                    for="chrysoberyl_custom_share_text"><?php _e('Custom Share Text', 'chrysoberyl'); ?></label>
+                            </th>
+                            <td>
+                                <textarea name="chrysoberyl_custom_share_text" id="chrysoberyl_custom_share_text" rows="3"
+                                    class="large-text"
+                                    placeholder="<?php esc_attr_e('ข้อความที่ต้องการให้แสดงเมื่อแชร์ (ใช้ {title} สำหรับชื่อบทความ, {url} สำหรับลิงก์)', 'chrysoberyl'); ?>"><?php echo esc_textarea($custom_share_text); ?></textarea>
+                                <p class="description">
+                                    <?php _e('ข้อความที่ต้องการให้แสดงเมื่อแชร์ (ใช้ {title} สำหรับชื่อบทความ, {url} สำหรับลิงก์)', 'chrysoberyl'); ?>
                                 </p>
                             </td>
                         </tr>

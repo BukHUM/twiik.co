@@ -1,0 +1,146 @@
+/**
+ * Editor Styles for Chrysoberyl Theme
+ *
+ * @package Chrysoberyl
+ * @since 1.0.0
+ */
+
+/* Basic editor styles */
+body {
+    font-family: 'Google Sans', 'Noto Sans Thai', system-ui, -apple-system, sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #202124;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    line-height: 1.3;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2.25em; }
+h2 { font-size: 1.875em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1.125em; }
+h6 { font-size: 1em; }
+
+/* Paragraphs */
+p {
+    margin-bottom: 1.5em;
+}
+
+/* Links */
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+    margin-bottom: 1.5em;
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid #1a73e8;
+    padding-left: 1.5em;
+    margin-left: 0;
+    font-style: italic;
+    color: #5f6368;
+}
+
+/* Code */
+code {
+    background: #f1f3f4;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+pre {
+    background: #f8f9fa;
+    padding: 1.5em;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5em;
+}
+
+th, td {
+    border: 1px solid #e8eaed;
+    padding: 0.75em 1em;
+    text-align: left;
+}
+
+th {
+    background: #f8f9fa;
+    font-weight: 500;
+}
+
+/* WordPress alignment classes */
+.alignleft {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+}
+
+.alignright {
+    float: right;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
+/* WordPress caption */
+.wp-caption {
+    max-width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.wp-caption-text {
+    font-size: 0.875em;
+    color: #5f6368;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+/* Gallery */
+.gallery-caption {
+    font-size: 0.875em;
+    color: #5f6368;
+}
