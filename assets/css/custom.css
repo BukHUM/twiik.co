@@ -1807,10 +1807,22 @@ body:has(.chrysoberyl-toc-mobile-toggle) #back-to-top {
     background: #fff;
     border-bottom: 1px solid #e5e7eb;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .chrysoberyl-toc-sticky-bar-toggle {
     transition: background-color 0.2s ease;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.chrysoberyl-toc-sticky-bar-title {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .chrysoberyl-toc-sticky-bar-toggle:hover {
@@ -1823,15 +1835,28 @@ body:has(.chrysoberyl-toc-mobile-toggle) #back-to-top {
     transition: max-height 0.3s ease;
     background: #fff;
     border-bottom: 1px solid #e5e7eb;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .chrysoberyl-toc-sticky-dropdown.chrysoberyl-toc-sticky-dropdown-open {
     max-height: 70vh;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .chrysoberyl-toc-sticky-dropdown .chrysoberyl-toc-mobile-nav {
     padding: 0.75rem 1rem 1rem;
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.chrysoberyl-toc-sticky-dropdown .chrysoberyl-toc-mobile-nav .chrysoberyl-toc-link {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .chrysoberyl-toc-sticky-dropdown-open .chrysoberyl-toc-sticky-bar-icon {
@@ -1906,13 +1931,22 @@ body:has(.chrysoberyl-toc-mobile-toggle) #back-to-top {
         display: block;
     }
 
-    /* แถบสารบัญชิด header เลย (fixed ใต้ header ไม่มีช่องว่าง) */
+    /* แถบสารบัญชิด header เลย (fixed ใต้ header ไม่มีช่องว่าง) — จำกัดภายในจอ responsive */
     .chrysoberyl-toc-sticky-bar-mobile-only.chrysoberyl-toc-sticky-bar-wrapper {
         position: fixed;
         top: 4rem;
         left: 0;
         right: 0;
         width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    /* TOC dropdown บนมือถือ: ให้ข้อความยาวห่อภายในจอ ไม่ล้น */
+    .chrysoberyl-toc-sticky-dropdown .chrysoberyl-toc-mobile-nav .chrysoberyl-toc-list,
+    .chrysoberyl-toc-sticky-dropdown .chrysoberyl-toc-mobile-nav .chrysoberyl-toc-item {
+        min-width: 0;
     }
 
     /* ป้องกันเนื้อหาด้านล่างไม่ให้ถูกบังโดยแถบ fixed */
