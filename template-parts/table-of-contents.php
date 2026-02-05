@@ -69,6 +69,9 @@ if ( $toc_collapsible === '1' ) {
 
 if ( $toc_mobile_enabled === '1' ) {
     $toc_classes[] = 'chrysoberyl-toc-mobile-' . esc_attr( $toc_mobile_position );
+    if ( $toc_mobile_position === 'sticky_dropdown' ) {
+        $toc_classes[] = 'chrysoberyl-toc-mobile-sticky-dropdown';
+    }
 }
 
 if ( $toc_auto_collapse_mobile === '1' ) {
@@ -78,6 +81,9 @@ if ( $toc_auto_collapse_mobile === '1' ) {
 
 <div class="<?php echo esc_attr( implode( ' ', $toc_classes ) ); ?>" 
      data-toc-config='<?php echo esc_attr( json_encode( $toc_data ) ); ?>'>
+    <?php
+    // Sticky bar on mobile is output at top of main in single.php (table-of-contents-sticky-bar.php) so it stays below header
+    ?>
     <div class="chrysoberyl-toc-container">
         <?php if ( $toc_collapsible === '1' ) : ?>
             <button type="button" class="chrysoberyl-toc-toggle" aria-label="<?php echo esc_attr( $toc_title ); ?>">

@@ -42,13 +42,16 @@ if (!$should_show) {
     return;
 }
 
+$show_on_mobile = get_option('chrysoberyl_breadcrumb_show_on_mobile', '1') === '1';
+$breadcrumb_visibility_class = $show_on_mobile ? 'block' : 'hidden md:block';
+
 ?>
 
 <?php
 // ตรง mockup: archive/single ใช้ text-google-blue สำหรับรายการปัจจุบัน
 $breadcrumb_current_class = (is_archive() || is_single()) ? 'text-google-blue font-medium' : 'text-gray-800 font-medium';
 ?>
-<nav class="chrysoberyl-breadcrumb hidden md:block text-sm" aria-label="Breadcrumb">
+<nav class="chrysoberyl-breadcrumb <?php echo esc_attr($breadcrumb_visibility_class); ?> text-sm" aria-label="Breadcrumb">
     <ol class="flex flex-wrap items-center gap-x-1 md:gap-x-2 text-google-gray-500">
         <li class="inline-flex items-center shrink-0">
             <a href="<?php echo esc_url(home_url('/')); ?>"

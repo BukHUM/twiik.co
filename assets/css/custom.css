@@ -1795,6 +1795,49 @@ body:has(.chrysoberyl-toc-mobile-toggle) #back-to-top {
     font-weight: 600;
 }
 
+/* TOC Mobile: Sticky Dropdown (dropdown ติด header) */
+.chrysoberyl-toc-sticky-bar-mobile-only {
+    display: none;
+}
+
+.chrysoberyl-toc-sticky-bar-wrapper {
+    position: sticky;
+    top: 4rem; /* 64px - ใต้ header h-16 */
+    z-index: 30;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.chrysoberyl-toc-sticky-bar-toggle {
+    transition: background-color 0.2s ease;
+}
+
+.chrysoberyl-toc-sticky-bar-toggle:hover {
+    background-color: #f3f4f6 !important;
+}
+
+.chrysoberyl-toc-sticky-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.chrysoberyl-toc-sticky-dropdown.chrysoberyl-toc-sticky-dropdown-open {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.chrysoberyl-toc-sticky-dropdown .chrysoberyl-toc-mobile-nav {
+    padding: 0.75rem 1rem 1rem;
+}
+
+.chrysoberyl-toc-sticky-dropdown-open .chrysoberyl-toc-sticky-bar-icon {
+    transform: rotate(180deg);
+}
+
 /* TOC Style Variations */
 .chrysoberyl-toc-style-numbered .chrysoberyl-toc-list {
     counter-reset: toc-counter;
@@ -1856,6 +1899,39 @@ body:has(.chrysoberyl-toc-mobile-toggle) #back-to-top {
 
     .chrysoberyl-toc-sidebar {
         margin-bottom: 1.5rem;
+    }
+
+    /* TOC Mobile: Sticky Dropdown — แสดงแถบ dropdown ชิด header (fixed ใต้ header) */
+    .chrysoberyl-toc-sticky-bar-mobile-only {
+        display: block;
+    }
+
+    /* แถบสารบัญชิด header เลย (fixed ใต้ header ไม่มีช่องว่าง) */
+    .chrysoberyl-toc-sticky-bar-mobile-only.chrysoberyl-toc-sticky-bar-wrapper {
+        position: fixed;
+        top: 4rem;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    /* ป้องกันเนื้อหาด้านล่างไม่ให้ถูกบังโดยแถบ fixed */
+    main.has-toc-sticky-bar .container {
+        padding-top: 3.25rem;
+    }
+
+    /* ช่องว่างใต้ breadcrumb ให้เท่ากับด้านบน (ลดลงเมื่อมีแถบ TOC sticky) */
+    main.has-toc-sticky-bar .container > .chrysoberyl-breadcrumb-wrap {
+        margin-bottom: 0.5rem;
+    }
+
+    /* ไม่แสดง breadcrumb บนมือถือ: ซ่อน wrapper เพื่อให้เนื้อหาขยับขึ้น ไม่เหลือช่องว่าง */
+    main.has-breadcrumb-hidden-on-mobile .chrysoberyl-breadcrumb-wrap {
+        display: none;
+    }
+
+    .chrysoberyl-toc-mobile-sticky-dropdown .chrysoberyl-toc-container {
+        display: none;
     }
 
     .chrysoberyl-toc-sticky .chrysoberyl-toc-container {

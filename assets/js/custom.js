@@ -1024,6 +1024,16 @@ function initTableOfContents() {
                 }
             });
         }
+
+        // Mobile Sticky Dropdown TOC: toggle bar
+        var stickyBarToggle = document.querySelector('.chrysoberyl-toc-sticky-bar-toggle');
+        var stickyDropdown = document.querySelector('.chrysoberyl-toc-sticky-dropdown');
+        if (stickyBarToggle && stickyDropdown) {
+            stickyBarToggle.addEventListener('click', function() {
+                var open = stickyDropdown.classList.toggle('chrysoberyl-toc-sticky-dropdown-open');
+                stickyBarToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+        }
         
         // Find the main article content area - prioritize .chrysoberyl-article-content
         let contentArea = document.querySelector('.chrysoberyl-article-content');
@@ -1122,6 +1132,10 @@ function initTableOfContents() {
             if (mobileToggle) {
                 mobileToggle.style.display = 'none';
             }
+            const stickyBarWrapper = document.querySelector('.chrysoberyl-toc-sticky-bar-wrapper');
+            if (stickyBarWrapper) {
+                stickyBarWrapper.style.display = 'none';
+            }
             return;
         }
         
@@ -1193,6 +1207,13 @@ function initTableOfContents() {
                                     content.classList.remove('chrysoberyl-toc-mobile-content-open');
                                     setTimeout(() => drawer.classList.add('hidden'), 300);
                                 }
+                            }
+                            // Close sticky dropdown (mobile)
+                            const stickyDrop = document.querySelector('.chrysoberyl-toc-sticky-dropdown');
+                            const stickyBtn = document.querySelector('.chrysoberyl-toc-sticky-bar-toggle');
+                            if (stickyDrop && stickyDrop.classList.contains('chrysoberyl-toc-sticky-dropdown-open')) {
+                                stickyDrop.classList.remove('chrysoberyl-toc-sticky-dropdown-open');
+                                if (stickyBtn) stickyBtn.setAttribute('aria-expanded', 'false');
                             }
                         }
                     }

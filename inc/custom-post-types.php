@@ -894,6 +894,9 @@ function chrysoberyl_settings_page()
             $breadcrumb_show_on_404 = isset($_POST['chrysoberyl_breadcrumb_show_on_404']) ? '1' : '0';
             update_option('chrysoberyl_breadcrumb_show_on_404', $breadcrumb_show_on_404);
 
+            $breadcrumb_show_on_mobile = ( isset($_POST['chrysoberyl_breadcrumb_show_on_mobile']) && $_POST['chrysoberyl_breadcrumb_show_on_mobile'] === '1' ) ? '1' : '0';
+            update_option('chrysoberyl_breadcrumb_show_on_mobile', $breadcrumb_show_on_mobile);
+
             if (isset($_POST['chrysoberyl_search_show_date'])) {
                 $suggestions_display[] = 'date';
             }
@@ -996,12 +999,8 @@ function chrysoberyl_settings_page()
             }
 
             // Mobile position
-            if (isset($_POST['chrysoberyl_toc_mobile_position'])) {
-                $toc_mobile_position = sanitize_text_field($_POST['chrysoberyl_toc_mobile_position']);
-                if (in_array($toc_mobile_position, array('top', 'bottom', 'floating', 'collapsible'), true)) {
-                    update_option('chrysoberyl_toc_mobile_position', $toc_mobile_position);
-                }
-            }
+            // บนมือถือใช้ Sticky Dropdown เท่านั้น (ลบตัวเลือก Mobile Position ออกจากหลังบ้านแล้ว)
+            update_option('chrysoberyl_toc_mobile_position', 'sticky_dropdown');
 
             // Heading levels
             $toc_headings = array();
@@ -1148,6 +1147,7 @@ function chrysoberyl_settings_page()
     $breadcrumb_show_on_date = get_option('chrysoberyl_breadcrumb_show_on_date', '1');
     $breadcrumb_show_on_search = get_option('chrysoberyl_breadcrumb_show_on_search', '1');
     $breadcrumb_show_on_404 = get_option('chrysoberyl_breadcrumb_show_on_404', '1');
+    $breadcrumb_show_on_mobile = get_option('chrysoberyl_breadcrumb_show_on_mobile', '1');
 
     // Get TOC settings
     $toc_enabled = get_option('chrysoberyl_toc_enabled', '1');
@@ -1155,7 +1155,7 @@ function chrysoberyl_settings_page()
     $toc_position = get_option('chrysoberyl_toc_position', 'top');
     $toc_show_on_single_post = get_option('chrysoberyl_toc_show_on_single_post', '1');
     $toc_show_on_single_page = get_option('chrysoberyl_toc_show_on_single_page', '0');
-    $toc_mobile_position = get_option('chrysoberyl_toc_mobile_position', 'floating');
+    $toc_mobile_position = get_option('chrysoberyl_toc_mobile_position', 'sticky_dropdown');
     $toc_headings = get_option('chrysoberyl_toc_headings', array('h2', 'h3', 'h4'));
     $toc_style = get_option('chrysoberyl_toc_style', 'nested');
     $toc_smooth_scroll = get_option('chrysoberyl_toc_smooth_scroll', '1');
@@ -1428,6 +1428,20 @@ function chrysoberyl_settings_page()
                                 </label>
                                 <p class="description" style="margin-top: 8px;">
                                     <?php _e('เปิด/ปิดการแสดง breadcrumbs ทั้งหมดในเว็บไซต์', 'chrysoberyl'); ?>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><?php _e('แสดง Breadcrumbs บนมือถือ', 'chrysoberyl'); ?></th>
+                            <td>
+                                <label class="chrysoberyl-toggle">
+                                    <input type="hidden" name="chrysoberyl_breadcrumb_show_on_mobile" value="0" />
+                                    <input type="checkbox" name="chrysoberyl_breadcrumb_show_on_mobile" value="1" <?php checked($breadcrumb_show_on_mobile, '1'); ?> />
+                                    <span class="toggle-slider"></span>
+                                    <span class="toggle-label"><?php _e('แสดง Breadcrumbs บนมือถือ', 'chrysoberyl'); ?></span>
+                                </label>
+                                <p class="description" style="margin-top: 8px;">
+                                    <?php _e('ปิดใช้จะซ่อน breadcrumbs บนหน้าจอขนาดเล็ก (มือถือ)', 'chrysoberyl'); ?>
                                 </p>
                             </td>
                         </tr>
@@ -2087,31 +2101,6 @@ function chrysoberyl_settings_page()
                                     <span class="toggle-slider"></span>
                                     <span class="toggle-label"><?php _e('แสดง TOC บน Mobile', 'chrysoberyl'); ?></span>
                                 </label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <label
-                                    for="chrysoberyl_toc_mobile_position"><?php _e('Mobile Position', 'chrysoberyl'); ?></label>
-                            </th>
-                            <td>
-                                <select name="chrysoberyl_toc_mobile_position" id="chrysoberyl_toc_mobile_position">
-                                    <option value="top" <?php selected($toc_mobile_position, 'top'); ?>>
-                                        <?php _e('Top (ด้านบน)', 'chrysoberyl'); ?>
-                                    </option>
-                                    <option value="bottom" <?php selected($toc_mobile_position, 'bottom'); ?>>
-                                        <?php _e('Bottom (ด้านล่าง)', 'chrysoberyl'); ?>
-                                    </option>
-                                    <option value="floating" <?php selected($toc_mobile_position, 'floating'); ?>>
-                                        <?php _e('Floating Button (ปุ่มลอย)', 'chrysoberyl'); ?>
-                                    </option>
-                                    <option value="collapsible" <?php selected($toc_mobile_position, 'collapsible'); ?>>
-                                        <?php _e('Collapsible Menu (เมนูย่อ/ขยาย)', 'chrysoberyl'); ?>
-                                    </option>
-                                </select>
-                                <p class="description">
-                                    <?php _e('เลือกตำแหน่งที่ต้องการแสดง TOC บน Mobile', 'chrysoberyl'); ?>
-                                </p>
                             </td>
                         </tr>
                         <tr>

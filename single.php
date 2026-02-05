@@ -15,11 +15,23 @@ get_header();
     <div class="h-full bg-google-blue w-0 transition-all duration-300" id="reading-progress"></div>
 </div>
 
-<main id="main-content" class="flex-grow w-full">
+<?php
+$toc_show_on_post = get_option( 'chrysoberyl_toc_show_on_single_post', '1' ) === '1';
+$toc_show_for_sticky = $toc_show_on_post && ( function_exists( 'chrysoberyl_show_toc_for_post' ) ? chrysoberyl_show_toc_for_post( get_the_ID() ) : ( get_option( 'chrysoberyl_toc_enabled', '1' ) === '1' ) );
+$toc_mobile_enabled = get_option( 'chrysoberyl_toc_mobile_enabled', '1' ) === '1';
+$toc_mobile_position = get_option( 'chrysoberyl_toc_mobile_position', 'floating' );
+$has_toc_sticky_bar = $toc_show_for_sticky && $toc_mobile_enabled && $toc_mobile_position === 'sticky_dropdown';
+$breadcrumb_hidden_on_mobile = get_option( 'chrysoberyl_breadcrumb_show_on_mobile', '1' ) !== '1';
+?>
+<main id="main-content" class="flex-grow w-full<?php echo $has_toc_sticky_bar ? ' has-toc-sticky-bar' : ''; ?><?php echo $breadcrumb_hidden_on_mobile ? ' has-breadcrumb-hidden-on-mobile' : ''; ?>">
     <div class="container mx-auto px-4 md:px-6 lg:px-8 max-w-[1248px] pb-20">
 
-        <!-- Breadcrumb (mockup: mb-6 ใต้ breadcrumb) -->
-        <div class="mb-6">
+        <?php if ( $has_toc_sticky_bar ) : ?>
+            <?php get_template_part( 'template-parts/table-of-contents-sticky-bar' ); ?>
+        <?php endif; ?>
+
+        <!-- Breadcrumb (mockup: mb-6 ใต้ breadcrumb; บนมือถือเมื่อมี TOC sticky ลดเป็น 0.5rem ผ่าน .chrysoberyl-breadcrumb-wrap) -->
+        <div class="chrysoberyl-breadcrumb-wrap mb-6">
             <?php get_template_part( 'template-parts/breadcrumb' ); ?>
         </div>
 
